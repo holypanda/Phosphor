@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>File Server</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.18/lib/codemirror.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.18/theme/monokai.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm@5.3.0/css/xterm.css">
+<script src="https://cdn.jsdelivr.net/npm/xterm@5.3.0/lib/xterm.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/xterm-addon-fit@0.8.0/lib/xterm-addon-fit.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.18/lib/codemirror.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.18/mode/javascript/javascript.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.18/mode/python/python.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.18/mode/go/go.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.18/mode/markdown/markdown.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.18/mode/css/css.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.18/mode/htmlmixed/htmlmixed.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.18/mode/xml/xml.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.18/mode/shell/shell.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.18/mode/yaml/yaml.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.18/mode/sql/sql.min.js"></script>
+<style>
+:root {
+  --primary: #00ff41;
+  --primary-hover: #00cc33;
+  --bg: #0a0e14;
+  --card: #131820;
+  --border: #1e2a3a;
+  --text: #c5cdd8;
+  --text-secondary: #5a6a7a;
+  --drop-bg: #0d1a0f;
+  --drop-border: #00ff41;
+  --success: #00ff41;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Fira Code', 'JetBrains Mono', 'Cascadia Code', 'Consolas', monospace; background: var(--bg); color: var(--text); }
+.layout { display: flex; height: 100vh; }
+.panel-left { width: 50%; padding: 24px 16px; overflow-y: auto; }
+.panel-left.editor-open { padding-bottom: 50%; }
+.panel-right { width: 50%; background: #1e1e1e; padding: 8px; display: flex; flex-direction: column; }
+.terminal-wrapper { flex: 1; overflow: hidden; }
+.terminal-divider { height: 2px; background: #444; flex-shrink: 0; }
+#terminal-container-1, #terminal-container-2 { height: 100%; }
+h1 { font-size: 1.5rem; margin-bottom: 8px; }
+.breadcrumb { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; margin-bottom: 20px; font-size: 0.9rem; }
+.breadcrumb a { color: var(--primary); text-decoration: none; cursor: pointer; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb span { color: var(--text-secondary); }
+.drop-zone {
+  border: 2px dashed var(--border); border-radius: 12px; padding: 32px; text-align: center;
+  color: var(--text-secondary); margin-bottom: 20px; transition: all 0.2s; cursor: pointer;
+}
+.drop-zone.dragover { border-color: var(--drop-border); background: var(--drop-bg); color: var(--primary); }
+.drop-zone p { margin-bottom: 8px; }
+.drop-zone .hint { font-size: 0.85rem; }
+.progress-wrap { display: none; margin-bottom: 20px; }
+.progress-wrap.active { display: block; }
+.progress-bar { width: 100%; height: 8px; border-radius: 4px; background: var(--border); overflow: hidden; }
+.progress-bar-inner { height: 100%; width: 0%; background: var(--primary); border-radius: 4px; transition: width 0.15s; }
+.progress-text { font-size: 0.85rem; color: var(--text-secondary); margin-top: 4px; }
+.file-table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.file-table th { text-align: left; padding: 12px 16px; background: var(--bg); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); border-bottom: 1px solid var(--border); }
+.file-table td { padding: 10px 16px; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+.file-table tr:last-child td { border-bottom: none; }
+.file-table tr:hover td { background: #1a2233; }
+.file-name { display: flex; align-items: center; gap: 8px; }
+.file-name a { color: var(--text); text-decoration: none; cursor: pointer; }
+.file-name a:hover { color: var(--primary); }
+.dl-btn { color: var(--primary); text-decoration: none; font-size: 0.85rem; cursor: pointer; }
+.dl-btn:hover { text-decoration: underline; }
+.empty { text-align: center; padding: 40px; color: var(--text-secondary); }
+#file-input { display: none; }
+.actions { display: flex; gap: 6px; }
+.action-btn { background: none; border: none; cursor: pointer; font-size: 0.85rem; padding: 2px 6px; border-radius: 4px; color: var(--text-secondary); transition: all 0.15s; }
+.action-btn:hover { background: var(--bg); color: var(--primary); }
+.action-btn.danger:hover { color: #ef4444; }
+.editor-panel {
+  position: fixed; bottom: 0; left: 0; width: 50%; height: 50%;
+  z-index: 1000; background: var(--card); border: 1px solid var(--border);
+  border-radius: 8px 8px 0 0; overflow: hidden;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+  display: flex; flex-direction: column;
+}
+.editor-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 8px 12px; background: var(--bg); border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.editor-filename { font-weight: 600; font-size: 0.9rem; }
+.editor-actions { display: flex; gap: 6px; }
+.editor-actions .btn {
+  padding: 4px 12px; border: 1px solid var(--primary); border-radius: 6px;
+  background: var(--card); color: var(--primary); cursor: pointer; font-size: 0.85rem; transition: all 0.15s;
+}
+.editor-actions .btn:hover { background: var(--primary); color: var(--bg); }
+#editor-container { flex: 1; overflow: hidden; }
+#editor-container .CodeMirror { height: 100%; font-size: 14px; }
+.CodeMirror { background: #0d1117 !important; }
+.CodeMirror-gutters { background: #0a0e14 !important; border-right-color: #1e2a3a !important; }
+.CodeMirror-linenumber { color: #5a6a7a !important; }
+.CodeMirror-cursor { border-left-color: #00ff41 !important; }
+.CodeMirror-selected { background: #1e2a3a !important; }
+.CodeMirror-activeline-background { background: #131820 !important; }
+@media (max-width: 768px) {
+  .layout { flex-direction: column; }
+  .panel-left, .panel-right { width: 100%; }
+  .panel-right { height: 350px; }
+  .col-modified { display: none; }
+  .editor-panel { width: 100%; }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+  <div class="panel-left">
+    <h1 id="server-title">File Server</h1>
+    <div class="breadcrumb" id="breadcrumb"></div>
+    <div class="drop-zone" id="drop-zone">
+      <p>拖拽文件到此处上传，或点击选择文件</p>
+      <p class="hint">支持多文件上传</p>
+    </div>
+    <input type="file" id="file-input" multiple>
+    <div class="progress-wrap" id="progress-wrap">
+      <div class="progress-bar"><div class="progress-bar-inner" id="progress-bar"></div></div>
+      <div class="progress-text" id="progress-text">上传中...</div>
+    </div>
+    <table class="file-table">
+      <thead><tr><th>名称</th><th>大小</th><th class="col-modified">修改时间</th><th></th></tr></thead>
+      <tbody id="file-list"></tbody>
+    </table>
+    <div class="editor-panel" id="editor-panel" style="display:none">
+      <div class="editor-header">
+        <span class="editor-filename" id="editor-filename"></span>
+        <div class="editor-actions">
+          <button class="btn" onclick="saveFile()">💾 保存</button>
+          <button class="btn" onclick="closeEditor()">✕ 关闭</button>
+        </div>
+      </div>
+      <div id="editor-container"></div>
+    </div>
+  </div>
+  <div class="panel-right">
+    <div class="terminal-wrapper" id="terminal-wrapper-1">
+      <div id="terminal-container-1"></div>
+    </div>
+    <div class="terminal-divider"></div>
+    <div class="terminal-wrapper" id="terminal-wrapper-2">
+      <div id="terminal-container-2"></div>
+    </div>
+  </div>
+</div>
+<script>
+let currentPath = '';
+
+function checkAuth(r) {
+  if (r.status === 401) { location.reload(); throw new Error('unauthorized'); }
+  return r;
+}
+
+function loadFiles(path) {
+  fetch('/api/files?path=' + encodeURIComponent(path))
+    .then(checkAuth)
+    .then(r => r.json())
+    .then(files => {
+      const tbody = document.getElementById('file-list');
+      if (!files || files.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="4" class="empty">空目录</td></tr>';
+        return;
+      }
+      files.sort((a, b) => {
+        if (a.is_dir !== b.is_dir) return a.is_dir ? -1 : 1;
+        return a.name.localeCompare(b.name, undefined, { sensitivity: 'base' });
+      });
+      tbody.innerHTML = files.map(f => {
+        const icon = f.is_dir ? '📁' : '📄';
+        const size = f.is_dir ? '-' : formatSize(f.size);
+        const modified = new Date(f.modified).toLocaleString();
+        const nameLink = f.is_dir
+          ? `<a onclick="navigateTo('${escapePath(f.path)}')">${icon} ${escapeHtml(f.name)}</a>`
+          : isEditable(f.name)
+            ? `<a onclick="openEditor('${escapePath(f.path)}', '${escapePath(f.name)}')">${icon} ${escapeHtml(f.name)}</a>`
+            : `<span>${icon} ${escapeHtml(f.name)}</span>`;
+        const dl = f.is_dir ? '' : `<button class="action-btn" onclick="downloadFile('${escapePath(f.path)}')" title="下载">下载</button>`;
+        const rename = `<button class="action-btn" onclick="renameItem('${escapePath(f.path)}', '${escapePath(f.name)}')" title="重命名">✏️</button>`;
+        const del = `<button class="action-btn danger" onclick="deleteItem('${escapePath(f.path)}', '${escapePath(f.name)}')" title="删除">🗑️</button>`;
+        return `<tr>
+          <td><div class="file-name">${nameLink}</div></td>
+          <td>${size}</td>
+          <td class="col-modified">${modified}</td>
+          <td><div class="actions">${rename}${dl}${del}</div></td>
+        </tr>`;
+      }).join('');
+    })
+    .catch(err => {
+      document.getElementById('file-list').innerHTML = '<tr><td colspan="4" class="empty">加载失败: ' + escapeHtml(err.message) + '</td></tr>';
+    });
+}
+
+function navigateTo(path) {
+  currentPath = path;
+  history.pushState({ path }, '', '/#' + path);
+  renderBreadcrumb(path);
+  loadFiles(path);
+}
+
+function renderBreadcrumb(path) {
+  const bc = document.getElementById('breadcrumb');
+  let html = '<a onclick="navigateTo(\'\')">根目录</a>';
+  if (path) {
+    const parts = path.split('/');
+    let acc = '';
+    for (let i = 0; i < parts.length; i++) {
+      acc += (i > 0 ? '/' : '') + parts[i];
+      html += ' <span>/</span> ';
+      if (i === parts.length - 1) {
+        html += '<span>' + escapeHtml(parts[i]) + '</span>';
+      } else {
+        html += '<a onclick="navigateTo(\'' + escapePath(acc) + '\')">' + escapeHtml(parts[i]) + '</a>';
+      }
+    }
+  }
+  bc.innerHTML = html;
+}
+
+function uploadFiles(fileList) {
+  if (!fileList.length) return;
+  const form = new FormData();
+  for (let i = 0; i < fileList.length; i++) form.append('files', fileList[i]);
+  const wrap = document.getElementById('progress-wrap');
+  const bar = document.getElementById('progress-bar');
+  const text = document.getElementById('progress-text');
+  wrap.classList.add('active');
+  bar.style.width = '0%';
+  text.textContent = '上传中...';
+  const xhr = new XMLHttpRequest();
+  xhr.open('POST', '/api/upload?path=' + encodeURIComponent(currentPath));
+  xhr.upload.onprogress = function(e) {
+    if (e.lengthComputable) {
+      const pct = Math.round(e.loaded / e.total * 100);
+      bar.style.width = pct + '%';
+      text.textContent = '上传中... ' + pct + '% (' + formatSize(e.loaded) + ' / ' + formatSize(e.total) + ')';
+    }
+  };
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      bar.style.width = '100%';
+      bar.style.background = 'var(--success)';
+      text.textContent = '上传完成';
+      setTimeout(() => { wrap.classList.remove('active'); bar.style.background = ''; }, 2000);
+      loadFiles(currentPath);
+    } else {
+      text.textContent = '上传失败: ' + xhr.responseText;
+    }
+  };
+  xhr.onerror = function() { text.textContent = '上传失败: 网络错误'; };
+  xhr.send(form);
+}
+
+function downloadFile(path) {
+  window.open('/api/download?path=' + encodeURIComponent(path), '_blank');
+}
+
+function formatSize(bytes) {
+  if (bytes === 0) return '0 B';
+  const units = ['B', 'KB', 'MB', 'GB', 'TB'];
+  const i = Math.floor(Math.log(bytes) / Math.log(1024));
+  return (bytes / Math.pow(1024, i)).toFixed(i > 0 ? 1 : 0) + ' ' + units[i];
+}
+
+function escapeHtml(s) {
+  const d = document.createElement('div');
+  d.textContent = s;
+  return d.innerHTML;
+}
+
+function escapePath(s) {
+  return s.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+}
+
+// Editor
+const EDITABLE_EXTS = new Set([
+  '.txt','.md','.json','.js','.ts','.jsx','.tsx','.py','.go','.rs',
+  '.css','.html','.htm','.xml','.yaml','.yml','.toml','.ini','.cfg',
+  '.sh','.bash','.zsh','.sql','.env','.gitignore','.dockerfile',
+  '.csv','.log','.conf','.vue','.svelte','.rb','.java','.c','.cpp',
+  '.h','.hpp','.php','.lua','.r','.swift','.kt','.scala','.prisma',
+  '.graphql','.proto','.makefile','.mod','.sum','.lock'
+]);
+function isEditable(name) {
+  const i = name.lastIndexOf('.');
+  if (i === -1) return true;
+  return EDITABLE_EXTS.has(name.substring(i).toLowerCase());
+}
+function getMode(name) {
+  const ext = name.substring(name.lastIndexOf('.')).toLowerCase();
+  const map = {
+    '.js': 'javascript', '.jsx': 'javascript', '.ts': 'javascript', '.tsx': 'javascript',
+    '.json': 'application/json',
+    '.py': 'python', '.go': 'go', '.rs': 'rust',
+    '.css': 'css', '.html': 'htmlmixed', '.htm': 'htmlmixed', '.xml': 'xml',
+    '.md': 'markdown', '.yaml': 'yaml', '.yml': 'yaml',
+    '.sh': 'shell', '.bash': 'shell', '.zsh': 'shell',
+    '.sql': 'sql',
+  };
+  return map[ext] || null;
+}
+
+let cmEditor = null;
+let editorFilePath = '';
+
+function openEditor(path, name) {
+  fetch('/api/read?path=' + encodeURIComponent(path))
+    .then(checkAuth)
+    .then(r => { if (!r.ok) return r.text().then(t => { throw new Error(t); }); return r.json(); })
+    .then(data => {
+      editorFilePath = path;
+      document.getElementById('editor-filename').textContent = data.name;
+      document.getElementById('editor-panel').style.display = 'flex';
+      document.querySelector('.panel-left').classList.add('editor-open');
+      const container = document.getElementById('editor-container');
+      container.innerHTML = '';
+      cmEditor = CodeMirror(container, {
+        value: data.content,
+        mode: getMode(data.name),
+        theme: 'monokai',
+        lineNumbers: true,
+        tabSize: 2,
+        indentWithTabs: false,
+        extraKeys: { 'Ctrl-S': saveFile, 'Cmd-S': saveFile },
+      });
+      cmEditor.focus();
+    })
+    .catch(err => alert('读取失败: ' + err.message));
+}
+
+function saveFile() {
+  if (!cmEditor || !editorFilePath) return;
+  const content = cmEditor.getValue();
+  apiPost('/api/save', { path: editorFilePath, content })
+    .then(() => {
+      const el = document.getElementById('editor-filename');
+      const orig = el.textContent;
+      el.textContent = orig + ' ✓ 已保存';
+      setTimeout(() => { el.textContent = orig; }, 1500);
+      loadFiles(currentPath);
+    })
+    .catch(err => alert('保存失败: ' + err.message));
+}
+
+function closeEditor() {
+  document.getElementById('editor-panel').style.display = 'none';
+  document.querySelector('.panel-left').classList.remove('editor-open');
+  if (cmEditor) { cmEditor.toTextArea && cmEditor.toTextArea(); cmEditor = null; }
+  document.getElementById('editor-container').innerHTML = '';
+  editorFilePath = '';
+}
+
+function apiPost(url, body) {
+  return fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  }).then(checkAuth).then(r => {
+    if (!r.ok) return r.text().then(t => { throw new Error(t); });
+    return r.json();
+  });
+}
+
+function deleteItem(path, name) {
+  if (!confirm('确定删除 "' + name + '" 吗？')) return;
+  apiPost('/api/delete', { path })
+    .then(() => loadFiles(currentPath))
+    .catch(err => alert('删除失败: ' + err.message));
+}
+
+function renameItem(path, oldName) {
+  const newName = prompt('输入新名称:', oldName);
+  if (!newName || newName === oldName) return;
+  const parts = path.split('/');
+  parts[parts.length - 1] = newName;
+  const newPath = parts.join('/');
+  apiPost('/api/rename', { old_path: path, new_path: newPath })
+    .then(() => loadFiles(currentPath))
+    .catch(err => alert('重命名失败: ' + err.message));
+}
+
+// Drag & drop
+const dropZone = document.getElementById('drop-zone');
+const fileInput = document.getElementById('file-input');
+dropZone.addEventListener('click', () => fileInput.click());
+fileInput.addEventListener('change', e => uploadFiles(e.target.files));
+dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('dragover'); });
+dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+dropZone.addEventListener('drop', e => { e.preventDefault(); dropZone.classList.remove('dragover'); uploadFiles(e.dataTransfer.files); });
+
+// History navigation
+window.addEventListener('popstate', e => {
+  const path = (e.state && e.state.path) || '';
+  currentPath = path;
+  renderBreadcrumb(path);
+  loadFiles(path);
+});
+
+// Init
+document.getElementById('server-title').textContent = location.host;
+document.title = location.host + ' - File Server';
+const initPath = location.hash.slice(1) || '';
+currentPath = initPath;
+renderBreadcrumb(initPath);
+loadFiles(initPath);
+
+// Terminal - dual terminals
+const terminals = [];
+
+function initTerminal(containerId) {
+  const container = document.getElementById(containerId);
+  const t = new Terminal({ cursorBlink: true, fontSize: 14, theme: { background: '#1e1e1e' } });
+  const fit = new FitAddon.FitAddon();
+  t.loadAddon(fit);
+  t.open(container);
+  fit.fit();
+
+  const proto = location.protocol === 'https:' ? 'wss:' : 'ws:';
+  const ws = new WebSocket(proto + '//' + location.host + '/api/terminal');
+  ws.binaryType = 'arraybuffer';
+
+  ws.onopen = function() {
+    ws.send('resize:' + JSON.stringify({ cols: t.cols, rows: t.rows }));
+  };
+
+  ws.onmessage = function(e) {
+    if (e.data instanceof ArrayBuffer) {
+      t.write(new Uint8Array(e.data));
+    } else {
+      t.write(e.data);
+    }
+  };
+
+  ws.onclose = function() {
+    t.write('\r\n\x1b[31m[连接已断开]\x1b[0m\r\n');
+  };
+
+  t.onData(function(data) {
+    if (ws && ws.readyState === WebSocket.OPEN) {
+      const encoder = new TextEncoder();
+      ws.send(encoder.encode(data));
+    }
+  });
+
+  terminals.push({ term: t, ws: ws, fitAddon: fit });
+}
+
+window.addEventListener('resize', function() {
+  terminals.forEach(function(item) {
+    item.fitAddon.fit();
+    if (item.ws && item.ws.readyState === WebSocket.OPEN) {
+      item.ws.send('resize:' + JSON.stringify({ cols: item.term.cols, rows: item.term.rows }));
+    }
+  });
+});
+
+initTerminal('terminal-container-1');
+initTerminal('terminal-container-2');
+</script>
+</body>
+</html>
