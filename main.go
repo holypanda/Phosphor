@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"crypto/rand"
 	"crypto/subtle"
 	"embed"
@@ -330,7 +331,7 @@ func handleUpload(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
 	}
-	if err := r.ParseMultipartForm(32 << 20); err != nil {
+	if err := r.ParseMultipartForm(128 << 20); err != nil {
 		http.Error(w, "parse error: "+err.Error(), http.StatusBadRequest)
 		return
 	}
@@ -339,7 +340,12 @@ func handleUpload(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "no files", http.StatusBadRequest)
 		return
 	}
+	const maxFileSize = 2 << 30 // 2 GB
 	for _, fh := range fhs {
+		if fh.Size > maxFileSize {
+			http.Error(w, fmt.Sprintf("file %q too large (%d bytes, max %d)", fh.Filename, fh.Size, maxFileSize), http.StatusRequestEntityTooLarge)
+			return
+		}
 		destPath, err := safePath(rootDir, filepath.Join(reqPath, fh.Filename))
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusBadRequest)
@@ -669,8 +675,23 @@ func main() {
 	mux.HandleFunc("GET /api/auth-check", handleAuthCheck)
 
 	addr := fmt.Sprintf(":%d", *port)
+	srv := &http.Server{Addr: addr, Handler: logMiddleware(authMiddleware(mux))}
+
+	mux.HandleFunc("POST /api/shutdown", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "application/json")
+		json.NewEncoder(w).Encode(map[string]bool{"ok": true})
+		log.Println("shutdown requested, stopping server...")
+		go func() {
+			time.Sleep(500 * time.Millisecond)
+			if err := srv.Shutdown(context.Background()); err != nil {
+				log.Printf("shutdown error: %v", err)
+			}
+		}()
+	})
+
 	log.Printf("serving %s on http://0.0.0.0%s", rootDir, addr)
-	if err := http.ListenAndServe(addr, logMiddleware(authMiddleware(mux))); err != nil {
+	if err := srv.ListenAndServe(); err != http.ErrServerClosed {
 		log.Fatal(err)
 	}
+	log.Println("server stopped")
 }

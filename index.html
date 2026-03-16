@@ -42,7 +42,10 @@ body { font-family: 'Fira Code', 'JetBrains Mono', 'Cascadia Code', 'Consolas', 
 .terminal-wrapper { flex: 1; overflow: hidden; }
 .terminal-divider { height: 2px; background: #444; flex-shrink: 0; }
 #terminal-container-1, #terminal-container-2 { height: 100%; }
-h1 { font-size: 1.5rem; margin-bottom: 8px; }
+h1 { font-size: 1.5rem; margin-bottom: 8px; display: inline; }
+.title-bar { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.shutdown-btn { background: none; border: 1px solid #ef4444; color: #ef4444; border-radius: 6px; padding: 4px 10px; cursor: pointer; font-size: 0.8rem; font-family: inherit; transition: all 0.15s; }
+.shutdown-btn:hover { background: #ef4444; color: #fff; }
 .breadcrumb { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; margin-bottom: 20px; font-size: 0.9rem; }
 .breadcrumb a { color: var(--primary); text-decoration: none; cursor: pointer; }
 .breadcrumb a:hover { text-decoration: underline; }
@@ -114,7 +117,10 @@ h1 { font-size: 1.5rem; margin-bottom: 8px; }
 <body>
 <div class="layout">
   <div class="panel-left">
-    <h1 id="server-title">File Server</h1>
+    <div class="title-bar">
+      <h1 id="server-title">File Server</h1>
+      <button class="shutdown-btn" onclick="shutdownServer()" title="关闭服务器">⏻ 关闭</button>
+    </div>
     <div class="breadcrumb" id="breadcrumb"></div>
     <div class="drop-zone" id="drop-zone">
       <p>拖拽文件到此处上传，或点击选择文件</p>
@@ -225,6 +231,13 @@ function renderBreadcrumb(path) {
 
 function uploadFiles(fileList) {
   if (!fileList.length) return;
+  const maxFileSize = 2 * 1024 * 1024 * 1024; // 2 GB
+  for (let i = 0; i < fileList.length; i++) {
+    if (fileList[i].size > maxFileSize) {
+      alert('文件 "' + fileList[i].name + '" 超过 2GB 限制（' + formatSize(fileList[i].size) + '），无法上传');
+      return;
+    }
+  }
   const form = new FormData();
   for (let i = 0; i < fileList.length; i++) form.append('files', fileList[i]);
   const wrap = document.getElementById('progress-wrap');
@@ -401,6 +414,18 @@ window.addEventListener('popstate', e => {
   renderBreadcrumb(path);
   loadFiles(path);
 });
+
+function shutdownServer() {
+  if (!confirm('确定要关闭服务器吗？')) return;
+  fetch('/api/shutdown', { method: 'POST' })
+    .then(r => r.json())
+    .then(() => {
+      document.querySelector('.panel-left').innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-secondary);font-size:1.2rem;">服务器已关闭</div>';
+    })
+    .catch(() => {
+      document.querySelector('.panel-left').innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--text-secondary);font-size:1.2rem;">服务器已关闭</div>';
+    });
+}
 
 // Init
 document.getElementById('server-title').textContent = location.host;
