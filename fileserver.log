@@ -1,7 +1,1568 @@
-2026/03/16 15:33:05 serving /root on http://0.0.0.0:3000
-2026/03/16 15:33:08 42.98.230.76:64783 GET / 0s
-2026/03/16 15:33:08 42.98.230.76:64783 GET /favicon.ico 0s
-2026/03/16 15:33:11 42.98.230.76:64783 POST /api/login 0s
-2026/03/16 15:33:11 42.98.230.76:64783 GET / 0s
-2026/03/16 15:33:12 42.98.230.76:64783 GET /api/files?path= 1ms
-2026/03/16 15:33:12 42.98.230.76:64784 GET /favicon.ico 0s
+2026/03/19 02:25:10 serving /root on http://0.0.0.0:3000
+2026/03/19 02:25:14 61.244.170.194:64579 GET / 0s
+2026/03/19 02:25:15 61.244.170.194:64579 GET /favicon.ico 0s
+2026/03/19 02:25:19 61.244.170.194:64579 POST /api/login 0s
+2026/03/19 02:25:19 61.244.170.194:64579 GET / 0s
+2026/03/19 02:25:19 61.244.170.194:64579 GET /api/terminal/sessions 0s
+2026/03/19 02:25:19 61.244.170.194:55611 GET /api/files?path= 1ms
+2026/03/19 02:25:19 61.244.170.194:64579 GET /favicon.ico 0s
+2026/03/19 02:26:00 61.244.170.194:55717 GET /api/terminal 1.886s
+2026/03/19 02:26:00 terminal session 7847d953-03a4-4a11-9aab-911fdedcca17 closed via API
+2026/03/19 02:26:00 61.244.170.194:64579 DELETE /api/terminal/sessions?id=7847d953-03a4-4a11-9aab-911fdedcca17 1ms
+2026/03/19 02:26:02 61.244.170.194:62606 GET /api/terminal 3.525s
+2026/03/19 02:26:02 terminal session d0548c1a-809b-4f6c-8c6a-7d18de6670fe closed via API
+2026/03/19 02:26:02 61.244.170.194:64579 DELETE /api/terminal/sessions?id=d0548c1a-809b-4f6c-8c6a-7d18de6670fe 1ms
+2026/03/19 02:26:08 61.244.170.194:54004 GET /api/terminal 42.711s
+2026/03/19 02:26:08 61.244.170.194:64579 GET /terminal?session=97be6165-f596-47c6-a2f6-dabc2a3f237f 0s
+2026/03/19 02:26:08 61.244.170.194:64579 GET /favicon.ico 0s
+2026/03/19 02:26:12 61.244.170.194:58073 GET /api/terminal?session=97be6165-f596-47c6-a2f6-dabc2a3f237f 3.401s
+2026/03/19 02:26:24 61.244.170.194:63186 GET /api/terminal?session=97be6165-f596-47c6-a2f6-dabc2a3f237f 8.546s
+2026/03/19 02:26:24 61.244.170.194:53494 GET /api/terminal 1m4.457s
+2026/03/19 02:26:24 61.244.170.194:54183 GET /api/terminal 59.947s
+2026/03/19 02:29:11 61.244.170.194:64579 GET / 1ms
+2026/03/19 02:29:11 61.244.170.194:64579 GET /api/files?path= 1ms
+2026/03/19 02:29:11 61.244.170.194:55611 GET /api/terminal/sessions 0s
+2026/03/19 02:30:15 61.244.170.194:55391 GET /favicon.ico 0s
+2026/03/19 02:30:22 61.244.170.194:63522 GET /api/terminal?session=97be6165-f596-47c6-a2f6-dabc2a3f237f 6.289s
+2026/03/19 02:30:22 terminal session 97be6165-f596-47c6-a2f6-dabc2a3f237f closed via API
+2026/03/19 02:30:22 61.244.170.194:55391 DELETE /api/terminal/sessions?id=97be6165-f596-47c6-a2f6-dabc2a3f237f 1ms
+2026/03/19 02:30:23 61.244.170.194:58215 GET /api/terminal?session=15a946ae-0165-46e2-bf52-47e951495e76 7.632s
+2026/03/19 02:30:23 terminal session 15a946ae-0165-46e2-bf52-47e951495e76 closed via API
+2026/03/19 02:30:23 61.244.170.194:55391 DELETE /api/terminal/sessions?id=15a946ae-0165-46e2-bf52-47e951495e76 1ms
+2026/03/19 02:30:33 restart requested, rebuilding and restarting...
+2026/03/19 02:30:33 61.244.170.194:55391 POST /api/restart 0s
+2026/03/19 02:30:33 server stopped
+Thu Mar 19 02:30:34 AM UTC 2026 [RESTART] Build succeeded, starting server...
+Thu Mar 19 02:30:34 AM UTC 2026 [RESTART] Server started, PID=1329832
+2026/03/19 02:30:34 serving /root on http://0.0.0.0:3000
+2026/03/19 02:30:35 61.244.170.194:50294 GET /api/auth-check 0s
+2026/03/19 02:30:35 61.244.170.194:50294 GET / 0s
+2026/03/19 02:30:36 61.244.170.194:50294 GET /favicon.ico 0s
+2026/03/19 02:30:40 61.244.170.194:50294 POST /api/login 0s
+2026/03/19 02:30:40 61.244.170.194:50294 GET / 0s
+2026/03/19 02:30:40 61.244.170.194:50294 GET /api/files?path= 1ms
+2026/03/19 02:30:40 61.244.170.194:61541 GET /api/terminal/sessions 0s
+2026/03/19 02:30:41 61.244.170.194:61541 GET /favicon.ico 0s
+2026/03/19 02:35:21 restart requested, rebuilding and restarting...
+2026/03/19 02:35:21 61.244.170.194:61541 POST /api/restart 1ms
+2026/03/19 02:35:21 server stopped
+Thu Mar 19 02:35:22 AM UTC 2026 [RESTART] Build succeeded, starting server...
+Thu Mar 19 02:35:22 AM UTC 2026 [RESTART] Server started, PID=1330497
+2026/03/19 02:35:22 serving /root on http://0.0.0.0:3000
+2026/03/19 02:35:23 61.244.170.194:59135 GET /api/auth-check 0s
+2026/03/19 02:35:23 61.244.170.194:59135 GET / 0s
+2026/03/19 02:35:23 61.244.170.194:59135 GET /favicon.ico 0s
+2026/03/19 02:35:28 61.244.170.194:59135 POST /api/login 0s
+2026/03/19 02:35:28 61.244.170.194:59135 GET / 0s
+2026/03/19 02:35:28 61.244.170.194:59135 GET /api/files?path= 1ms
+2026/03/19 02:35:28 61.244.170.194:64620 GET /api/terminal/sessions 0s
+2026/03/19 02:35:29 61.244.170.194:59135 GET /favicon.ico 0s
+2026/03/19 02:35:50 14.0.227.88:6448 GET / 0s
+2026/03/19 02:35:50 14.0.227.88:6449 GET / 0s
+2026/03/19 02:35:58 14.0.227.88:6915 POST /api/login 0s
+2026/03/19 02:36:12 14.0.227.88:6916 POST /api/login 1ms
+2026/03/19 02:36:12 14.0.227.88:6916 GET / 0s
+2026/03/19 02:36:12 14.0.227.88:6916 GET /api/files?path= 1ms
+2026/03/19 02:36:12 14.0.227.88:6917 GET /api/terminal/sessions 0s
+2026/03/19 02:36:13 61.244.170.194:50853 GET /api/terminal 44.148s
+2026/03/19 02:36:32 14.0.227.88:6919 GET /api/files?path= 0s
+2026/03/19 02:36:51 terminal session ab62de1d-5918-4a5d-b76a-8a9d9606a4a8 closed via API
+2026/03/19 02:36:51 61.244.170.194:59135 DELETE /api/terminal/sessions?id=ab62de1d-5918-4a5d-b76a-8a9d9606a4a8 1ms
+2026/03/19 02:36:51 14.0.227.88:6918 GET /api/terminal?session=ab62de1d-5918-4a5d-b76a-8a9d9606a4a8 38.437s
+2026/03/19 02:37:06 61.244.170.194:59135 GET /api/read?path=.claude.json 1ms
+2026/03/19 02:40:59 61.244.170.194:62029 GET /api/terminal 6.123s
+2026/03/19 02:40:59 terminal session fe9c94f6-0e82-4987-8a3d-033fd9485382 closed via API
+2026/03/19 02:40:59 61.244.170.194:59135 DELETE /api/terminal/sessions?id=fe9c94f6-0e82-4987-8a3d-033fd9485382 1ms
+2026/03/19 02:41:07 restart requested, rebuilding and restarting...
+2026/03/19 02:41:07 61.244.170.194:59135 POST /api/restart 0s
+2026/03/19 02:41:07 server stopped
+Thu Mar 19 02:41:08 AM UTC 2026 [RESTART] Build succeeded, starting server...
+Thu Mar 19 02:41:08 AM UTC 2026 [RESTART] Server started, PID=1331313
+2026/03/19 02:41:08 serving /root on http://0.0.0.0:3000
+2026/03/19 02:41:09 61.244.170.194:50434 GET /api/auth-check 0s
+2026/03/19 02:41:09 61.244.170.194:50434 GET / 0s
+2026/03/19 02:41:10 61.244.170.194:50434 GET /favicon.ico 0s
+2026/03/19 02:41:16 14.0.227.88:6920 GET / 0s
+2026/03/19 02:41:25 14.0.227.88:6921 POST /api/login 0s
+2026/03/19 02:41:25 14.0.227.88:6921 GET / 0s
+2026/03/19 02:41:25 14.0.227.88:6921 GET /api/files?path= 1ms
+2026/03/19 02:41:26 14.0.227.88:6922 GET /api/terminal/sessions 0s
+2026/03/19 02:41:40 61.244.170.194:50434 POST /api/login 0s
+2026/03/19 02:41:40 61.244.170.194:50434 GET / 0s
+2026/03/19 02:41:40 61.244.170.194:50434 GET /api/files?path= 0s
+2026/03/19 02:41:40 61.244.170.194:62523 GET /api/terminal/sessions 0s
+2026/03/19 02:41:41 61.244.170.194:50434 GET /favicon.ico 0s
+2026/03/19 02:41:41 14.0.227.88:6923 GET /api/terminal 14.03s
+2026/03/19 02:49:54 restart requested, rebuilding and restarting...
+2026/03/19 02:49:54 61.244.170.194:53865 POST /api/restart 0s
+2026/03/19 02:49:54 server stopped
+Thu Mar 19 02:49:55 AM UTC 2026 [RESTART] Build succeeded, starting server...
+Thu Mar 19 02:49:55 AM UTC 2026 [RESTART] Server started, PID=1332338
+2026/03/19 02:49:55 serving /root on http://0.0.0.0:3000
+2026/03/19 02:49:56 61.244.170.194:59437 GET /api/auth-check 0s
+2026/03/19 02:49:56 61.244.170.194:59437 GET / 0s
+2026/03/19 02:49:57 61.244.170.194:59437 GET /favicon.ico 0s
+2026/03/19 02:50:00 61.244.170.194:59437 POST /api/login 0s
+2026/03/19 02:50:00 61.244.170.194:59437 GET / 0s
+2026/03/19 02:50:01 61.244.170.194:61570 GET /api/terminal/sessions 0s
+2026/03/19 02:50:01 61.244.170.194:59437 GET /api/files?path= 1ms
+2026/03/19 02:50:01 61.244.170.194:61570 GET /favicon.ico 0s
+2026/03/19 02:54:25 restart requested, rebuilding and restarting...
+2026/03/19 02:54:25 61.244.170.194:61570 POST /api/restart 0s
+2026/03/19 02:54:25 server stopped
+Thu Mar 19 02:54:26 AM UTC 2026 [RESTART] Build succeeded, starting server...
+Thu Mar 19 02:54:26 AM UTC 2026 [RESTART] Server started, PID=1333236
+2026/03/19 02:54:26 serving /root on http://0.0.0.0:3000
+2026/03/19 02:54:27 61.244.170.194:63144 GET /api/auth-check 0s
+2026/03/19 02:54:27 61.244.170.194:63144 GET / 0s
+2026/03/19 02:54:28 61.244.170.194:63144 GET /favicon.ico 0s
+2026/03/19 02:54:31 61.244.170.194:63144 POST /api/login 0s
+2026/03/19 02:54:31 61.244.170.194:63144 GET / 0s
+2026/03/19 02:54:31 61.244.170.194:63144 GET /api/files?path= 1ms
+2026/03/19 02:54:31 61.244.170.194:56209 GET /api/terminal/sessions 0s
+2026/03/19 02:54:31 61.244.170.194:56209 GET /favicon.ico 0s
+2026/03/19 02:54:41 61.244.170.194:56209 GET /api/proxy?url=https%3A%2F%2Fwww.youtube.com 897ms
+2026/03/19 02:55:01 61.244.170.194:56209 GET /api/proxy?url=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1Ziw5eaEKN%2F%3Fspm_id_from%3D333.1007.tianma.1-1-1.click 597ms
+2026/03/19 02:55:30 61.244.170.194:56209 GET /api/proxy?url=https%3A%2F%2Fwww.google.com%2F 385ms
+2026/03/19 02:55:57 61.244.170.194:56209 GET /api/proxy?url=https%3A%2F%2Fclaude.com%2F 837ms
+2026/03/19 02:56:04 61.244.170.194:56209 GET /api/proxy?url=https%3A%2F%2Fclaude.com%2F 117ms
+2026/03/19 02:56:04 61.244.170.194:63144 POST /sentry?o=1158394&p=4504646202490880 0s
+2026/03/19 03:00:29 174.138.83.16:48644 GET / 0s
+2026/03/19 03:00:29 174.138.83.16:48648 GET /favicon.ico 0s
+2026/03/19 03:01:00 61.244.170.194:60177 POST /sentry?o=1158394&p=4504646202490880 0s
+2026/03/19 03:21:31 restart requested, rebuilding and restarting...
+2026/03/19 03:21:31 61.244.170.194:63330 POST /api/restart 0s
+2026/03/19 03:21:32 server stopped
+Thu Mar 19 03:21:33 AM UTC 2026 [RESTART] Build succeeded, starting server...
+Thu Mar 19 03:21:33 AM UTC 2026 [RESTART] Server started, PID=1335694
+2026/03/19 03:21:33 serving /root on http://0.0.0.0:3000
+2026/03/19 03:21:34 61.244.170.194:60131 GET /api/auth-check 0s
+2026/03/19 03:21:34 61.244.170.194:60131 GET / 0s
+2026/03/19 03:21:34 61.244.170.194:60131 GET /favicon.ico 0s
+2026/03/19 03:21:38 61.244.170.194:60131 POST /api/login 0s
+2026/03/19 03:21:38 61.244.170.194:60131 GET / 0s
+2026/03/19 03:21:39 61.244.170.194:60131 GET /api/files?path= 1ms
+2026/03/19 03:21:39 61.244.170.194:60131 GET /api/terminal/sessions 0s
+2026/03/19 03:21:39 61.244.170.194:56516 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/css/bb7d3d120d17de0b.css 44ms
+2026/03/19 03:21:39 61.244.170.194:60131 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/css/95b83e376d020c60.css 56ms
+2026/03/19 03:21:39 61.244.170.194:61530 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/css/2a72e3531cfb5053.css 23ms
+2026/03/19 03:21:39 61.244.170.194:54335 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/css/026d87fb2c6610cf.css 40ms
+2026/03/19 03:21:39 61.244.170.194:64113 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/css/1bdb36932a6d7a0b.css 38ms
+2026/03/19 03:21:39 61.244.170.194:56516 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/css/9119f743a9f3f2f2.css 26ms
+2026/03/19 03:21:39 61.244.170.194:61530 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/css/5f9618b8fe0ac1d6.css 28ms
+2026/03/19 03:21:40 61.244.170.194:54335 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/css/ba14c32faf4a9e8b.css 24ms
+2026/03/19 03:21:40 61.244.170.194:63252 GET /api/proxy/https/claude.com/ 999ms
+2026/03/19 03:21:40 61.244.170.194:60131 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/css/6151d73cc72523c2.css 345ms
+2026/03/19 03:21:40 61.244.170.194:61530 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/webpack-f47e6529837a86c7.js 23ms
+2026/03/19 03:21:40 61.244.170.194:64113 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/19664-b77431ed99a5e98f.js 22ms
+2026/03/19 03:21:40 61.244.170.194:54335 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/main-app-8d9f15e644d9bbf3.js 25ms
+2026/03/19 03:21:40 61.244.170.194:60131 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/86864-3ce7ab8dd774a101.js 33ms
+2026/03/19 03:21:40 61.244.170.194:56516 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/2574-dc837420c933e84e.js 71ms
+2026/03/19 03:21:40 61.244.170.194:63252 GET /api/proxy/https/a.claude.ai/isolated-segment.html?v=b42d73afa4 25ms
+2026/03/19 03:21:40 61.244.170.194:61530 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/87c73c54-6e6a0bed4271723d.js 201ms
+2026/03/19 03:21:40 61.244.170.194:63252 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/media/fe66948be403232d-s.p.woff2 20ms
+2026/03/19 03:21:40 61.244.170.194:64113 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/media/01d1396bd69a228a-s.p.woff2 167ms
+2026/03/19 03:21:40 61.244.170.194:54335 GET /api/proxy/https/claude.com/images/google.svg 29ms
+2026/03/19 03:21:40 61.244.170.194:60131 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/app/global-error-699c4110bae065df.js 19ms
+2026/03/19 03:21:40 61.244.170.194:56516 GET /api/proxy/https/a.claude.ai/cdn-cgi/challenge-platform/scripts/jsd/main.js 11ms
+2026/03/19 03:21:40 61.244.170.194:63252 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/c7dfc041-a9ea445d92867d87.js 24ms
+2026/03/19 03:21:40 61.244.170.194:61530 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/aec2b0d1-f643fba6b769b671.js 22ms
+2026/03/19 03:21:41 61.244.170.194:54335 POST /sentry?o=1158394&p=4504646202490880 0s
+2026/03/19 03:21:41 61.244.170.194:60131 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/59666-af92c0f00bd496b8.js 19ms
+2026/03/19 03:21:41 61.244.170.194:63252 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/media/5ab84f5ed5bd55bd-s.p.woff2 19ms
+2026/03/19 03:21:41 61.244.170.194:56516 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/media/56139cc7a3934d47-s.p.woff2 187ms
+2026/03/19 03:21:41 61.244.170.194:60131 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/media/a0eafab536ffd221-s.p.woff2 49ms
+2026/03/19 03:21:41 61.244.170.194:61530 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/media/a72997480c14a9d4-s.p.woff2 22ms
+2026/03/19 03:21:41 61.244.170.194:63252 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/media/b8c97ebabd0473a4-s.p.woff2 23ms
+2026/03/19 03:21:41 61.244.170.194:64113 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/media/b96accb76593e50d-s.p.woff2 30ms
+2026/03/19 03:21:41 61.244.170.194:54335 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/media/8d6f5db32d507c08-s.p.woff2 179ms
+2026/03/19 03:21:41 61.244.170.194:60131 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/media/c25fe61b276783b5-s.p.woff2 17ms
+2026/03/19 03:21:41 61.244.170.194:61530 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/media/d4ad98ce6ee578c0-s.p.woff2 23ms
+2026/03/19 03:21:41 61.244.170.194:63252 GET /api/proxy/https/a-cdn.anthropic.com/v1/projects/LKJN8LsLERHEOXkw487o7qCTFOrGPimI/settings 16ms
+2026/03/19 03:21:41 61.244.170.194:64113 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/75212-5807ef84fe1eac02.js 20ms
+2026/03/19 03:21:41 61.244.170.194:56516 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/59597-b2be51d3b69d41ee.js 22ms
+2026/03/19 03:21:41 61.244.170.194:60131 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/85948-d015caca815d223b.js 19ms
+2026/03/19 03:21:41 61.244.170.194:61530 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/63724-374ab877d4e7560b.js 22ms
+2026/03/19 03:21:41 61.244.170.194:63252 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/64939-83f9f921174990c0.js 16ms
+2026/03/19 03:21:41 61.244.170.194:54335 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/73417-36594da1696c882b.js 37ms
+2026/03/19 03:21:41 61.244.170.194:64113 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/72615-e730de964960c2db.js 23ms
+2026/03/19 03:21:41 61.244.170.194:56516 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/81548-1c69bd945f3a560f.js 24ms
+2026/03/19 03:21:41 61.244.170.194:60131 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/91246-ea204f4f3ebe27fb.js 18ms
+2026/03/19 03:21:41 61.244.170.194:61530 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/12781-d826784184164128.js 19ms
+2026/03/19 03:21:41 61.244.170.194:63252 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/45312-4ca7be4c078ba17f.js 40ms
+2026/03/19 03:21:41 61.244.170.194:54335 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/94882-a8e1affa20570066.js 22ms
+2026/03/19 03:21:41 61.244.170.194:64113 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/73584-2edd7ff21e293a16.js 32ms
+2026/03/19 03:21:41 61.244.170.194:60131 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/10489-fd71bb6846c99358.js 26ms
+2026/03/19 03:21:42 61.244.170.194:61530 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/66488-82bd2b331554ffce.js 24ms
+2026/03/19 03:21:42 61.244.170.194:63252 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/3153-ff6040e659f1ff96.js 41ms
+2026/03/19 03:21:42 61.244.170.194:54335 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/20152-694177ef2e928126.js 36ms
+2026/03/19 03:21:42 61.244.170.194:64113 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/74813-bc0f43aa2760fa00.js 31ms
+2026/03/19 03:21:42 61.244.170.194:56516 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/59613-ca38a9565cc74b3f.js 175ms
+2026/03/19 03:21:42 61.244.170.194:60131 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/80691-03a1b26147ab8b5c.js 22ms
+2026/03/19 03:21:42 61.244.170.194:61530 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/43764-d60f88e34468f10c.js 19ms
+2026/03/19 03:21:42 61.244.170.194:64113 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/97151-777e72b9214eb0d1.js 25ms
+2026/03/19 03:21:42 61.244.170.194:54335 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/4656-6f73ebd41112f426.js 34ms
+2026/03/19 03:21:42 61.244.170.194:63252 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/87792-07ab36354b59548f.js 31ms
+2026/03/19 03:21:42 61.244.170.194:56516 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/app/(ssr)/(auth)/layout-55c72e93855c47b8.js 49ms
+2026/03/19 03:21:42 61.244.170.194:60131 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/13629-6cb25d8dc4b5cb57.js 22ms
+2026/03/19 03:21:42 61.244.170.194:61530 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/app/(ssr)/(auth)/error-89f523c24c9b561c.js 23ms
+2026/03/19 03:21:42 61.244.170.194:54335 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/22568-b17f34b0c110607a.js 28ms
+2026/03/19 03:21:42 61.244.170.194:64113 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/61374-7321505067fd4e01.js 38ms
+2026/03/19 03:21:42 61.244.170.194:63252 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/48579-daa030d970a88850.js 37ms
+2026/03/19 03:21:42 61.244.170.194:56516 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/65933-5ac8b117d42926dc.js 27ms
+2026/03/19 03:21:42 61.244.170.194:60131 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/85367-426013f238e412cc.js 22ms
+2026/03/19 03:21:42 61.244.170.194:61530 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/52936-5954186cd692f9fc.js 25ms
+2026/03/19 03:21:42 61.244.170.194:54335 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/app/(ssr)/(auth)/login/page-3ab6d966a4b212d6.js 24ms
+2026/03/19 03:21:42 61.244.170.194:60131 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/57660070-98a0f4342774931d.js 24ms
+2026/03/19 03:21:42 61.244.170.194:56516 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/6527a925-d9cda19137f078bf.js 36ms
+2026/03/19 03:21:42 61.244.170.194:63252 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/b6045b22-a6f4d0aac23c2202.js 68ms
+2026/03/19 03:21:42 61.244.170.194:61530 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/86674-69fad68f352607f3.js 17ms
+2026/03/19 03:21:42 61.244.170.194:64113 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/891cff7f-f60c50dd8ad01172.js 196ms
+2026/03/19 03:21:42 61.244.170.194:63252 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/58033-5cfd7ab12bb72cb6.js 21ms
+2026/03/19 03:21:42 61.244.170.194:60131 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/34513-9bf7f3f86504609d.js 59ms
+2026/03/19 03:21:42 61.244.170.194:61530 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/77067-96474ccb720410a0.js 16ms
+2026/03/19 03:21:42 61.244.170.194:54335 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/16685-06620aeb6f1308f7.js 20ms
+2026/03/19 03:21:42 61.244.170.194:64113 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/44983-db300ceaa4b4bd65.js 19ms
+2026/03/19 03:21:42 61.244.170.194:56516 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/38371-64c97e6f0af24e53.js 25ms
+2026/03/19 03:21:43 61.244.170.194:63252 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/18581-987a4b4aa59f2900.js 18ms
+2026/03/19 03:21:43 61.244.170.194:60131 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/65084-5a2a83cb7858e55d.js 18ms
+2026/03/19 03:21:43 61.244.170.194:61530 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/44723-fa68d8ffec2f0716.js 20ms
+2026/03/19 03:21:43 61.244.170.194:54335 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/87224-63841c697aa57d39.js 27ms
+2026/03/19 03:21:43 61.244.170.194:64113 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/92863-3fdf1b174ac239e9.js 24ms
+2026/03/19 03:21:43 61.244.170.194:56516 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/37131-55345ee6df65de14.js 17ms
+2026/03/19 03:21:43 61.244.170.194:63252 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/15022-d6f65f0b0f077ecc.js 24ms
+2026/03/19 03:21:43 61.244.170.194:60131 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/97289-cb527dd517d00551.js 25ms
+2026/03/19 03:21:43 61.244.170.194:61530 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/22167-05cb9f640b049937.js 20ms
+2026/03/19 03:21:43 61.244.170.194:54335 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/77803-037cbeb1a70d6e05.js 20ms
+2026/03/19 03:21:43 61.244.170.194:64113 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/36016-fa526983f3c3960d.js 19ms
+2026/03/19 03:21:43 61.244.170.194:56516 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/65279-3d7ccae8cc7d23fb.js 28ms
+2026/03/19 03:21:43 61.244.170.194:63252 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/67267-18767b15ee9d455f.js 22ms
+2026/03/19 03:21:43 61.244.170.194:60131 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/41743-1ad4db978a46b405.js 16ms
+2026/03/19 03:21:43 61.244.170.194:61530 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/51278-62beaaa01da79ffb.js 19ms
+2026/03/19 03:21:43 61.244.170.194:54335 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/93389-587e28d3d4f75e4b.js 16ms
+2026/03/19 03:21:43 61.244.170.194:64113 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/277-33c888aecf384897.js 27ms
+2026/03/19 03:21:43 61.244.170.194:56516 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/76655-4a4ad8639fa26ca0.js 29ms
+2026/03/19 03:21:43 61.244.170.194:63252 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/71866-962fb51d8b4c3cdd.js 23ms
+2026/03/19 03:21:43 61.244.170.194:60131 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/94922-ddb2a28ff99a1643.js 21ms
+2026/03/19 03:21:43 61.244.170.194:61530 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/86409-988a69efe96788a0.js 21ms
+2026/03/19 03:21:43 61.244.170.194:54335 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/17421-ef551e5daca8ead8.js 21ms
+2026/03/19 03:21:43 61.244.170.194:64113 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/36304-774d81d2449de396.js 24ms
+2026/03/19 03:21:43 61.244.170.194:56516 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/83495-66a86b2764d31cc6.js 22ms
+2026/03/19 03:21:43 61.244.170.194:63252 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/app/(ssr)/layout-a88146d18a5203e8.js 20ms
+2026/03/19 03:21:43 61.244.170.194:60131 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/1728-53fac6f360f596f0.js 37ms
+2026/03/19 03:21:43 61.244.170.194:61530 GET /api/proxy/https/assets-proxy.anthropic.com/claude-ai/v1/_next/static/chunks/app/(ssr)/not-found-78661ff2bd950735.js 55ms
+2026/03/19 03:21:43 61.244.170.194:64113 GET /api/proxy/https/a-cdn.anthropic.com/next-integrations/actions/3962/1faa179dfb20d0a3f5a0.js 35ms
+2026/03/19 03:21:43 61.244.170.194:54335 GET /api/proxy/https/cdn.sanity.io/files/4zrzovbb/website/032a2abc20d7be25555ccbfbdf0a6a98082156ad.webm 162ms
+2026/03/19 03:21:44 61.244.170.194:64113 POST /api/proxy/https/www.google.com/ccm/collect?frm=1&en=page_view&dr=172.236.229.37&dl=http%3A%2F%2F172.236.229.37%3A3000%2F&scrsrc=172.236.229.37&rnd=293465373.1773890504&auid=1960761523.1773888958&navt=n&npa=0&gtm=45be63h0v9196940227za204zd9196940227xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=103116026~103200004~115616985~115938465~115938468~116024733~117484252~118104771&apve=1&apvf=f&apvc=1&tids=AW-16632748715&tid=AW-16632748715&tft=1773890503759&tfd=5058 17ms
+2026/03/19 03:21:44 61.244.170.194:61530 POST /api/proxy/https/www.google.com/ccm/collect?frm=1&en=page_view&dr=172.236.229.37&dl=http%3A%2F%2F172.236.229.37%3A3000%2F&scrsrc=172.236.229.37&rnd=293465373.1773890504&auid=1960761523.1773888958&navt=n&npa=0&gtm=45fe63h0v9227220020za204zb9196940227zd9196940227xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=103116026~103200004~115938465~115938468~116024733~117484252~118104773&apve=1&apvf=f&apvc=0&tids=DC-15684265&tid=DC-15684265&tft=1773890503845&tfd=5143 11ms
+2026/03/19 03:21:44 61.244.170.194:54335 GET /favicon.ico 0s
+2026/03/19 03:21:51 61.244.170.194:54335 GET /api/proxy/https/www.youtube.com 392ms
+2026/03/19 03:21:52 61.244.170.194:61530 GET /api/proxy/https/i.ytimg.com/generate_204 15ms
+2026/03/19 03:21:52 61.244.170.194:63252 GET /api/proxy/https/www.youtube.com/s/desktop/c376667c/jsbin/custom-elements-es5-adapter.vflset/custom-elements-es5-adapter.js 21ms
+2026/03/19 03:21:52 61.244.170.194:60131 GET /api/proxy/https/www.youtube.com/s/desktop/c376667c/jsbin/web-animations-next-lite.min.vflset/web-animations-next-lite.min.js 21ms
+2026/03/19 03:21:52 61.244.170.194:56516 GET /api/proxy/https/www.youtube.com/s/desktop/c376667c/jsbin/webcomponents-sd.vflset/webcomponents-sd.js 23ms
+2026/03/19 03:21:52 61.244.170.194:61530 GET /api/proxy/https/www.youtube.com/s/desktop/c376667c/jsbin/intersection-observer.min.vflset/intersection-observer.min.js 9ms
+2026/03/19 03:21:52 61.244.170.194:56516 GET /api/proxy/https/www.youtube.com/s/desktop/c376667c/jsbin/www-i18n-constants-en_US.vflset/www-i18n-constants.js 10ms
+2026/03/19 03:21:52 61.244.170.194:61530 GET /api/proxy/https/www.youtube.com/s/desktop/c376667c/jsbin/network.vflset/network.js 10ms
+2026/03/19 03:21:52 61.244.170.194:60131 GET /api/proxy/https/www.youtube.com/s/desktop/c376667c/jsbin/spf.vflset/spf.js 20ms
+2026/03/19 03:21:52 61.244.170.194:54335 GET /api/proxy/https/www.youtube.com/s/desktop/c376667c/jsbin/scheduler.vflset/scheduler.js 22ms
+2026/03/19 03:21:52 61.244.170.194:63252 GET /api/proxy/https/fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=YouTube+Sans:wght@300..900&display=swap 56ms
+2026/03/19 03:21:53 61.244.170.194:56516 GET /api/proxy/https/www.youtube.com/s/desktop/c376667c/cssbin/www-main-desktop-home-page-skeleton.css 13ms
+2026/03/19 03:21:53 61.244.170.194:60131 GET /api/proxy/https/www.youtube.com/s/desktop/c376667c/cssbin/www-onepick.css 15ms
+2026/03/19 03:21:53 61.244.170.194:61530 GET /api/proxy/https/www.youtube.com/s/desktop/c376667c/cssbin/www-main-desktop-watch-page-skeleton.css 30ms
+2026/03/19 03:21:53 61.244.170.194:54335 GET /api/proxy/https/www.youtube.com/s/_/ytmainappweb/_/ss/k=ytmainappweb.kevlar_base.V-1a7L9W9qk.L.B1.O/am=AAAAgAABYAI/d=0/br=1/rs=AGKMywGtKTv6SB_HpLifHo-8vanoUEPQrQ 252ms
+2026/03/19 03:21:53 61.244.170.194:63252 GET /api/proxy/https/fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBA.woff2 42ms
+2026/03/19 03:21:53 61.244.170.194:54335 GET /api/proxy/https/accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252Fsignin_passive%26feature%3Dpassive&hl=en 71ms
+2026/03/19 03:21:53 61.244.170.194:54335 GET /api/proxy/https/accounts.google.com/InteractiveLogin?continue=https://www.youtube.com/signin?action_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252Fsignin_passive%26feature%3Dpassive&hl=en&passive=true&service=youtube&uilel=3&dsh=S-1020421303:1773890513678983&ifkv=ASfE1-oMsAsfqnUiLraBpKlgbA1swNJ7H4aRMcgh6DEG1mKANrZY47LOrVSuLyY6cVpCfKRvk-VSNA 58ms
+2026/03/19 03:21:53 61.244.170.194:64113 GET /api/proxy/https/www.youtube.com/s/_/ytmainappweb/_/js/k=ytmainappweb.kevlar_base.en_US.WCzKWUsvIE0.es5.O/am=AAAAgAAAQAI/d=1/br=1/rs=AGKMywE6cjn4-LE6Adbl504T1xWI7LWCuQ/m=kevlar_base_module,kevlar_main_module 1.674s
+2026/03/19 03:21:54 61.244.170.194:64113 GET /api/proxy/https/googleads.g.doubleclick.net/pagead/id 89ms
+2026/03/19 03:21:54 172.236.229.37:44718 POST /api/stats/atr?ns=yt&el=detailpage&cpn=pNPogxZDfxlrstaj&ver=2&cmt=1.303&fmt=303&fs=0&rt=05673&euri&lact=303&cl=347330218&mos=1&volume=100&cbrand=6YzTR&cbr=AUjKqW&cbrver=7.14.89.71&c=WEB&cver=2.20260319&cplayer=UNIPLAYER&cos=oTO91b6hM&cosver=2780162&cplatform=DESKTOP&hl=en_US&cr=US&uga=96&len=03610066&fexp=FAZJo%2CZjHot%2Ch3v29&feature=g-high-rec&afmt=303&muted=0&conn=1&docid=V5gNgxIVf-T&ei=vC6PDovntg0t8AatNUQ861r&plid=8xJ2KNME34Mfbkmu&vm=rpZyB76GF8IVpZIJ3wvj8iPaH2whBX2byBRSKTr5jllbaTLDKrZpTfJj29NopM8T1H36rRBZKvKVa4VJPGF69Y9trvJwGqm8IZcBIoj6eAxLOcwTGntN21HDLVzxiy9yYUEFF3biVqmcvH2phk2zEA7n99jrt6Y34k5feVlv4HWIFWfYOJl6LV1jqTQ3Exj 0s
+2026/03/19 03:21:54 61.244.170.194:63252 POST /api/proxy/http/172.236.229.37:3000/api/stats/atr?ns=yt&el=detailpage&cpn=pNPogxZDfxlrstaj&ver=2&cmt=1.303&fmt=303&fs=0&rt=05673&euri&lact=303&cl=347330218&mos=1&volume=100&cbrand=6YzTR&cbr=AUjKqW&cbrver=7.14.89.71&c=WEB&cver=2.20260319&cplayer=UNIPLAYER&cos=oTO91b6hM&cosver=2780162&cplatform=DESKTOP&hl=en_US&cr=US&uga=96&len=03610066&fexp=FAZJo%2CZjHot%2Ch3v29&feature=g-high-rec&afmt=303&muted=0&conn=1&docid=V5gNgxIVf-T&ei=vC6PDovntg0t8AatNUQ861r&plid=8xJ2KNME34Mfbkmu&vm=rpZyB76GF8IVpZIJ3wvj8iPaH2whBX2byBRSKTr5jllbaTLDKrZpTfJj29NopM8T1H36rRBZKvKVa4VJPGF69Y9trvJwGqm8IZcBIoj6eAxLOcwTGntN21HDLVzxiy9yYUEFF3biVqmcvH2phk2zEA7n99jrt6Y34k5feVlv4HWIFWfYOJl6LV1jqTQ3Exj 1ms
+2026/03/19 03:21:54 172.236.229.37:44734 POST /generate_204 0s
+2026/03/19 03:21:54 61.244.170.194:61530 POST /api/proxy/http/172.236.229.37:3000/generate_204 1ms
+2026/03/19 03:21:54 61.244.170.194:60131 GET /s/search/audio/failure.mp3 0s
+2026/03/19 03:21:54 61.244.170.194:56516 GET /s/search/audio/no_input.mp3 0s
+2026/03/19 03:21:54 61.244.170.194:64113 GET /api/proxy/https/fonts.gstatic.com/s/youtubesans/v32/Qw38ZQNGEDjaO2m6tqIqX5E-AVS5_rSejo46_PCTRspJ0OosolrBEJL3HO_T7fE.woff2 8ms
+2026/03/19 03:21:54 61.244.170.194:61530 GET /s/search/audio/open.mp3 0s
+2026/03/19 03:21:54 61.244.170.194:63252 GET /s/search/audio/success.mp3 1ms
+2026/03/19 03:21:54 61.244.170.194:64113 GET /api/proxy/https/fonts.googleapis.com/css?family=Roboto:300italic,400italic,500italic,700italic 43ms
+2026/03/19 03:21:54 61.244.170.194:56516 GET /api/proxy/https/www.youtube.com/s/player/f4f314f0/www-player.css 38ms
+2026/03/19 03:21:54 61.244.170.194:54335 GET /api/proxy/https/accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252Fsignin_passive%26feature%3Dpassive&dsh=S-1020421303%3A1773890513678983&hl=en&ifkv=ASfE1-rzUWcW-NCLfazQe5_82GqEQ5Mvbhd0q9gFeVND624A8cFWhzWjq1wBG0NzvkbJvGJtVcrrOQ&passive=true&service=youtube&uilel=3&flowName=GlifWebSignIn&flowEntry=ServiceLogin 820ms
+2026/03/19 03:21:54 61.244.170.194:60131 GET /api/proxy/https/fonts.googleapis.com/css?family=Roboto+Mono:400 57ms
+2026/03/19 03:21:55 172.236.229.37:44734 POST /api/stats/atr?ns=yt&el=detailpage&cpn=pNPogxZDfxlrstaj&ver=2&cmt=1.303&fmt=303&fs=0&rt=05673&euri&lact=303&cl=347330218&mos=1&volume=100&cbrand=6YzTR&cbr=AUjKqW&cbrver=7.14.89.71&c=WEB&cver=2.20260319&cplayer=UNIPLAYER&cos=oTO91b6hM&cosver=2780162&cplatform=DESKTOP&hl=en_US&cr=US&uga=96&len=03610066&fexp=FAZJo%2CZjHot%2Ch3v29&feature=g-high-rec&afmt=303&muted=0&conn=1&docid=V5gNgxIVf-T&ei=vC6PDovntg0t8AatNUQ861r&plid=8xJ2KNME34Mfbkmu&vm=rpZyB76GF8IVpZIJ3wvj8iPaH2whBX2byBRSKTr5jllbaTLDKrZpTfJj29NopM8T1H36rRBZKvKVa4VJPGF69Y9trvJwGqm8IZcBIoj6eAxLOcwTGntN21HDLVzxiy9yYUEFF3biVqmcvH2phk2zEA7n99jrt6Y34k5feVlv4HWIFWfYOJl6LV1jqTQ3Exj 0s
+2026/03/19 03:21:55 61.244.170.194:63252 POST /api/proxy/http/172.236.229.37:3000/api/stats/atr?ns=yt&el=detailpage&cpn=pNPogxZDfxlrstaj&ver=2&cmt=1.303&fmt=303&fs=0&rt=05673&euri&lact=303&cl=347330218&mos=1&volume=100&cbrand=6YzTR&cbr=AUjKqW&cbrver=7.14.89.71&c=WEB&cver=2.20260319&cplayer=UNIPLAYER&cos=oTO91b6hM&cosver=2780162&cplatform=DESKTOP&hl=en_US&cr=US&uga=96&len=03610066&fexp=FAZJo%2CZjHot%2Ch3v29&feature=g-high-rec&afmt=303&muted=0&conn=1&docid=V5gNgxIVf-T&ei=vC6PDovntg0t8AatNUQ861r&plid=8xJ2KNME34Mfbkmu&vm=rpZyB76GF8IVpZIJ3wvj8iPaH2whBX2byBRSKTr5jllbaTLDKrZpTfJj29NopM8T1H36rRBZKvKVa4VJPGF69Y9trvJwGqm8IZcBIoj6eAxLOcwTGntN21HDLVzxiy9yYUEFF3biVqmcvH2phk2zEA7n99jrt6Y34k5feVlv4HWIFWfYOJl6LV1jqTQ3Exj 0s
+2026/03/19 03:21:55 61.244.170.194:61530 POST /api/proxy/https/jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT 26ms
+2026/03/19 03:21:55 61.244.170.194:64113 GET /api/proxy/https/googleads.g.doubleclick.net/pagead/id?slf_rd=1 29ms
+2026/03/19 03:21:55 172.236.229.37:44734 POST /generate_204 0s
+2026/03/19 03:21:55 61.244.170.194:60131 POST /api/proxy/http/172.236.229.37:3000/generate_204 0s
+2026/03/19 03:21:55 172.236.229.37:44734 POST /api/stats/atr?ns=yt&el=detailpage&cpn=pNPogxZDfxlrstaj&ver=2&cmt=1.303&fmt=303&fs=0&rt=05673&euri&lact=303&cl=347330218&mos=1&volume=100&cbrand=6YzTR&cbr=AUjKqW&cbrver=7.14.89.71&c=WEB&cver=2.20260319&cplayer=UNIPLAYER&cos=oTO91b6hM&cosver=2780162&cplatform=DESKTOP&hl=en_US&cr=US&uga=96&len=03610066&fexp=FAZJo%2CZjHot%2Ch3v29&feature=g-high-rec&afmt=303&muted=0&conn=1&docid=V5gNgxIVf-T&ei=vC6PDovntg0t8AatNUQ861r&plid=8xJ2KNME34Mfbkmu&vm=rpZyB76GF8IVpZIJ3wvj8iPaH2whBX2byBRSKTr5jllbaTLDKrZpTfJj29NopM8T1H36rRBZKvKVa4VJPGF69Y9trvJwGqm8IZcBIoj6eAxLOcwTGntN21HDLVzxiy9yYUEFF3biVqmcvH2phk2zEA7n99jrt6Y34k5feVlv4HWIFWfYOJl6LV1jqTQ3Exj 0s
+2026/03/19 03:21:55 61.244.170.194:61530 POST /api/proxy/http/172.236.229.37:3000/api/stats/atr?ns=yt&el=detailpage&cpn=pNPogxZDfxlrstaj&ver=2&cmt=1.303&fmt=303&fs=0&rt=05673&euri&lact=303&cl=347330218&mos=1&volume=100&cbrand=6YzTR&cbr=AUjKqW&cbrver=7.14.89.71&c=WEB&cver=2.20260319&cplayer=UNIPLAYER&cos=oTO91b6hM&cosver=2780162&cplatform=DESKTOP&hl=en_US&cr=US&uga=96&len=03610066&fexp=FAZJo%2CZjHot%2Ch3v29&feature=g-high-rec&afmt=303&muted=0&conn=1&docid=V5gNgxIVf-T&ei=vC6PDovntg0t8AatNUQ861r&plid=8xJ2KNME34Mfbkmu&vm=rpZyB76GF8IVpZIJ3wvj8iPaH2whBX2byBRSKTr5jllbaTLDKrZpTfJj29NopM8T1H36rRBZKvKVa4VJPGF69Y9trvJwGqm8IZcBIoj6eAxLOcwTGntN21HDLVzxiy9yYUEFF3biVqmcvH2phk2zEA7n99jrt6Y34k5feVlv4HWIFWfYOJl6LV1jqTQ3Exj 0s
+2026/03/19 03:21:55 61.244.170.194:54335 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/search/v15/24px.svg 15ms
+2026/03/19 03:21:55 61.244.170.194:60131 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/menu/v1/24px.svg 29ms
+2026/03/19 03:21:55 61.244.170.194:64113 GET /api/proxy/https/www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.AccountsSignInUi.en.14Rkgw_A9nc.es5.O/am=Kf4GAADoFIFkAIz7_wYAEiCIBtczAWgCkQEAAAAAAAAAQAsAAKQR/d=1/excm=_b,_tp,identifierview/ed=1/dg=0/wt=2/ujg=1/rs=AOaEmlGV-7z8YEj3-TaEHwkLFzbgpwSc7w/dti=1/m=_b,_tp 50ms
+2026/03/19 03:21:55 61.244.170.194:63252 GET /api/proxy/https/youtube.com 139ms
+2026/03/19 03:21:55 172.236.229.37:44734 POST /generate_204 0s
+2026/03/19 03:21:55 61.244.170.194:61530 POST /api/proxy/http/172.236.229.37:3000/generate_204 0s
+2026/03/19 03:21:55 61.244.170.194:54335 POST /api/proxy/https/jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT 11ms
+2026/03/19 03:21:55 61.244.170.194:60131 GET /api/proxy/https/www.gstatic.com/youtube/img/icons/web/youtube_fill/yt-logo-updated/v3/24px.svg 10ms
+2026/03/19 03:21:55 61.244.170.194:64113 GET /s/player/f4f314f0/player_es6.vflset/en_US/base.js 0s
+2026/03/19 03:21:55 61.244.170.194:63252 POST /v3/signin/_/AccountsSignInUi/cspreport/fine-allowlist 0s
+2026/03/19 03:21:55 61.244.170.194:61530 GET /api/proxy/https/www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.AccountsSignInUi.en.14Rkgw_A9nc.es5.O/ck=boq-identity.AccountsSignInUi.2eyZ8W2ICiY.L.B1.O/am=Kf4GAADoFIFkAIz7_wYAEiCIBtczAWgCkQEAAAAAAAAAQAsAAKQR/d=1/exm=_b,_tp/excm=_b,_tp,identifierview/ed=1/wt=2/ujg=1/rs=AOaEmlG01aUlFWblMcjXjO9xrYz69skIEw/ee=ASJRFf:DAnQ7e;Al0B8:kibjWe;DaIJ8c:iAskyc;EVNhjf:pw70Gc;EkYFhd:GwYlN;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:XVMNvd;Me32dd:MEeYgc;NJ1rfe:yGfSdd;NPKaK:PVlQOd;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SMDL4c:K0PMbc;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;UpnZUd:nnwwYc;Uvc8o:VDovNc;VlRiDf:j7ZRif;XdiAjb:NLiXbe;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:vfuNJf;lOO0Vd:OTA3Ae;nTuGK:JKNPM;oGtAuc:sOXFj;oSUNyd:K0PMbc;oXZmbc:tUnxGc;pXdRYb:L9OGUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;sHdTOe:nSePib;vNjB7d:YTxL4;wR5FRb:siKnQd;wc73nd:kqeOEd;yxTchf:KUM7Z/dti=1/m=byfTOb,lsjVmc,LEikZe 15ms
+2026/03/19 03:21:55 61.244.170.194:54335 GET /api/proxy/https/www.gstatic.com/youtube/img/icons/web/youtube_outline/refresh/v1/24px.svg 21ms
+2026/03/19 03:21:55 61.244.170.194:56516 GET /api/proxy/https/www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.AccountsSignInUi.en.14Rkgw_A9nc.es5.O/ck=boq-identity.AccountsSignInUi.2eyZ8W2ICiY.L.B1.O/am=Kf4GAADoFIFkAIz7_wYAEiCIBtczAWgCkQEAAAAAAAAAQAsAAKQR/d=1/exm=LEikZe,_b,_tp,byfTOb,lsjVmc/excm=_b,_tp,identifierview/ed=1/wt=2/ujg=1/rs=AOaEmlG01aUlFWblMcjXjO9xrYz69skIEw/ee=ASJRFf:DAnQ7e;Al0B8:kibjWe;DaIJ8c:iAskyc;EVNhjf:pw70Gc;EkYFhd:GwYlN;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:XVMNvd;Me32dd:MEeYgc;NJ1rfe:yGfSdd;NPKaK:PVlQOd;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SMDL4c:K0PMbc;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;UpnZUd:nnwwYc;Uvc8o:VDovNc;VlRiDf:j7ZRif;XdiAjb:NLiXbe;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:vfuNJf;lOO0Vd:OTA3Ae;nTuGK:JKNPM;oGtAuc:sOXFj;oSUNyd:K0PMbc;oXZmbc:tUnxGc;pXdRYb:L9OGUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;sHdTOe:nSePib;vNjB7d:YTxL4;wR5FRb:siKnQd;wc73nd:kqeOEd;yxTchf:KUM7Z/dti=1/m=n73qwf,SCuOPb,IZT63,vfuNJf,UUJqVe,ws9Tlc,KUM7Z,siKnQd,yGfSdd,mzzZzc,rCcCxc,cciGGe,m9oV,vjKJJ,y5vRwf,DqMihc,K1ZKnb,DiaQ5,lkFgGf,SD8Jgb,mvkUhe,CMcBD,Fndnac,t2srLd,EN3i8d,z0u0L,xiZRqc,L9OGUe,PrPYRd,MpJwZc,cYShmd,hc6Ubd,inNHtf,oLggrd,WpP9Yc,xQtZb,gJzDyc,lwddkf,SpsfSb,tUnxGc,EFQ78c,zbML3c,zr1jrb,vHEMJe,YTxL4,YHI3We,Uas9Hd,zy0vNb,K0PMbc,MY7mZe,qmdT9,GwYlN,NLiXbe,LDQI 49ms
+2026/03/19 03:21:55 61.244.170.194:60131 GET /api/proxy/https/www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.AccountsSignInUi.en.14Rkgw_A9nc.es5.O/ck=boq-identity.AccountsSignInUi.2eyZ8W2ICiY.L.B1.O/am=Kf4GAADoFIFkAIz7_wYAEiCIBtczAWgCkQEAAAAAAAAAQAsAAKQR/d=1/exm=CMcBD,DiaQ5,DqMihc,EFQ78c,EN3i8d,Fndnac,GwYlN,IZT63,K0PMbc,K1ZKnb,KUM7Z,L9OGUe,LDQI,LEikZe,MY7mZe,MpJwZc,NLiXbe,PrPYRd,SCuOPb,SD8Jgb,SpsfSb,UUJqVe,Uas9Hd,WpP9Yc,YHI3We,YTxL4,_b,_tp,byfTOb,cYShmd,cciGGe,gJzDyc,hc6Ubd,inNHtf,lkFgGf,lsjVmc,lwddkf,m9oV,mvkUhe,mzzZzc,n73qwf,oLggrd,qmdT9,rCcCxc,siKnQd,t2srLd,tUnxGc,vHEMJe,vfuNJf,vjKJJ,ws9Tlc,xQtZb,xiZRqc,y5vRwf,yGfSdd,z0u0L,zbML3c,zr1jrb,zy0vNb/excm=_b,_tp,identifierview/ed=1/wt=2/ujg=1/rs=AOaEmlG01aUlFWblMcjXjO9xrYz69skIEw/ee=ASJRFf:DAnQ7e;Al0B8:kibjWe;DaIJ8c:iAskyc;EVNhjf:pw70Gc;EkYFhd:GwYlN;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:XVMNvd;Me32dd:MEeYgc;NJ1rfe:yGfSdd;NPKaK:PVlQOd;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SMDL4c:K0PMbc;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;UpnZUd:nnwwYc;Uvc8o:VDovNc;VlRiDf:j7ZRif;XdiAjb:NLiXbe;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:vfuNJf;lOO0Vd:OTA3Ae;nTuGK:JKNPM;oGtAuc:sOXFj;oSUNyd:K0PMbc;oXZmbc:tUnxGc;pXdRYb:L9OGUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;sHdTOe:nSePib;vNjB7d:YTxL4;wR5FRb:siKnQd;wc73nd:kqeOEd;yxTchf:KUM7Z/dti=1/m=ltDFwf,rmumx,E87wgc,qPYxq,Tbb4sb,pxq3x,f8Gu1e,soHxf,YgOFye,oqkvIf,yRXbo,bTi8wc,ywOR5c,PHUIyb 12ms
+2026/03/19 03:21:55 61.244.170.194:64113 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/chevron_down/v9/24px.svg 15ms
+2026/03/19 03:21:55 61.244.170.194:63252 POST /api/proxy/https/www.youtube.com/youtubei/v1/log_event?alt=json 29ms
+2026/03/19 03:21:55 61.244.170.194:61530 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/mic/v14/24px.svg 9ms
+2026/03/19 03:21:55 61.244.170.194:54335 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/person_circle/v10/24px.svg 14ms
+2026/03/19 03:21:55 61.244.170.194:60131 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/overflow_vertical/v13/24px.svg 10ms
+2026/03/19 03:21:55 61.244.170.194:64113 GET /api/proxy/https/www.youtube.com/s/_/ytmainappweb/_/js/k=ytmainappweb.kevlar_base.en_US.WCzKWUsvIE0.es5.O/am=AAAAgAAAQAI/d=1/exm=kevlar_base_module,kevlar_main_module/ed=1/br=1/rs=AGKMywE6cjn4-LE6Adbl504T1xWI7LWCuQ/m=QlbBce 11ms
+2026/03/19 03:21:55 61.244.170.194:63252 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/x/v11/24px.svg 12ms
+2026/03/19 03:21:55 61.244.170.194:61530 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/location_pin/v2/24px.svg 9ms
+2026/03/19 03:21:55 61.244.170.194:56516 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/add_circle/v6/24px.svg 11ms
+2026/03/19 03:21:55 61.244.170.194:54335 GET /api/proxy/https/www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.AccountsSignInUi.en.14Rkgw_A9nc.es5.O/ck=boq-identity.AccountsSignInUi.2eyZ8W2ICiY.L.B1.O/am=Kf4GAADoFIFkAIz7_wYAEiCIBtczAWgCkQEAAAAAAAAAQAsAAKQR/d=1/exm=CMcBD,DiaQ5,DqMihc,E87wgc,EFQ78c,EN3i8d,Fndnac,GwYlN,IZT63,K0PMbc,K1ZKnb,KUM7Z,L9OGUe,LDQI,LEikZe,MY7mZe,MpJwZc,NLiXbe,PHUIyb,PrPYRd,SCuOPb,SD8Jgb,SpsfSb,Tbb4sb,UUJqVe,Uas9Hd,WpP9Yc,YHI3We,YTxL4,YgOFye,_b,_tp,bTi8wc,byfTOb,cYShmd,cciGGe,f8Gu1e,gJzDyc,hc6Ubd,inNHtf,lkFgGf,lsjVmc,ltDFwf,lwddkf,m9oV,mvkUhe,mzzZzc,n73qwf,oLggrd,oqkvIf,pxq3x,qPYxq,qmdT9,rCcCxc,rmumx,siKnQd,soHxf,t2srLd,tUnxGc,vHEMJe,vfuNJf,vjKJJ,ws9Tlc,xQtZb,xiZRqc,y5vRwf,yGfSdd,yRXbo,ywOR5c,z0u0L,zbML3c,zr1jrb,zy0vNb/excm=_b,_tp,identifierview/ed=1/wt=2/ujg=1/rs=AOaEmlG01aUlFWblMcjXjO9xrYz69skIEw/ee=ASJRFf:DAnQ7e;Al0B8:kibjWe;DaIJ8c:iAskyc;EVNhjf:pw70Gc;EkYFhd:GwYlN;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:XVMNvd;Me32dd:MEeYgc;NJ1rfe:yGfSdd;NPKaK:PVlQOd;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SMDL4c:K0PMbc;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;UpnZUd:nnwwYc;Uvc8o:VDovNc;VlRiDf:j7ZRif;XdiAjb:NLiXbe;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:vfuNJf;lOO0Vd:OTA3Ae;nTuGK:JKNPM;oGtAuc:sOXFj;oSUNyd:K0PMbc;oXZmbc:tUnxGc;pXdRYb:L9OGUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;sHdTOe:nSePib;vNjB7d:YTxL4;wR5FRb:siKnQd;wc73nd:kqeOEd;yxTchf:KUM7Z/dti=1/m=p3hmRc,LvGhrf,RqjULd 17ms
+2026/03/19 03:21:55 61.244.170.194:60131 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/add_circle/v6/24px.svg 10ms
+2026/03/19 03:21:55 61.244.170.194:64113 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/alert_bubble/v2/24px.svg 10ms
+2026/03/19 03:21:56 61.244.170.194:56516 POST /api/proxy/https/jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT 14ms
+2026/03/19 03:21:56 61.244.170.194:54335 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/audio/v14/24px.svg 10ms
+2026/03/19 03:21:56 61.244.170.194:60131 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/audio/v14/24px.svg 12ms
+2026/03/19 03:21:56 61.244.170.194:64113 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/bag/v7/24px.svg 11ms
+2026/03/19 03:21:56 61.244.170.194:63252 POST /api/proxy/https/accounts.google.com/v3/signin/_/AccountsSignInUi/jserror?script=http%3A%2F%2F172.236.229.37%3A3000%2Fapi%2Fproxy%2Fhttps%2Faccounts.google.com%2Fv3%2Fsignin%2Fidentifier%3Fcontinue%3Dhttps%253A%252F%252Fwww.youtube.com%252Fsignin%253Faction_handle_signin%253Dtrue%2526app%253Ddesktop%2526hl%253Den%2526next%253D%25252Fsignin_passive%2526feature%253Dpassive%26dsh%3DS-1020421303%253A1773890513678983%26hl%3Den%26ifkv%3DASfE1-rzUWcW-NCLfazQe5_82GqEQ5Mvbhd0q9gFeVND624A8cFWhzWjq1wBG0NzvkbJvGJtVcrrOQ%26passive%3Dtrue%26service%3Dyoutube%26uilel%3D3%26flowName%3DGlifWebSignIn%26flowEntry%3DServiceLogin&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AqmdT9%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ACMcBD%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AlkFgGf%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AxBaz7b%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AxBaz7b%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AAvtSve%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AY9BZsb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AhLUv9c%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AA2sInc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AAXIbBf%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ANLiXbe%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aluili%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AGwYlN%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AMY7mZe%24%24%3A%20Cannot%20read%20properties%20of%20null%20(reading%20%27replace%27)&line=Not%20available 177ms
+2026/03/19 03:21:56 61.244.170.194:56516 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/bag/v7/24px.svg 11ms
+2026/03/19 03:21:56 61.244.170.194:61530 POST /api/proxy/https/accounts.google.com/v3/signin/_/AccountsSignInUi/jserror?script=http%3A%2F%2F172.236.229.37%3A3000%2Fapi%2Fproxy%2Fhttps%2Faccounts.google.com%2Fv3%2Fsignin%2Fidentifier%3Fcontinue%3Dhttps%253A%252F%252Fwww.youtube.com%252Fsignin%253Faction_handle_signin%253Dtrue%2526app%253Ddesktop%2526hl%253Den%2526next%253D%25252Fsignin_passive%2526feature%253Dpassive%26dsh%3DS-1020421303%253A1773890513678983%26hl%3Den%26ifkv%3DASfE1-rzUWcW-NCLfazQe5_82GqEQ5Mvbhd0q9gFeVND624A8cFWhzWjq1wBG0NzvkbJvGJtVcrrOQ%26passive%3Dtrue%26service%3Dyoutube%26uilel%3D3%26flowName%3DGlifWebSignIn%26flowEntry%3DServiceLogin&error=Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AqmdT9%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ACMcBD%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AlkFgGf%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AxBaz7b%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AxBaz7b%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AAvtSve%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AY9BZsb%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AhLUv9c%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AA2sInc%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AAXIbBf%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3ANLiXbe%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3Aluili%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AGwYlN%24%24%3A%20Failed%20to%20retrieve%20dependencies%20of%20service%20%24%24XID%3AMY7mZe%24%24%3A%20Cannot%20read%20properties%20of%20null%20(reading%20%27replace%27)&line=Not%20available 251ms
+2026/03/19 03:21:56 61.244.170.194:54335 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/bell/v11/24px.svg 9ms
+2026/03/19 03:21:56 61.244.170.194:60131 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/bell/v11/24px.svg 13ms
+2026/03/19 03:21:56 61.244.170.194:64113 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/clapperboard/v3/24px.svg 13ms
+2026/03/19 03:21:56 61.244.170.194:63252 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/clapperboard/v3/24px.svg 10ms
+2026/03/19 03:21:56 61.244.170.194:56516 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/clock/v10/24px.svg 9ms
+2026/03/19 03:21:56 61.244.170.194:61530 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/clock/v10/24px.svg 10ms
+2026/03/19 03:21:56 61.244.170.194:54335 GET /api/proxy/https/www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.AccountsSignInUi.en.14Rkgw_A9nc.es5.O/ck=boq-identity.AccountsSignInUi.2eyZ8W2ICiY.L.B1.O/am=Kf4GAADoFIFkAIz7_wYAEiCIBtczAWgCkQEAAAAAAAAAQAsAAKQR/d=1/exm=CMcBD,DiaQ5,DqMihc,E87wgc,EFQ78c,EN3i8d,Fndnac,GwYlN,IZT63,K0PMbc,K1ZKnb,KUM7Z,L9OGUe,LDQI,LEikZe,LvGhrf,MY7mZe,MpJwZc,NLiXbe,PHUIyb,PrPYRd,RqjULd,SCuOPb,SD8Jgb,SpsfSb,Tbb4sb,UUJqVe,Uas9Hd,WpP9Yc,YHI3We,YTxL4,YgOFye,_b,_tp,bTi8wc,byfTOb,cYShmd,cciGGe,f8Gu1e,gJzDyc,hc6Ubd,inNHtf,lkFgGf,lsjVmc,ltDFwf,lwddkf,m9oV,mvkUhe,mzzZzc,n73qwf,oLggrd,oqkvIf,p3hmRc,pxq3x,qPYxq,qmdT9,rCcCxc,rmumx,siKnQd,soHxf,t2srLd,tUnxGc,vHEMJe,vfuNJf,vjKJJ,ws9Tlc,xQtZb,xiZRqc,y5vRwf,yGfSdd,yRXbo,ywOR5c,z0u0L,zbML3c,zr1jrb,zy0vNb/excm=_b,_tp,identifierview/ed=1/wt=2/ujg=1/rs=AOaEmlG01aUlFWblMcjXjO9xrYz69skIEw/ee=ASJRFf:DAnQ7e;Al0B8:kibjWe;DaIJ8c:iAskyc;EVNhjf:pw70Gc;EkYFhd:GwYlN;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:XVMNvd;Me32dd:MEeYgc;NJ1rfe:yGfSdd;NPKaK:PVlQOd;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SMDL4c:K0PMbc;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;UpnZUd:nnwwYc;Uvc8o:VDovNc;VlRiDf:j7ZRif;XdiAjb:NLiXbe;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:vfuNJf;lOO0Vd:OTA3Ae;nTuGK:JKNPM;oGtAuc:sOXFj;oSUNyd:K0PMbc;oXZmbc:tUnxGc;pXdRYb:L9OGUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;sHdTOe:nSePib;vNjB7d:YTxL4;wR5FRb:siKnQd;wc73nd:kqeOEd;yxTchf:KUM7Z/dti=1/m=ZwDk9d,RMhBfe 10ms
+2026/03/19 03:21:56 61.244.170.194:60131 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/copy/v3/24px.svg 10ms
+2026/03/19 03:21:56 61.244.170.194:64113 GET /api/proxy/https/www.gstatic.com/youtube/img/icons/web/youtube_fill/creator_studio_red_logo/v2/24px.svg 10ms
+2026/03/19 03:21:56 61.244.170.194:63252 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/download/v11/24px.svg 11ms
+2026/03/19 03:21:56 61.244.170.194:56516 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/fashion/v4/24px.svg 14ms
+2026/03/19 03:21:56 61.244.170.194:61530 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/fashion/v4/24px.svg 9ms
+2026/03/19 03:21:56 61.244.170.194:54335 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/flag/v10/24px.svg 10ms
+2026/03/19 03:21:56 61.244.170.194:60131 GET /api/proxy/https/www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.AccountsSignInUi.en.14Rkgw_A9nc.es5.O/ck=boq-identity.AccountsSignInUi.2eyZ8W2ICiY.L.B1.O/am=Kf4GAADoFIFkAIz7_wYAEiCIBtczAWgCkQEAAAAAAAAAQAsAAKQR/d=1/exm=CMcBD,DiaQ5,DqMihc,E87wgc,EFQ78c,EN3i8d,Fndnac,GwYlN,IZT63,K0PMbc,K1ZKnb,KUM7Z,L9OGUe,LDQI,LEikZe,LvGhrf,MY7mZe,MpJwZc,NLiXbe,PHUIyb,PrPYRd,RMhBfe,RqjULd,SCuOPb,SD8Jgb,SpsfSb,Tbb4sb,UUJqVe,Uas9Hd,WpP9Yc,YHI3We,YTxL4,YgOFye,ZwDk9d,_b,_tp,bTi8wc,byfTOb,cYShmd,cciGGe,f8Gu1e,gJzDyc,hc6Ubd,inNHtf,lkFgGf,lsjVmc,ltDFwf,lwddkf,m9oV,mvkUhe,mzzZzc,n73qwf,oLggrd,oqkvIf,p3hmRc,pxq3x,qPYxq,qmdT9,rCcCxc,rmumx,siKnQd,soHxf,t2srLd,tUnxGc,vHEMJe,vfuNJf,vjKJJ,ws9Tlc,xQtZb,xiZRqc,y5vRwf,yGfSdd,yRXbo,ywOR5c,z0u0L,zbML3c,zr1jrb,zy0vNb/excm=_b,_tp,identifierview/ed=1/wt=2/ujg=1/rs=AOaEmlG01aUlFWblMcjXjO9xrYz69skIEw/ee=ASJRFf:DAnQ7e;Al0B8:kibjWe;DaIJ8c:iAskyc;EVNhjf:pw70Gc;EkYFhd:GwYlN;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:XVMNvd;Me32dd:MEeYgc;NJ1rfe:yGfSdd;NPKaK:PVlQOd;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SMDL4c:K0PMbc;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;UpnZUd:nnwwYc;Uvc8o:VDovNc;VlRiDf:j7ZRif;XdiAjb:NLiXbe;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:vfuNJf;lOO0Vd:OTA3Ae;nTuGK:JKNPM;oGtAuc:sOXFj;oSUNyd:K0PMbc;oXZmbc:tUnxGc;pXdRYb:L9OGUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;sHdTOe:nSePib;vNjB7d:YTxL4;wR5FRb:siKnQd;wc73nd:kqeOEd;yxTchf:KUM7Z/dti=1/m=ZDZcre,w9hDv,A7fCU 10ms
+2026/03/19 03:21:56 61.244.170.194:63252 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/flag/v10/24px.svg 12ms
+2026/03/19 03:21:56 61.244.170.194:64113 GET /api/proxy/https/accounts.youtube.com/accounts/CheckConnection?pmpo=https%3A%2F%2Faccounts.google.com&v=743553794&timestamp=1773890516169 82ms
+2026/03/19 03:21:56 61.244.170.194:56516 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/gaming/v3/24px.svg 12ms
+2026/03/19 03:21:56 61.244.170.194:61530 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/gaming/v3/24px.svg 12ms
+2026/03/19 03:21:56 61.244.170.194:54335 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/gear/v10/24px.svg 8ms
+2026/03/19 03:21:56 61.244.170.194:60131 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/gear/v10/24px.svg 13ms
+2026/03/19 03:21:56 61.244.170.194:63252 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/help_circle/v2/24px.svg 12ms
+2026/03/19 03:21:56 61.244.170.194:64113 GET /api/proxy/https/www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.AccountsSignInUi.en.14Rkgw_A9nc.es5.O/ck=boq-identity.AccountsSignInUi.2eyZ8W2ICiY.L.B1.O/am=Kf4GAADoFIFkAIz7_wYAEiCIBtczAWgCkQEAAAAAAAAAQAsAAKQR/d=1/exm=A7fCU,CMcBD,DiaQ5,DqMihc,E87wgc,EFQ78c,EN3i8d,Fndnac,GwYlN,IZT63,K0PMbc,K1ZKnb,KUM7Z,L9OGUe,LDQI,LEikZe,LvGhrf,MY7mZe,MpJwZc,NLiXbe,PHUIyb,PrPYRd,RMhBfe,RqjULd,SCuOPb,SD8Jgb,SpsfSb,Tbb4sb,UUJqVe,Uas9Hd,WpP9Yc,YHI3We,YTxL4,YgOFye,ZDZcre,ZwDk9d,_b,_tp,bTi8wc,byfTOb,cYShmd,cciGGe,f8Gu1e,gJzDyc,hc6Ubd,inNHtf,lkFgGf,lsjVmc,ltDFwf,lwddkf,m9oV,mvkUhe,mzzZzc,n73qwf,oLggrd,oqkvIf,p3hmRc,pxq3x,qPYxq,qmdT9,rCcCxc,rmumx,siKnQd,soHxf,t2srLd,tUnxGc,vHEMJe,vfuNJf,vjKJJ,w9hDv,ws9Tlc,xQtZb,xiZRqc,y5vRwf,yGfSdd,yRXbo,ywOR5c,z0u0L,zbML3c,zr1jrb,zy0vNb/excm=_b,_tp,identifierview/ed=1/wt=2/ujg=1/rs=AOaEmlG01aUlFWblMcjXjO9xrYz69skIEw/ee=ASJRFf:DAnQ7e;Al0B8:kibjWe;DaIJ8c:iAskyc;EVNhjf:pw70Gc;EkYFhd:GwYlN;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:XVMNvd;Me32dd:MEeYgc;NJ1rfe:yGfSdd;NPKaK:PVlQOd;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SMDL4c:K0PMbc;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;UpnZUd:nnwwYc;Uvc8o:VDovNc;VlRiDf:j7ZRif;XdiAjb:NLiXbe;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:vfuNJf;lOO0Vd:OTA3Ae;nTuGK:JKNPM;oGtAuc:sOXFj;oSUNyd:K0PMbc;oXZmbc:tUnxGc;pXdRYb:L9OGUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;sHdTOe:nSePib;vNjB7d:YTxL4;wR5FRb:siKnQd;wc73nd:kqeOEd;yxTchf:KUM7Z/dti=1/m=P6sQOc 11ms
+2026/03/19 03:21:56 61.244.170.194:56516 POST /v3/signin/_/AccountsSignInUi/cspreport/fine-allowlist 0s
+2026/03/19 03:21:56 61.244.170.194:61530 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/history/v1/24px.svg 12ms
+2026/03/19 03:21:56 61.244.170.194:54335 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/home/v10/24px.svg 11ms
+2026/03/19 03:21:56 61.244.170.194:60131 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/home/v10/24px.svg 11ms
+2026/03/19 03:21:56 61.244.170.194:63252 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/lightbulb/v4/24px.svg 9ms
+2026/03/19 03:21:56 61.244.170.194:64113 POST /api/proxy/https/jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT 14ms
+2026/03/19 03:21:57 61.244.170.194:56516 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/lightbulb/v4/24px.svg 9ms
+2026/03/19 03:21:57 61.244.170.194:61530 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/live/v1/24px.svg 11ms
+2026/03/19 03:21:57 61.244.170.194:54335 GET /api/proxy/https/www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.AccountsSignInUi.en.14Rkgw_A9nc.es5.O/ck=boq-identity.AccountsSignInUi.2eyZ8W2ICiY.L.B1.O/am=Kf4GAADoFIFkAIz7_wYAEiCIBtczAWgCkQEAAAAAAAAAQAsAAKQR/d=1/exm=A7fCU,CMcBD,DiaQ5,DqMihc,E87wgc,EFQ78c,EN3i8d,Fndnac,GwYlN,IZT63,K0PMbc,K1ZKnb,KUM7Z,L9OGUe,LDQI,LEikZe,LvGhrf,MY7mZe,MpJwZc,NLiXbe,P6sQOc,PHUIyb,PrPYRd,RMhBfe,RqjULd,SCuOPb,SD8Jgb,SpsfSb,Tbb4sb,UUJqVe,Uas9Hd,WpP9Yc,YHI3We,YTxL4,YgOFye,ZDZcre,ZwDk9d,_b,_tp,bTi8wc,byfTOb,cYShmd,cciGGe,f8Gu1e,gJzDyc,hc6Ubd,inNHtf,lkFgGf,lsjVmc,ltDFwf,lwddkf,m9oV,mvkUhe,mzzZzc,n73qwf,oLggrd,oqkvIf,p3hmRc,pxq3x,qPYxq,qmdT9,rCcCxc,rmumx,siKnQd,soHxf,t2srLd,tUnxGc,vHEMJe,vfuNJf,vjKJJ,w9hDv,ws9Tlc,xQtZb,xiZRqc,y5vRwf,yGfSdd,yRXbo,ywOR5c,z0u0L,zbML3c,zr1jrb,zy0vNb/excm=_b,_tp,identifierview/ed=1/wt=2/ujg=1/rs=AOaEmlG01aUlFWblMcjXjO9xrYz69skIEw/ee=ASJRFf:DAnQ7e;Al0B8:kibjWe;DaIJ8c:iAskyc;EVNhjf:pw70Gc;EkYFhd:GwYlN;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:XVMNvd;Me32dd:MEeYgc;NJ1rfe:yGfSdd;NPKaK:PVlQOd;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SMDL4c:K0PMbc;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;UpnZUd:nnwwYc;Uvc8o:VDovNc;VlRiDf:j7ZRif;XdiAjb:NLiXbe;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:vfuNJf;lOO0Vd:OTA3Ae;nTuGK:JKNPM;oGtAuc:sOXFj;oSUNyd:K0PMbc;oXZmbc:tUnxGc;pXdRYb:L9OGUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;sHdTOe:nSePib;vNjB7d:YTxL4;wR5FRb:siKnQd;wc73nd:kqeOEd;yxTchf:KUM7Z/dti=1/m=Wt6vjf,hhhU8,FCpbqb,WhJNk 11ms
+2026/03/19 03:21:57 61.244.170.194:60131 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/mic/v14/24px.svg 9ms
+2026/03/19 03:21:57 61.244.170.194:63252 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/news/v3/24px.svg 10ms
+2026/03/19 03:21:57 61.244.170.194:64113 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/news/v3/24px.svg 10ms
+2026/03/19 03:21:57 61.244.170.194:56516 GET /api/proxy/https/www.gstatic.com/youtube/img/icons/web/youtube_fill/offline_no_content/v1/192px.svg 12ms
+2026/03/19 03:21:57 61.244.170.194:61530 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/overflow_horizontal/v6/24px.svg 9ms
+2026/03/19 03:21:57 61.244.170.194:60131 POST /v3/signin/_/AccountsSignInUi/cspreport/fine-allowlist 0s
+2026/03/19 03:21:57 61.244.170.194:54335 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/play_square_stack/v1/24px.svg 11ms
+2026/03/19 03:21:57 61.244.170.194:63252 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/play_square_stack/v1/24px.svg 11ms
+2026/03/19 03:21:57 61.244.170.194:64113 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/playlist/v5/24px.svg 8ms
+2026/03/19 03:21:57 61.244.170.194:56516 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/podcast/v6/24px.svg 9ms
+2026/03/19 03:21:57 61.244.170.194:60131 POST /v3/signin/_/AccountsSignInUi/cspreport/fine-allowlist 0s
+2026/03/19 03:21:57 61.244.170.194:61530 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/podcast/v6/24px.svg 16ms
+2026/03/19 03:21:57 61.244.170.194:54335 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/search/v15/24px.svg 11ms
+2026/03/19 03:21:57 61.244.170.194:63252 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/subscriptions/v12/24px.svg 9ms
+2026/03/19 03:21:57 61.244.170.194:64113 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/subscriptions/v12/24px.svg 10ms
+2026/03/19 03:21:57 61.244.170.194:56516 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/thumb_up/v23/24px.svg 11ms
+2026/03/19 03:21:57 61.244.170.194:60131 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/trash_can/v10/24px.svg 8ms
+2026/03/19 03:21:57 61.244.170.194:61530 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/thumb_up/v23/24px.svg 11ms
+2026/03/19 03:21:57 61.244.170.194:54335 POST /v3/signin/_/AccountsSignInUi/cspreport/fine-allowlist 0s
+2026/03/19 03:21:57 61.244.170.194:63252 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/trash_can/v10/24px.svg 9ms
+2026/03/19 03:21:57 61.244.170.194:64113 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/trending/v2/24px.svg 14ms
+2026/03/19 03:21:57 61.244.170.194:56516 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/trending/v2/24px.svg 10ms
+2026/03/19 03:21:57 61.244.170.194:60131 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/trophy/v3/24px.svg 9ms
+2026/03/19 03:21:57 61.244.170.194:61530 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/trophy/v3/24px.svg 10ms
+2026/03/19 03:21:57 61.244.170.194:54335 GET /api/proxy/https/www.gstatic.com/youtube/img/icons/web/youtube_fill/unplugged_logo/v2/24px.svg 9ms
+2026/03/19 03:21:57 61.244.170.194:63252 POST /v3/signin/_/AccountsSignInUi/cspreport/fine-allowlist 0s
+2026/03/19 03:21:57 61.244.170.194:64113 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/video/v3/24px.svg 10ms
+2026/03/19 03:21:57 61.244.170.194:56516 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/video/v3/24px.svg 11ms
+2026/03/19 03:21:57 61.244.170.194:54335 POST /v3/signin/_/AccountsSignInUi/cspreport/fine-allowlist 0s
+2026/03/19 03:21:57 61.244.170.194:60131 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/video_camera_add/v2/24px.svg 9ms
+2026/03/19 03:21:57 61.244.170.194:61530 GET /api/proxy/https/www.gstatic.com/youtube/img/icons/web/youtube_fill/youtube_kids_round/v2/24px.svg 10ms
+2026/03/19 03:21:57 61.244.170.194:63252 GET /api/proxy/https/www.gstatic.com/youtube/img/icons/web/youtube_fill/youtube_music/v2/24px.svg 16ms
+2026/03/19 03:21:57 61.244.170.194:64113 GET /api/proxy/https/www.gstatic.com/youtube/img/icons/web/youtube_fill/youtube_round/v2/24px.svg 10ms
+2026/03/19 03:21:58 61.244.170.194:56516 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/youtube_shorts/v11/24px.svg 9ms
+2026/03/19 03:21:58 61.244.170.194:60131 POST /v3/signin/_/AccountsSignInUi/cspreport/fine-allowlist 0s
+2026/03/19 03:21:58 61.244.170.194:54335 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/youtube_shorts/v11/24px.svg 9ms
+2026/03/19 03:21:58 61.244.170.194:61530 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/arrow_down/v3/24px.svg 14ms
+2026/03/19 03:21:58 61.244.170.194:63252 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/arrow_up/v3/24px.svg 18ms
+2026/03/19 03:21:58 61.244.170.194:64113 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/pause/v9/24px.svg 12ms
+2026/03/19 03:21:58 61.244.170.194:54335 POST /v3/signin/_/AccountsSignInUi/cspreport/fine-allowlist 0s
+2026/03/19 03:21:58 61.244.170.194:60131 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/play/v4/24px.svg 9ms
+2026/03/19 03:21:58 61.244.170.194:56516 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/play/v4/24px.svg 15ms
+2026/03/19 03:21:58 61.244.170.194:61530 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/share/v12/24px.svg 10ms
+2026/03/19 03:21:58 61.244.170.194:63252 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/share/v12/24px.svg 10ms
+2026/03/19 03:21:58 61.244.170.194:54335 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/text_bubble/v3/24px.svg 10ms
+2026/03/19 03:21:58 61.244.170.194:60131 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/text_bubble/v3/24px.svg 11ms
+2026/03/19 03:21:58 61.244.170.194:64113 GET /api/proxy/https/suggestqueries-clients6.youtube.com/complete/search?ds=yt&hl=en&gl=us&client=youtube&gs_ri=youtube&sugexp=fpt_dummy%2Cymo.ei%3D51817713&h=180&w=320&ytvs=1&gs_id=0&q=&cp=0 40ms
+2026/03/19 03:21:58 61.244.170.194:56516 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/thumb_down/v25/24px.svg 9ms
+2026/03/19 03:21:58 61.244.170.194:61530 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/thumb_down/v25/24px.svg 9ms
+2026/03/19 03:21:58 61.244.170.194:63252 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/volume_max/v2/24px.svg 10ms
+2026/03/19 03:21:58 61.244.170.194:54335 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/volume_max/v2/24px.svg 11ms
+2026/03/19 03:21:58 61.244.170.194:64113 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_fill_experimental/volume_mute/v2/24px.svg 9ms
+2026/03/19 03:21:58 61.244.170.194:60131 GET /api/proxy/https/www.gstatic.com/youtube/img/icons/web/youtube_outline/waveform/v1/24px.svg 10ms
+2026/03/19 03:21:58 61.244.170.194:56516 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/volume_mute/v2/24px.svg 14ms
+2026/03/19 03:21:58 61.244.170.194:61530 GET /api/proxy/https/www.youtube.com/s/_/ytmainappweb/_/js/k=ytmainappweb.kevlar_base.en_US.WCzKWUsvIE0.es5.O/am=AAAAgAAAQAI/d=1/exm=QlbBce,kevlar_base_module,kevlar_main_module/ed=1/br=1/rs=AGKMywE6cjn4-LE6Adbl504T1xWI7LWCuQ/m=yTIahe 12ms
+2026/03/19 03:21:58 61.244.170.194:61530 POST /api/proxy/https/jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT 13ms
+2026/03/19 03:22:00 61.244.170.194:61530 GET /api/proxy/https/suggestqueries-clients6.youtube.com/complete/search?ds=yt&hl=en&gl=us&client=youtube&gs_ri=youtube&sugexp=fpt_dummy%2Cymo.ei%3D51817713&h=180&w=320&ytvs=1&gs_id=1&q=a&cp=1 28ms
+2026/03/19 03:22:00 61.244.170.194:56516 GET /api/proxy/https/suggestqueries-clients6.youtube.com/complete/search?ds=yt&hl=en&gl=us&client=youtube&gs_ri=youtube&sugexp=fpt_dummy%2Cymo.ei%3D51817713&h=180&w=320&ytvs=1&gs_id=2&q=ak&cp=2 35ms
+2026/03/19 03:22:01 61.244.170.194:61530 GET /api/proxy/https/encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSn4D0z2OZl29XfHJaBXRGN0dJBhXvTv0iEi2Rsj5s5K2yNopEL 14ms
+2026/03/19 03:22:01 61.244.170.194:54335 GET /api/proxy/https/encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLaxajDE8iX6GAtH2xyx0Z_pORachyOi5K5pdZfTNjhumF604B 12ms
+2026/03/19 03:22:01 61.244.170.194:64113 GET /api/proxy/https/encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS05Vy4L2oyrtYhI3VsKmvEnjVd8Gu7EGEmyXnYHwTMViC5sXRx 13ms
+2026/03/19 03:22:01 61.244.170.194:60131 GET /api/proxy/https/suggestqueries-clients6.youtube.com/complete/search?ds=yt&hl=en&gl=us&client=youtube&gs_ri=youtube&sugexp=fpt_dummy%2Cymo.ei%3D51817713&h=180&w=320&ytvs=1&gs_id=3&q=aka&cp=3 31ms
+2026/03/19 03:22:01 61.244.170.194:63252 GET /api/proxy/https/fonts.gstatic.com/s/i/youtube_outline_experimental/info_circle/v10/24px.svg 10ms
+2026/03/19 03:22:01 61.244.170.194:56516 GET /api/proxy/https/encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRE_PmnzJOrNd8x7UfunZS2lA3KSVTJ4NwgzJ9dhx8sruM_5qL4 24ms
+2026/03/19 03:22:01 61.244.170.194:61530 GET /api/proxy/https/encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQCac6Twi2QHrYGrw5TjoaErdvUxlIde2J_7_qgC5HGLbbTUTlU 2ms
+2026/03/19 03:22:01 61.244.170.194:54335 GET /api/proxy/https/encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3ANMz4P6NO4hf3KBd2tocLwUFwv2uRgf6ozIhkutzWJCoEHzn 4ms
+2026/03/19 03:22:01 61.244.170.194:64113 GET /api/proxy/https/encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRP7MZqnjb5hUDFiIHiA_ABV1yrpUXcjNBrTX7-ef4jAL_8XfiH 13ms
+2026/03/19 03:22:01 61.244.170.194:60131 GET /api/proxy/https/yt3.googleusercontent.com/iM4mqZuv9vXGGtWC_P-XAWeo6ehxBPWTqq9mviIx24DRk3qiL2bA5YAQ5RfWAnDpc-PBd6Zb=s88-c-k-c0x00ffffff-no-rj 20ms
+2026/03/19 03:22:02 61.244.170.194:60131 POST /api/proxy/https/jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT 11ms
+2026/03/19 03:22:07 61.244.170.194:60131 POST /api/proxy/https/jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT 13ms
+2026/03/19 03:22:09 61.244.170.194:64113 POST /api/proxy/https/www.youtube.com/youtubei/v1/log_event?alt=json 32ms
+2026/03/19 03:22:09 61.244.170.194:60131 GET /api/proxy/https/www.github.com 88ms
+2026/03/19 03:22:09 61.244.170.194:60131 GET /api/proxy/https/github.com/ 301ms
+2026/03/19 03:22:09 61.244.170.194:64113 POST /api/proxy/https/www.youtube.com/youtubei/v1/log_event?alt=json 29ms
+2026/03/19 03:22:09 61.244.170.194:54335 GET /api/proxy/https/github.githubassets.com/assets/global-banner-disable-758f0cae02744f7a.js 73ms
+2026/03/19 03:22:09 61.244.170.194:63252 GET /api/proxy/https/github.githubassets.com/assets/light_high_contrast-51c0c6e0c085cc0f.css 74ms
+2026/03/19 03:22:09 61.244.170.194:61530 GET /api/proxy/https/github.githubassets.com/assets/MonaSansVF-wdth-wght-opsz-902d64c7ad02.woff2 76ms
+2026/03/19 03:22:09 61.244.170.194:56516 GET /api/proxy/https/github.githubassets.com/assets/light-0c8222dcd7a4f9b7.css 77ms
+2026/03/19 03:22:10 61.244.170.194:54317 GET /api/proxy/https/github.githubassets.com/assets/dark-fc6eec18532c3ae0.css 3ms
+2026/03/19 03:22:10 61.244.170.194:54335 GET /api/proxy/https/github.githubassets.com/assets/dark_high_contrast-96d7b2bab5a6ae4e.css 3ms
+2026/03/19 03:22:10 61.244.170.194:63252 GET /api/proxy/https/github.githubassets.com/assets/primer-primitives-6da842159062d25e.css 2ms
+2026/03/19 03:22:10 61.244.170.194:56516 GET /api/proxy/https/github.githubassets.com/assets/primer-b55097560d244c08.css 7ms
+2026/03/19 03:22:10 61.244.170.194:63252 GET /api/proxy/https/github.githubassets.com/assets/site-984d942ec490ca43.css 5ms
+2026/03/19 03:22:10 61.244.170.194:54335 GET /api/proxy/https/github.githubassets.com/assets/github-6e7c458caf1e80bb.css 7ms
+2026/03/19 03:22:10 61.244.170.194:54317 GET /api/proxy/https/github.githubassets.com/assets/global-68dd150ce6c8e711.css 160ms
+2026/03/19 03:22:10 61.244.170.194:61530 GET /api/proxy/https/github.githubassets.com/assets/home-1aab590db4b38e90.css 3ms
+2026/03/19 03:22:10 61.244.170.194:63252 GET /api/proxy/https/github.githubassets.com/assets/react-core.014e3a1ebc051a2d.module.css 3ms
+2026/03/19 03:22:10 61.244.170.194:60131 GET /api/proxy/https/github.githubassets.com/assets/landing-pages-8a6ddfb3febb09cd.css 163ms
+2026/03/19 03:22:10 61.244.170.194:61530 GET /api/proxy/https/github.githubassets.com/assets/primer-react-css.4dcb3969e4eef817.module.css 6ms
+2026/03/19 03:22:10 61.244.170.194:54335 GET /api/proxy/https/github.githubassets.com/assets/landing-pages.cdae2eb99c5a3a0c.module.css 4ms
+2026/03/19 03:22:10 61.244.170.194:56516 GET /api/proxy/https/github.githubassets.com/assets/keyboard-shortcuts-dialog.c5ace5ffcc3a46ba.module.css 1ms
+2026/03/19 03:22:10 61.244.170.194:63252 GET /api/proxy/https/github.githubassets.com/assets/marketing-navigation.d11e438e7c4246d8.module.css 2ms
+2026/03/19 03:22:10 61.244.170.194:60131 GET /api/proxy/https/github.githubassets.com/assets/high-contrast-cookie-6d9b25bb81324e28.js 1ms
+2026/03/19 03:22:11 61.244.170.194:60131 GET /api/proxy/https/github.githubassets.com/assets/wp-runtime-71e545785afdc8f7.js 2ms
+2026/03/19 03:22:11 61.244.170.194:63252 GET /api/proxy/https/github.githubassets.com/assets/28839-c0b8ec9e4855e70d.js 2ms
+2026/03/19 03:22:11 61.244.170.194:54317 GET /api/proxy/https/github.githubassets.com/assets/environment-d875a2db42d84bc1.js 3ms
+2026/03/19 03:22:11 61.244.170.194:56516 GET /api/proxy/https/github.githubassets.com/assets/85924-d72bd3bf2ebf2b33.js 4ms
+2026/03/19 03:22:11 61.244.170.194:54335 GET /api/proxy/https/github.githubassets.com/assets/34646-b8591bde7c6dfc95.js 4ms
+2026/03/19 03:22:11 61.244.170.194:61530 GET /api/proxy/https/github.githubassets.com/assets/runtime-helpers-9ca289a20b4287f3.js 3ms
+2026/03/19 03:22:11 61.244.170.194:60131 GET /api/proxy/https/github.githubassets.com/assets/2966-7fae197fcc122033.js 2ms
+2026/03/19 03:22:11 61.244.170.194:63252 GET /api/proxy/https/github.githubassets.com/assets/41013-98ec62b138074b3c.js 2ms
+2026/03/19 03:22:11 61.244.170.194:54335 GET /api/proxy/https/github.githubassets.com/assets/96232-9ad451468017b312.js 1ms
+2026/03/19 03:22:11 61.244.170.194:54317 GET /api/proxy/https/github.githubassets.com/assets/77313-833d857459e22419.js 2ms
+2026/03/19 03:22:11 61.244.170.194:56516 GET /api/proxy/https/github.githubassets.com/assets/51210-4f6b60f1e56caf0b.js 1ms
+2026/03/19 03:22:11 61.244.170.194:61530 GET /api/proxy/https/github.githubassets.com/assets/MonaSansMonoVF-wght-04a1e3036ddf.woff2 2ms
+2026/03/19 03:22:11 61.244.170.194:60131 GET /api/proxy/https/github.githubassets.com/assets/95150-62e60f2748c6241e.js 2ms
+2026/03/19 03:22:11 61.244.170.194:63252 GET /api/proxy/https/github.githubassets.com/assets/46740-6ff37d25440dfd5f.js 1ms
+2026/03/19 03:22:11 61.244.170.194:54317 GET /api/proxy/https/github.githubassets.com/assets/github-elements-6d9afb9c6f3d58d9.js 2ms
+2026/03/19 03:22:11 61.244.170.194:54335 GET /api/proxy/https/github.githubassets.com/assets/74071-fa61cd1f62507633.js 4ms
+2026/03/19 03:22:11 61.244.170.194:56516 GET /api/proxy/https/github.githubassets.com/assets/element-registry-9d373e261315752e.js 2ms
+2026/03/19 03:22:11 61.244.170.194:61530 GET /api/proxy/https/github.githubassets.com/assets/react-core-1b7e0e8bea30ae82.js 14ms
+2026/03/19 03:22:11 61.244.170.194:60131 GET /api/proxy/https/github.githubassets.com/assets/react-lib-3f8a185bb97e4f4c.js 7ms
+2026/03/19 03:22:11 61.244.170.194:63252 GET /api/proxy/https/github.githubassets.com/assets/7053-059cc82f993d345a.js 3ms
+2026/03/19 03:22:11 61.244.170.194:54317 GET /api/proxy/https/github.githubassets.com/assets/79039-13dc534ba9c6a63e.js 3ms
+2026/03/19 03:22:11 61.244.170.194:54335 GET /api/proxy/https/github.githubassets.com/assets/61110-91a6e672e6c52371.js 2ms
+2026/03/19 03:22:11 61.244.170.194:56516 GET /api/proxy/https/github.githubassets.com/assets/2887-7374f895742e2de6.js 2ms
+2026/03/19 03:22:11 172.236.229.37:44734 GET /api/proxy/https/github.githubassets.com/assets/primer-react-css.4dcb3969e4eef817.module.css 0s
+2026/03/19 03:22:11 61.244.170.194:61530 GET /api/proxy/http/172.236.229.37:3000/api/proxy/https/github.githubassets.com/assets/primer-react-css.4dcb3969e4eef817.module.css 0s
+2026/03/19 03:22:11 172.236.229.37:44734 GET /api/proxy/https/github.githubassets.com/assets/react-core.014e3a1ebc051a2d.module.css 0s
+2026/03/19 03:22:11 61.244.170.194:60131 GET /api/proxy/http/172.236.229.37:3000/api/proxy/https/github.githubassets.com/assets/react-core.014e3a1ebc051a2d.module.css 0s
+2026/03/19 03:22:11 172.236.229.37:44734 GET /api/proxy/https/github.githubassets.com/assets/38963.f70dfea92b138b01.module.css 0s
+2026/03/19 03:22:11 61.244.170.194:63252 GET /api/proxy/http/172.236.229.37:3000/api/proxy/https/github.githubassets.com/assets/38963.f70dfea92b138b01.module.css 0s
+2026/03/19 03:22:11 172.236.229.37:44734 GET /api/proxy/https/github.githubassets.com/assets/70168.374ce4e648336309.module.css 0s
+2026/03/19 03:22:11 61.244.170.194:54317 GET /api/proxy/http/172.236.229.37:3000/api/proxy/https/github.githubassets.com/assets/70168.374ce4e648336309.module.css 0s
+2026/03/19 03:22:11 61.244.170.194:56516 GET /api/proxy/https/github.githubassets.com/assets/26533-3b7304f75d999c48.js 4ms
+2026/03/19 03:22:11 61.244.170.194:54335 GET /api/proxy/https/github.githubassets.com/assets/18728-82d661dfa4f3f257.js 4ms
+2026/03/19 03:22:11 61.244.170.194:61530 GET /api/proxy/https/github.githubassets.com/assets/12734-bef5da8f594c610e.js 2ms
+2026/03/19 03:22:11 172.236.229.37:44734 GET /api/proxy/https/github.githubassets.com/assets/primer-react-css.4dcb3969e4eef817.module.css 0s
+2026/03/19 03:22:11 61.244.170.194:60131 GET /api/proxy/http/172.236.229.37:3000/api/proxy/https/github.githubassets.com/assets/primer-react-css.4dcb3969e4eef817.module.css 0s
+2026/03/19 03:22:11 172.236.229.37:44734 GET /api/proxy/https/github.githubassets.com/assets/react-core.014e3a1ebc051a2d.module.css 0s
+2026/03/19 03:22:11 61.244.170.194:63252 GET /api/proxy/http/172.236.229.37:3000/api/proxy/https/github.githubassets.com/assets/react-core.014e3a1ebc051a2d.module.css 0s
+2026/03/19 03:22:11 61.244.170.194:54317 GET /api/proxy/https/github.githubassets.com/assets/89155-cd29998a39b55887.js 2ms
+2026/03/19 03:22:11 172.236.229.37:44734 GET /api/proxy/https/github.githubassets.com/assets/38963.f70dfea92b138b01.module.css 0s
+2026/03/19 03:22:11 61.244.170.194:56516 GET /api/proxy/http/172.236.229.37:3000/api/proxy/https/github.githubassets.com/assets/38963.f70dfea92b138b01.module.css 0s
+2026/03/19 03:22:11 172.236.229.37:44734 GET /api/proxy/https/github.githubassets.com/assets/70168.374ce4e648336309.module.css 0s
+2026/03/19 03:22:11 61.244.170.194:54335 GET /api/proxy/http/172.236.229.37:3000/api/proxy/https/github.githubassets.com/assets/70168.374ce4e648336309.module.css 0s
+2026/03/19 03:22:11 61.244.170.194:61530 GET /api/proxy/https/github.githubassets.com/assets/28305-5ae8a855edd35837.js 3ms
+2026/03/19 03:22:12 61.244.170.194:63252 GET /api/proxy/https/github.githubassets.com/assets/60481-2dd020b8c4505ee4.js 2ms
+2026/03/19 03:22:12 61.244.170.194:60131 GET /api/proxy/https/github.githubassets.com/assets/63225-709573646523acd4.js 4ms
+2026/03/19 03:22:12 61.244.170.194:54317 GET /api/proxy/https/github.githubassets.com/assets/46287-40d492abf520cfec.js 3ms
+2026/03/19 03:22:12 61.244.170.194:56516 GET /api/proxy/https/github.githubassets.com/assets/2498-97555f2269e8a9bd.js 4ms
+2026/03/19 03:22:12 61.244.170.194:54335 GET /api/proxy/https/github.githubassets.com/assets/57073-82b72117f7081d82.js 4ms
+2026/03/19 03:22:12 61.244.170.194:61530 GET /api/proxy/https/github.githubassets.com/assets/15625-1fe1313c1426464a.js 2ms
+2026/03/19 03:22:12 172.236.229.37:44734 GET /api/proxy/https/github.githubassets.com/assets/38963.f70dfea92b138b01.module.css 0s
+2026/03/19 03:22:12 61.244.170.194:63252 GET /api/proxy/http/172.236.229.37:3000/api/proxy/https/github.githubassets.com/assets/38963.f70dfea92b138b01.module.css 0s
+2026/03/19 03:22:12 172.236.229.37:44734 GET /api/proxy/https/github.githubassets.com/assets/70168.374ce4e648336309.module.css 0s
+2026/03/19 03:22:12 61.244.170.194:60131 GET /api/proxy/http/172.236.229.37:3000/api/proxy/https/github.githubassets.com/assets/70168.374ce4e648336309.module.css 0s
+2026/03/19 03:22:12 61.244.170.194:54317 GET /api/proxy/https/github.githubassets.com/assets/48527-f916f0db97fcaa0a.js 1ms
+2026/03/19 03:22:12 61.244.170.194:56516 GET /api/proxy/https/github.githubassets.com/assets/28703-b65c10948d4038cd.js 1ms
+2026/03/19 03:22:12 61.244.170.194:54335 GET /api/proxy/https/github.githubassets.com/assets/99328-91354dc331fd4cdd.js 2ms
+2026/03/19 03:22:12 61.244.170.194:61530 GET /api/proxy/https/github.githubassets.com/assets/9211-67d72f75fc5bc751.js 2ms
+2026/03/19 03:22:12 172.236.229.37:44734 GET /api/proxy/https/github.githubassets.com/assets/38963.f70dfea92b138b01.module.css 0s
+2026/03/19 03:22:12 61.244.170.194:60131 GET /api/proxy/http/172.236.229.37:3000/api/proxy/https/github.githubassets.com/assets/38963.f70dfea92b138b01.module.css 0s
+2026/03/19 03:22:12 61.244.170.194:63252 GET /api/proxy/https/github.githubassets.com/assets/91184-962677183b5639ee.js 2ms
+2026/03/19 03:22:12 172.236.229.37:44734 GET /api/proxy/https/github.githubassets.com/assets/70168.374ce4e648336309.module.css 0s
+2026/03/19 03:22:12 61.244.170.194:54317 GET /api/proxy/http/172.236.229.37:3000/api/proxy/https/github.githubassets.com/assets/70168.374ce4e648336309.module.css 0s
+2026/03/19 03:22:12 61.244.170.194:56516 GET /api/proxy/https/github.githubassets.com/assets/97232-f296cf9f18a015f8.js 2ms
+2026/03/19 03:22:12 61.244.170.194:54335 GET /api/proxy/https/github.githubassets.com/assets/87774-a49163e290691688.js 2ms
+2026/03/19 03:22:12 61.244.170.194:61530 GET /api/proxy/https/github.githubassets.com/assets/27493-4c94010ef4ae1e22.js 1ms
+2026/03/19 03:22:12 61.244.170.194:60131 GET /api/proxy/https/github.githubassets.com/assets/56889-a22c1e3369fa0b5c.js 1ms
+2026/03/19 03:22:12 61.244.170.194:63252 GET /api/proxy/https/github.githubassets.com/assets/2013-ba4f72f3bac703ac.js 2ms
+2026/03/19 03:22:12 61.244.170.194:54317 GET /api/proxy/https/github.githubassets.com/assets/81564-b397683e312aecfa.js 1ms
+2026/03/19 03:22:12 61.244.170.194:56516 GET /api/proxy/https/github.githubassets.com/assets/behaviors-2bb77e1b1379a63e.js 3ms
+2026/03/19 03:22:12 61.244.170.194:54335 GET /api/proxy/https/github.githubassets.com/assets/38302-3e712631658bb3b9.js 3ms
+2026/03/19 03:22:12 61.244.170.194:61530 GET /api/proxy/https/github.githubassets.com/assets/notifications-global-26855372e0da920b.js 2ms
+2026/03/19 03:22:12 61.244.170.194:60131 GET /api/proxy/https/github.githubassets.com/assets/43444-dea18a2977743513.js 2ms
+2026/03/19 03:22:12 61.244.170.194:63252 GET /api/proxy/https/github.githubassets.com/assets/22445-b58367711e0574da.js 2ms
+2026/03/19 03:22:12 61.244.170.194:54317 GET /api/proxy/https/github.githubassets.com/assets/marketing-essentials-6741b7c54c954971.js 1ms
+2026/03/19 03:22:12 61.244.170.194:54335 GET /api/proxy/https/github.githubassets.com/assets/octicons-react-ca419a820093f0c2.js 7ms
+2026/03/19 03:22:12 61.244.170.194:56516 GET /api/proxy/https/github.githubassets.com/assets/primer-react-2d7f32332b3df9d6.js 9ms
+2026/03/19 03:22:12 61.244.170.194:61530 GET /api/proxy/https/github.githubassets.com/assets/82920-9ed2fcb4b31c2618.js 2ms
+2026/03/19 03:22:12 61.244.170.194:60131 GET /api/proxy/https/github.githubassets.com/assets/37869-a6edd40fc0f7a5b7.js 2ms
+2026/03/19 03:22:12 61.244.170.194:63252 GET /api/proxy/https/github.githubassets.com/assets/68751-dc22dc5f8bf5a264.js 3ms
+2026/03/19 03:22:12 61.244.170.194:54317 GET /api/proxy/https/github.githubassets.com/assets/70641-f1d515c4c768cf4a.js 9ms
+2026/03/19 03:22:12 61.244.170.194:61530 GET /api/proxy/https/github.githubassets.com/assets/46752-06df1a7bce5e9ba9.js 2ms
+2026/03/19 03:22:12 61.244.170.194:60131 GET /api/proxy/https/github.githubassets.com/assets/85897-8b0385c4420af2ed.js 2ms
+2026/03/19 03:22:12 61.244.170.194:63252 GET /api/proxy/https/github.githubassets.com/assets/71236-1e8b5578214f81f0.js 1ms
+2026/03/19 03:22:12 61.244.170.194:54335 GET /api/proxy/https/github.githubassets.com/assets/90018-d7d024587e306d73.js 2ms
+2026/03/19 03:22:13 61.244.170.194:56516 GET /api/proxy/https/github.githubassets.com/assets/48761-6c98a87d10770aa4.js 7ms
+2026/03/19 03:22:13 61.244.170.194:61530 GET /api/proxy/https/github.githubassets.com/assets/18382-e081f793d0d5eda3.js 6ms
+2026/03/19 03:22:13 61.244.170.194:60131 GET /api/proxy/https/github.githubassets.com/assets/63991-e25341ef4598af2e.js 2ms
+2026/03/19 03:22:13 61.244.170.194:63252 GET /api/proxy/https/github.githubassets.com/assets/6572-814f55f7ae92e4e1.js 6ms
+2026/03/19 03:22:13 61.244.170.194:54317 GET /api/proxy/https/github.githubassets.com/assets/55077-1ce0509a5f86e296.js 3ms
+2026/03/19 03:22:13 61.244.170.194:54335 GET /api/proxy/https/github.githubassets.com/assets/37826-e9b8045d31acb775.js 4ms
+2026/03/19 03:22:13 61.244.170.194:56516 GET /api/proxy/https/github.githubassets.com/assets/34287-c85d16e9fca79261.js 2ms
+2026/03/19 03:22:13 61.244.170.194:61530 GET /api/proxy/https/github.githubassets.com/assets/84552-741d1da95d56a5d0.js 2ms
+2026/03/19 03:22:13 61.244.170.194:60131 GET /api/proxy/https/github.githubassets.com/assets/39250-b19002618b3e8e64.js 2ms
+2026/03/19 03:22:13 61.244.170.194:54317 GET /api/proxy/https/github.githubassets.com/assets/49957-706481bd04d18e9e.js 3ms
+2026/03/19 03:22:13 61.244.170.194:54335 GET /api/proxy/https/github.githubassets.com/assets/landing-pages-4554b3ab650bc7b4.js 15ms
+2026/03/19 03:22:13 61.244.170.194:56516 GET /api/proxy/https/github.githubassets.com/assets/93308-59bc73bd78f63174.js 2ms
+2026/03/19 03:22:13 61.244.170.194:61530 GET /api/proxy/https/github.githubassets.com/assets/sessions-a663cbddb3957792.js 2ms
+2026/03/19 03:22:13 61.244.170.194:60131 GET /api/proxy/https/github.githubassets.com/assets/particles-170bd1fd231f4669.png 1ms
+2026/03/19 03:22:13 61.244.170.194:54317 GET /api/proxy/https/github.githubassets.com/assets/chunk-30351-b1f2aea5d12e6646.js 1ms
+2026/03/19 03:22:13 61.244.170.194:56516 GET /api/proxy/https/github.githubassets.com/assets/chunk-51591-375f71c67c905659.js 2ms
+2026/03/19 03:22:13 61.244.170.194:61530 GET /api/proxy/https/github.githubassets.com/assets/chunk-34877-417678a20c83a429.js 2ms
+2026/03/19 03:22:13 61.244.170.194:63252 GET /api/proxy/https/github.githubassets.com/assets/chunk-36423-c84ccea2d788d8c1.js 3ms
+2026/03/19 03:22:13 61.244.170.194:60131 GET /api/proxy/https/github.githubassets.com/assets/chunk-82097-7fc857cb5424bc8b.js 2ms
+2026/03/19 03:22:13 61.244.170.194:54317 GET /api/proxy/https/github.githubassets.com/assets/62758-2c52ce561820e1db.js 5ms
+2026/03/19 03:22:13 61.244.170.194:54335 GET /api/proxy/https/github.githubassets.com/assets/2694-7845f874754220e5.js 2ms
+2026/03/19 03:22:13 61.244.170.194:56516 GET /api/proxy/https/github.githubassets.com/assets/2758-1289ff00c5943402.js 2ms
+2026/03/19 03:22:13 61.244.170.194:61530 GET /api/proxy/https/github.githubassets.com/assets/chunk-41106-c8d8b147ae1e2eb6.js 2ms
+2026/03/19 03:22:13 61.244.170.194:63252 GET /api/proxy/https/github.githubassets.com/assets/chunk-2257-d16bdf9ff9a05416.js 2ms
+2026/03/19 03:22:13 61.244.170.194:60131 GET /api/proxy/https/github.githubassets.com/assets/chunk-78326-f081de5f755d62a5.js 1ms
+2026/03/19 03:22:13 61.244.170.194:54317 GET /api/proxy/https/github.githubassets.com/assets/chunk-93657-4fda6d9f299149bb.js 2ms
+2026/03/19 03:22:13 61.244.170.194:54335 GET /api/proxy/https/github.githubassets.com/assets/chunk-57230-9862a1113dd95044.js 2ms
+2026/03/19 03:22:13 61.244.170.194:56516 GET /api/proxy/https/github.githubassets.com/assets/chunk-50050-754d6e747d469bea.js 4ms
+2026/03/19 03:22:13 61.244.170.194:61530 GET /api/proxy/https/github.githubassets.com/assets/chunk-54704-7c556a181ae89425.js 2ms
+2026/03/19 03:22:13 61.244.170.194:60131 GET /api/proxy/https/github.githubassets.com/assets/36469-ba19164162d5c300.js 2ms
+2026/03/19 03:22:13 61.244.170.194:54317 GET /api/proxy/https/github.githubassets.com/assets/86065-584c9e31b923259d.js 3ms
+2026/03/19 03:22:13 61.244.170.194:63252 GET /api/proxy/https/github.githubassets.com/assets/18304-6bbb156b92601415.js 4ms
+2026/03/19 03:22:13 61.244.170.194:54335 GET /api/proxy/https/github.githubassets.com/assets/86361-d0100f6402767250.js 2ms
+2026/03/19 03:22:13 61.244.170.194:56516 GET /api/proxy/https/github.githubassets.com/assets/chunk-81053-4d1b3746e529561d.js 2ms
+2026/03/19 03:22:13 61.244.170.194:61530 GET /api/proxy/https/github.githubassets.com/assets/chunk-46661-7ea70c431dcc3df8.js 2ms
+2026/03/19 03:22:14 61.244.170.194:54317 GET /api/proxy/https/github.githubassets.com/assets/chunk-52864-e32e985d484dcaa8.js 3ms
+2026/03/19 03:22:14 61.244.170.194:63252 GET /api/proxy/https/github.githubassets.com/assets/chunk-62664-2ad4742368fbd272.js 1ms
+2026/03/19 03:22:14 61.244.170.194:60131 GET /api/proxy/https/images.ctfassets.net/8aevphvgewt8/g1XhuDG7foMyNWIEIpGJj/b40a790b854d0803704deb7905b1bd82/logo-duolingo-14477f9e54a6.svg 17ms
+2026/03/19 03:22:14 61.244.170.194:54335 GET /api/proxy/https/github.githubassets.com/assets/chunk-68015-b1226c7a49c513af.js 1ms
+2026/03/19 03:22:14 61.244.170.194:56516 GET /api/proxy/https/github.githubassets.com/assets/chunk-85825-a9a3df618cf463ae.js 2ms
+2026/03/19 03:22:15 61.244.170.194:56516 GET /api/proxy/https/images.ctfassets.net/8aevphvgewt8/6Qr8Snm4JceoMFRJhapgFa/802ded1d2c486a9d0a4c073d9f8f38f4/logo-gartner-aa8c2e452b64.svg 3ms
+2026/03/19 03:22:15 61.244.170.194:56516 GET /api/proxy/https/images.ctfassets.net/8aevphvgewt8/1Dt1ncaR6ZM4dQvknFzfBI/e5c2092be5bd53881622eced4fd37564/accordion-1-ce487d44c0bf.webp 5ms
+2026/03/19 03:22:15 61.244.170.194:60131 GET /api/proxy/https/images.ctfassets.net/8aevphvgewt8/3xzVZaJhqo3B62R8NeHjX2/e37c81e4f26e9dac2aff1f23a0243087/accordion-3-52ca331d22ea.webp 9ms
+2026/03/19 03:22:15 61.244.170.194:63252 GET /api/proxy/https/images.ctfassets.net/8aevphvgewt8/3cgNgdKFqflI27vyDh4Gpa/c459dc8690133e7663b8db2626cf2045/accordion-4-a26744b70ff7.webp 8ms
+2026/03/19 03:22:15 61.244.170.194:54335 GET /api/proxy/https/images.ctfassets.net/8aevphvgewt8/1uXZYDy7dMcH9QwxuAU06F/1cb167cc60d725b8cf7089faf9a4ed06/accordion-2-730955545f07.webp 8ms
+2026/03/19 03:22:16 61.244.170.194:63252 GET /api/proxy/https/images.ctfassets.net/8aevphvgewt8/5mzhSO4avmXBwkFsMzgXkW/91991e6258f14f54d23840b6c13c3013/hero-64ecd484397f.webp 3ms
+2026/03/19 03:22:19 61.244.170.194:63252 POST /sentry?o=1158394&p=4504646202490880 0s
+2026/03/19 03:22:47 61.244.170.194:63252 GET /api/proxy/https/www.claude.com 89ms
+2026/03/19 03:22:47 61.244.170.194:63252 GET /api/proxy/https/claude.com/ 17ms
+2026/03/19 03:22:47 61.244.170.194:63252 GET /api/proxy/https/claude.ai/?redirect=claude.com&via=cookie 24ms
+2026/03/19 03:22:47 61.244.170.194:63252 GET /api/proxy/https/claude.ai/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=9de95acffe092ee7 39ms
+2026/03/19 03:22:48 61.244.170.194:63252 GET /api/proxy/https/claude.ai/favicon.ico 35ms
+2026/03/19 03:22:58 61.244.170.194:50117 GET /api/terminal 35.186s
+2026/03/19 03:22:58 61.244.170.194:63252 GET /terminal?session=db4c378f-d6d3-45bb-ac38-901cfa3dd1e5 0s
+2026/03/19 03:22:58 61.244.170.194:63252 GET /favicon.ico 0s
+2026/03/19 03:23:00 61.244.170.194:65309 GET /api/terminal?session=db4c378f-d6d3-45bb-ac38-901cfa3dd1e5 1.709s
+2026/03/19 03:28:48 61.244.170.194:58012 GET /api/proxy/https/claude.ai/?redirect=claude.com&via=cookie 25ms
+2026/03/19 03:28:49 61.244.170.194:58012 GET /api/proxy/https/claude.ai/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1?ray=9de963a0cabbcb9e 173ms
+2026/03/19 03:28:49 61.244.170.194:58012 GET /api/proxy/https/claude.ai/favicon.ico 26ms
+2026/03/19 03:29:15 restart requested, rebuilding and restarting...
+2026/03/19 03:29:15 61.244.170.194:58012 POST /api/restart 0s
+2026/03/19 03:29:16 server stopped
+Thu Mar 19 03:29:16 AM UTC 2026 [RESTART] Build succeeded, starting server...
+Thu Mar 19 03:29:16 AM UTC 2026 [RESTART] Server started, PID=1336777
+2026/03/19 03:29:16 serving /root on http://0.0.0.0:3000
+2026/03/19 03:29:18 61.244.170.194:54034 GET /api/auth-check 0s
+2026/03/19 03:29:18 61.244.170.194:54034 GET / 0s
+2026/03/19 03:29:18 61.244.170.194:54034 GET /favicon.ico 0s
+2026/03/19 03:29:24 61.244.170.194:54034 POST /api/login 0s
+2026/03/19 03:29:24 61.244.170.194:54034 GET / 0s
+2026/03/19 03:29:25 61.244.170.194:54034 GET /api/files?path= 1ms
+2026/03/19 03:29:25 61.244.170.194:58091 GET /api/terminal/sessions 0s
+2026/03/19 03:29:25 61.244.170.194:54034 GET /favicon.ico 0s
+2026/03/19 03:40:24 restart requested, rebuilding and restarting...
+2026/03/19 03:40:24 61.244.170.194:51149 POST /api/restart 0s
+2026/03/19 03:40:25 server stopped
+Thu Mar 19 03:40:26 AM UTC 2026 [RESTART] Build succeeded, starting server...
+Thu Mar 19 03:40:26 AM UTC 2026 [RESTART] Server started, PID=1337590
+2026/03/19 03:40:26 serving /root on http://0.0.0.0:3000
+2026/03/19 03:40:27 61.244.170.194:58550 GET /api/auth-check 0s
+2026/03/19 03:40:27 61.244.170.194:58550 GET / 0s
+2026/03/19 03:40:27 61.244.170.194:58550 GET /favicon.ico 0s
+2026/03/19 03:40:31 61.244.170.194:58550 POST /api/login 0s
+2026/03/19 03:40:31 61.244.170.194:58550 GET / 0s
+2026/03/19 03:40:31 61.244.170.194:63321 GET /api/terminal/sessions 0s
+2026/03/19 03:40:31 61.244.170.194:58550 GET /api/files?path= 1ms
+2026/03/19 03:40:32 61.244.170.194:63321 GET /favicon.ico 0s
+2026/03/19 03:40:46 61.244.170.194:58651 GET /api/terminal 5.196s
+2026/03/19 03:40:46 terminal session f76d4b3c-acfe-4841-9df6-c0e91e9112b3 closed via API
+2026/03/19 03:40:46 61.244.170.194:63321 DELETE /api/terminal/sessions?id=f76d4b3c-acfe-4841-9df6-c0e91e9112b3 1ms
+2026/03/19 03:40:47 61.244.170.194:54356 GET /api/terminal 1.105s
+2026/03/19 03:40:47 terminal session 97810bef-52e1-4ef6-9783-01473f42f960 closed via API
+2026/03/19 03:40:47 61.244.170.194:63321 DELETE /api/terminal/sessions?id=97810bef-52e1-4ef6-9783-01473f42f960 1ms
+2026/03/19 03:40:49 61.244.170.194:60291 GET /api/terminal 17.543s
+2026/03/19 03:40:49 terminal session d8ffbd8c-39f7-4404-a685-55458176c591 closed via API
+2026/03/19 03:40:49 61.244.170.194:63321 DELETE /api/terminal/sessions?id=d8ffbd8c-39f7-4404-a685-55458176c591 1ms
+2026/03/19 03:44:31 61.244.170.194:63321 GET /api/read?path=.claude.json 1ms
+2026/03/19 03:44:50 92.118.39.30:34178 POST / 0s
+2026/03/19 03:45:24 61.244.170.194:63321 GET /api/read?path=.claude.json 1ms
+2026/03/19 03:47:15 61.244.170.194:63321 GET /api/files?path= 1ms
+2026/03/19 03:47:18 61.244.170.194:63321 GET /api/files?path=JES 0s
+2026/03/19 03:47:18 61.244.170.194:63321 GET /favicon.ico 0s
+2026/03/19 03:47:55 uploaded: /root/JES/A-1.企业简介.docx (15020 bytes)
+2026/03/19 03:47:55 61.244.170.194:63321 POST /api/upload?path=JES 38ms
+2026/03/19 03:47:55 61.244.170.194:63321 GET /api/files?path=JES 0s
+2026/03/19 03:47:59 deleted: /root/JES/A-1.企业简介.docx
+2026/03/19 03:47:59 61.244.170.194:63321 POST /api/delete 0s
+2026/03/19 03:47:59 61.244.170.194:63321 GET /api/files?path=JES 0s
+2026/03/19 03:49:32 uploaded: /root/JES/20260226GPTX投资尽职调查资料 jestxj001.zip (178696551 bytes)
+2026/03/19 03:49:32 61.244.170.194:63321 POST /api/upload?path=JES 20.299s
+2026/03/19 03:49:32 61.244.170.194:63321 GET /api/files?path=JES 0s
+2026/03/19 04:08:38 restart requested, rebuilding and restarting...
+2026/03/19 04:08:38 61.244.170.194:55472 POST /api/restart 1ms
+2026/03/19 04:08:38 server stopped
+Thu Mar 19 04:08:39 AM UTC 2026 [RESTART] Build succeeded, starting server...
+Thu Mar 19 04:08:39 AM UTC 2026 [RESTART] Server started, PID=1341816
+2026/03/19 04:08:39 serving /root on http://0.0.0.0:3000
+2026/03/19 04:08:40 61.244.170.194:64054 GET /api/auth-check 0s
+2026/03/19 04:08:40 61.244.170.194:64054 GET / 0s
+2026/03/19 04:08:41 61.244.170.194:64054 GET /favicon.ico 0s
+2026/03/19 04:08:44 61.244.170.194:64054 POST /api/login 0s
+2026/03/19 04:08:44 61.244.170.194:64054 GET / 0s
+2026/03/19 04:08:44 61.244.170.194:64054 GET /api/files?path= 1ms
+2026/03/19 04:08:44 61.244.170.194:61777 GET /api/terminal/sessions 0s
+2026/03/19 04:08:44 61.244.170.194:64054 GET /favicon.ico 0s
+2026/03/19 04:08:48 61.244.170.194:64054 GET /api/files?path=JES 0s
+2026/03/19 04:08:48 61.244.170.194:61777 GET /favicon.ico 0s
+2026/03/19 04:10:08 61.244.170.194:57538 GET /api/terminal 15.643s
+2026/03/19 04:10:08 terminal session d1ad17fc-e7c1-4dd8-b648-f89c748cad26 closed via API
+2026/03/19 04:10:08 61.244.170.194:61777 DELETE /api/terminal/sessions?id=d1ad17fc-e7c1-4dd8-b648-f89c748cad26 1ms
+2026/03/19 04:13:22 14.0.227.88:6924 GET / 0s
+2026/03/19 04:13:31 14.0.227.88:6925 POST /api/login 0s
+2026/03/19 04:13:31 14.0.227.88:6925 GET / 0s
+2026/03/19 04:13:32 14.0.227.88:6925 GET /api/files?path= 1ms
+2026/03/19 04:13:32 14.0.227.88:6926 GET /api/terminal/sessions 0s
+2026/03/19 04:13:32 61.244.170.194:50568 GET /api/terminal 4m47.837s
+2026/03/19 04:13:47 14.0.227.88:6927 GET /api/terminal?session=053f996c-d915-4566-ae6a-da5f7b0f8e62 14.214s
+2026/03/19 04:14:09 20.169.105.34:34836 GET / 0s
+2026/03/19 04:54:11 91.224.92.177:41194 POST / 0s
+2026/03/19 05:15:35 61.244.170.194:60904 GET /api/files?path=JES 0s
+2026/03/19 05:15:37 61.244.170.194:60904 GET /api/download?path=JES%2F%E5%B9%BF%E4%B8%9C%E5%81%A5%E5%B0%94%E5%9C%A3%E5%8C%BB%E8%8D%AF%E7%A7%91%E6%8A%80%E5%88%9D%E6%AD%A5%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A.md 6ms
+2026/03/19 05:21:33 81.168.83.103:50003 GET /.env.prod 0s
+2026/03/19 05:32:56 92.118.39.30:50694 POST / 0s
+2026/03/19 05:52:57 61.244.170.194:60960 GET /api/files?path=JES 0s
+2026/03/19 05:52:59 61.244.170.194:60960 GET /api/read?path=JES%2F%E5%81%A5%E5%B0%94%E5%9C%A3Follow-up%20Call%E9%97%AE%E9%A2%98%E6%B8%85%E5%8D%95.md 0s
+2026/03/19 05:54:37 102.69.167.14:42892 GET / 0s
+2026/03/19 05:54:37 102.69.167.14:42892 POST / 0s
+2026/03/19 05:59:57 152.32.245.186:35526 GET / 0s
+2026/03/19 05:59:59 152.32.245.186:35600 GET /favicon.ico 0s
+2026/03/19 05:59:59 152.32.245.186:35980 GET /sitemap.xml 0s
+2026/03/19 05:59:59 152.32.245.186:35978 GET /robots.txt 0s
+2026/03/19 06:16:38 61.244.170.194:55169 GET /api/files?path=JES 0s
+2026/03/19 06:16:41 61.244.170.194:55169 GET /api/read?path=JES%2F%E5%81%A5%E5%B0%94%E5%9C%A3Follow-up%20Call%E9%A2%84%E6%B2%9F%E9%80%9A%E9%97%AE%E9%A2%98%E6%B8%85%E5%8D%95%EF%BC%88%E5%A4%96%E5%8F%91%E7%89%88%EF%BC%89.md 0s
+2026/03/19 06:18:21 61.244.170.194:55169 GET /api/read?path=JES%2F%E5%81%A5%E5%B0%94%E5%9C%A3Follow-up%20Call%E9%A2%84%E6%B2%9F%E9%80%9A%E9%97%AE%E9%A2%98%E6%B8%85%E5%8D%95%EF%BC%88%E5%A4%96%E5%8F%91%E7%89%88%EF%BC%89.md 0s
+2026/03/19 06:27:08 61.244.170.194:64979 GET /api/files?path=JES 0s
+2026/03/19 06:27:21 61.244.170.194:64979 GET /api/files?path=JES%2F.claude 0s
+2026/03/19 06:27:21 61.244.170.194:63823 GET /favicon.ico 0s
+2026/03/19 06:27:26 61.244.170.194:63823 GET /api/files?path=JES%2F.claude 0s
+2026/03/19 06:27:26 61.244.170.194:63823 GET /api/files?path=JES%2F.claude 0s
+2026/03/19 06:27:27 61.244.170.194:63823 GET /api/files?path=JES%2F.claude%2Fskills 0s
+2026/03/19 06:27:27 61.244.170.194:64979 GET /favicon.ico 0s
+2026/03/19 06:27:28 61.244.170.194:64979 GET /api/files?path=JES%2F.claude%2Fskills%2Fscreen 0s
+2026/03/19 06:27:28 61.244.170.194:63823 GET /favicon.ico 0s
+2026/03/19 06:27:30 61.244.170.194:63823 GET /api/files?path=JES%2F.claude%2Fskills%2Fscreen 0s
+2026/03/19 06:27:30 61.244.170.194:63823 GET /api/files?path=JES%2F.claude 0s
+2026/03/19 06:27:30 61.244.170.194:64979 GET /favicon.ico 0s
+2026/03/19 06:27:31 61.244.170.194:64979 GET /api/files?path=JES 0s
+2026/03/19 06:27:32 61.244.170.194:63823 GET /favicon.ico 0s
+2026/03/19 06:27:44 61.244.170.194:63823 GET /api/files?path= 1ms
+2026/03/19 06:27:44 61.244.170.194:64979 GET /favicon.ico 0s
+2026/03/19 06:27:47 61.244.170.194:64979 GET /api/files?path=.claude 1ms
+2026/03/19 06:27:47 61.244.170.194:63823 GET /favicon.ico 0s
+2026/03/19 06:27:54 61.244.170.194:63823 GET /api/files?path=.claude%2Fprojects 1ms
+2026/03/19 06:27:54 61.244.170.194:64979 GET /favicon.ico 0s
+2026/03/19 06:28:03 61.244.170.194:64979 GET /api/files?path=.claude%2Fprojects%2F-root-JES 0s
+2026/03/19 06:28:03 61.244.170.194:63823 GET /favicon.ico 0s
+2026/03/19 06:28:06 61.244.170.194:63823 GET /api/files?path=.claude%2Fprojects%2F-root-JES%2Fmemory 0s
+2026/03/19 06:28:06 61.244.170.194:64979 GET /favicon.ico 0s
+2026/03/19 06:28:11 61.244.170.194:64979 GET /api/read?path=.claude%2Fprojects%2F-root-JES%2Fmemory%2FMEMORY.md 0s
+2026/03/19 06:28:17 61.244.170.194:64979 GET /api/read?path=.claude%2Fprojects%2F-root-JES%2Fmemory%2Fproject_jes_screening.md 0s
+2026/03/19 06:28:29 61.244.170.194:64979 GET /api/files?path= 0s
+2026/03/19 06:28:29 61.244.170.194:63823 GET /favicon.ico 0s
+2026/03/19 06:28:35 restart requested, rebuilding and restarting...
+2026/03/19 06:28:35 61.244.170.194:63823 POST /api/restart 0s
+2026/03/19 06:28:36 server stopped
+Thu Mar 19 06:28:36 AM UTC 2026 [RESTART] Build succeeded, starting server...
+Thu Mar 19 06:28:36 AM UTC 2026 [RESTART] Server started, PID=1351704
+2026/03/19 06:28:36 serving /root on http://0.0.0.0:3000
+2026/03/19 06:28:37 61.244.170.194:49943 GET /api/auth-check 0s
+2026/03/19 06:28:38 61.244.170.194:49943 GET / 0s
+2026/03/19 06:28:38 61.244.170.194:49943 GET /favicon.ico 0s
+2026/03/19 06:28:41 61.244.170.194:49943 POST /api/login 0s
+2026/03/19 06:28:42 61.244.170.194:49943 GET / 0s
+2026/03/19 06:28:42 61.244.170.194:49943 GET /api/files?path= 1ms
+2026/03/19 06:28:42 61.244.170.194:50417 GET /api/terminal/sessions 0s
+2026/03/19 06:28:42 61.244.170.194:49943 GET /favicon.ico 0s
+2026/03/19 06:28:49 61.244.170.194:49943 GET /api/files?path=JES 0s
+2026/03/19 06:28:49 61.244.170.194:50417 GET /favicon.ico 0s
+2026/03/19 06:28:51 61.244.170.194:50417 GET /api/read?path=JES%2F%E5%B9%BF%E4%B8%9C%E5%81%A5%E5%B0%94%E5%9C%A3%E5%8C%BB%E8%8D%AF%E7%A7%91%E6%8A%80%E5%88%9D%E6%AD%A5%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A.md 1ms
+2026/03/19 06:33:31 restart requested, rebuilding and restarting...
+2026/03/19 06:33:31 61.244.170.194:60834 POST /api/restart 0s
+2026/03/19 06:33:31 server stopped
+Thu Mar 19 06:33:32 AM UTC 2026 [RESTART] Build succeeded, starting server...
+Thu Mar 19 06:33:32 AM UTC 2026 [RESTART] Server started, PID=1352377
+2026/03/19 06:33:32 serving /root on http://0.0.0.0:3000
+2026/03/19 06:33:33 61.244.170.194:49367 GET /api/auth-check 0s
+2026/03/19 06:33:33 61.244.170.194:49367 GET / 0s
+2026/03/19 06:33:34 61.244.170.194:49367 GET /favicon.ico 0s
+2026/03/19 06:33:37 61.244.170.194:49367 POST /api/login 0s
+2026/03/19 06:33:38 61.244.170.194:49367 GET / 0s
+2026/03/19 06:33:38 61.244.170.194:49367 GET /api/files?path= 1ms
+2026/03/19 06:33:38 61.244.170.194:55272 GET /api/terminal/sessions 0s
+2026/03/19 06:33:38 61.244.170.194:55272 GET /favicon.ico 0s
+2026/03/19 06:33:42 61.244.170.194:55272 GET /api/files?path=JES 0s
+2026/03/19 06:33:42 61.244.170.194:49367 GET /favicon.ico 0s
+2026/03/19 06:33:44 61.244.170.194:49367 GET /api/read?path=JES%2F%E5%81%A5%E5%B0%94%E5%9C%A3Follow-up%20Call%E9%A2%84%E6%B2%9F%E9%80%9A%E9%97%AE%E9%A2%98%E6%B8%85%E5%8D%95%EF%BC%88%E5%A4%96%E5%8F%91%E7%89%88%EF%BC%89.md 0s
+2026/03/19 06:34:11 61.244.170.194:64010 GET /api/terminal 7.784s
+2026/03/19 06:34:11 terminal session d341af96-000a-47e3-9429-b7744784ce26 closed via API
+2026/03/19 06:34:11 61.244.170.194:49367 DELETE /api/terminal/sessions?id=d341af96-000a-47e3-9429-b7744784ce26 1ms
+2026/03/19 06:38:07 restart requested, rebuilding and restarting...
+2026/03/19 06:38:07 61.244.170.194:49367 POST /api/restart 0s
+2026/03/19 06:38:07 server stopped
+Thu Mar 19 06:38:08 AM UTC 2026 [RESTART] Build succeeded, starting server...
+Thu Mar 19 06:38:08 AM UTC 2026 [RESTART] Server started, PID=1353088
+2026/03/19 06:38:08 serving /root on http://0.0.0.0:3000
+2026/03/19 06:38:09 61.244.170.194:58249 GET /api/auth-check 0s
+2026/03/19 06:38:09 61.244.170.194:58249 GET / 0s
+2026/03/19 06:38:10 61.244.170.194:58249 GET /favicon.ico 0s
+2026/03/19 06:38:13 61.244.170.194:58249 POST /api/login 0s
+2026/03/19 06:38:14 61.244.170.194:58249 GET / 0s
+2026/03/19 06:38:14 61.244.170.194:58249 GET /api/files?path= 1ms
+2026/03/19 06:38:14 61.244.170.194:53066 GET /api/terminal/sessions 0s
+2026/03/19 06:38:14 61.244.170.194:58249 GET /favicon.ico 0s
+2026/03/19 06:38:24 61.244.170.194:59856 GET /api/terminal 2s
+2026/03/19 06:38:24 terminal session fc3fc71b-30db-4820-bf36-1586fcd7e9f6 closed via API
+2026/03/19 06:38:24 61.244.170.194:58249 DELETE /api/terminal/sessions?id=fc3fc71b-30db-4820-bf36-1586fcd7e9f6 0s
+2026/03/19 06:38:25 61.244.170.194:50841 GET /api/terminal 9.249s
+2026/03/19 06:38:25 terminal session 019126a4-2f61-40d1-b9ba-38e30965ae66 closed via API
+2026/03/19 06:38:25 61.244.170.194:58249 DELETE /api/terminal/sessions?id=019126a4-2f61-40d1-b9ba-38e30965ae66 1ms
+2026/03/19 06:38:31 61.244.170.194:63492 GET /api/terminal 3.418s
+2026/03/19 06:38:31 terminal session 07e16bb0-25e6-4c25-a63f-1f53b6a37506 closed via API
+2026/03/19 06:38:31 61.244.170.194:58249 DELETE /api/terminal/sessions?id=07e16bb0-25e6-4c25-a63f-1f53b6a37506 1ms
+2026/03/19 06:38:32 61.244.170.194:65075 GET /api/terminal 5.794s
+2026/03/19 06:38:32 terminal session 3abb38dc-52c8-4b71-b2f1-f97b6ae063ec closed via API
+2026/03/19 06:38:32 61.244.170.194:58249 DELETE /api/terminal/sessions?id=3abb38dc-52c8-4b71-b2f1-f97b6ae063ec 1ms
+2026/03/19 06:38:35 61.244.170.194:62010 GET /api/terminal 1.172s
+2026/03/19 06:38:35 terminal session 6ff795a7-c844-4fd1-9384-5cc51d26cbe3 closed via API
+2026/03/19 06:38:35 61.244.170.194:58249 DELETE /api/terminal/sessions?id=6ff795a7-c844-4fd1-9384-5cc51d26cbe3 1ms
+2026/03/19 06:38:37 61.244.170.194:50737 GET /api/terminal 3.177s
+2026/03/19 06:38:37 terminal session b64a1645-9c8c-46af-b683-ff652fe02646 closed via API
+2026/03/19 06:38:37 61.244.170.194:58249 DELETE /api/terminal/sessions?id=b64a1645-9c8c-46af-b683-ff652fe02646 1ms
+2026/03/19 06:38:40 61.244.170.194:55088 GET /api/terminal 2.325s
+2026/03/19 06:38:40 terminal session d17bf4dd-0539-410a-b517-e43958623ae9 closed via API
+2026/03/19 06:38:40 61.244.170.194:58249 DELETE /api/terminal/sessions?id=d17bf4dd-0539-410a-b517-e43958623ae9 1ms
+2026/03/19 06:38:50 61.244.170.194:60044 GET /api/terminal 8.367s
+2026/03/19 06:38:50 terminal session 3246539c-0980-480c-8dab-f0e49c9df01c closed via API
+2026/03/19 06:38:50 61.244.170.194:58249 DELETE /api/terminal/sessions?id=3246539c-0980-480c-8dab-f0e49c9df01c 1ms
+2026/03/19 06:38:50 61.244.170.194:62730 GET /api/terminal 7.899s
+2026/03/19 06:38:50 terminal session ad02ed1a-77ba-4ea3-825c-6d6671c80479 closed via API
+2026/03/19 06:38:50 61.244.170.194:58249 DELETE /api/terminal/sessions?id=ad02ed1a-77ba-4ea3-825c-6d6671c80479 1ms
+2026/03/19 06:38:52 61.244.170.194:64779 GET /api/terminal 10.694s
+2026/03/19 06:38:52 terminal session 005ab46d-226a-41d5-aa1a-6e58de2d320b closed via API
+2026/03/19 06:38:52 61.244.170.194:58249 DELETE /api/terminal/sessions?id=005ab46d-226a-41d5-aa1a-6e58de2d320b 1ms
+2026/03/19 06:38:58 61.244.170.194:63908 GET /api/terminal 5.426s
+2026/03/19 06:38:58 terminal session ad6965d9-0395-4909-bcfe-7c1a9a7bb376 closed via API
+2026/03/19 06:38:58 61.244.170.194:58249 DELETE /api/terminal/sessions?id=ad6965d9-0395-4909-bcfe-7c1a9a7bb376 0s
+2026/03/19 06:38:59 61.244.170.194:62094 GET /api/terminal 5.146s
+2026/03/19 06:38:59 terminal session 1de01c53-a635-40d2-80b4-df6fffe56831 closed via API
+2026/03/19 06:38:59 61.244.170.194:58249 DELETE /api/terminal/sessions?id=1de01c53-a635-40d2-80b4-df6fffe56831 1ms
+2026/03/19 06:38:59 61.244.170.194:50293 GET /api/terminal 4.884s
+2026/03/19 06:38:59 terminal session 4edb1971-cc58-40f3-b8f4-0ea75d4ef1b8 closed via API
+2026/03/19 06:38:59 61.244.170.194:58249 DELETE /api/terminal/sessions?id=4edb1971-cc58-40f3-b8f4-0ea75d4ef1b8 1ms
+2026/03/19 06:38:59 61.244.170.194:62435 GET /api/terminal 4.628s
+2026/03/19 06:38:59 terminal session b0a558b6-524f-405a-9d73-307d92d088ab closed via API
+2026/03/19 06:38:59 61.244.170.194:58249 DELETE /api/terminal/sessions?id=b0a558b6-524f-405a-9d73-307d92d088ab 0s
+2026/03/19 06:39:00 61.244.170.194:63152 GET /api/terminal 4.307s
+2026/03/19 06:39:00 terminal session a4f44c2a-81da-434a-8930-c6a3e247e467 closed via API
+2026/03/19 06:39:00 61.244.170.194:58249 DELETE /api/terminal/sessions?id=a4f44c2a-81da-434a-8930-c6a3e247e467 1ms
+2026/03/19 06:39:06 61.244.170.194:56880 GET /api/terminal 5.039s
+2026/03/19 06:39:06 terminal session e68f7ad8-46bd-4f22-9e12-10105d263c91 closed via API
+2026/03/19 06:39:06 61.244.170.194:58249 DELETE /api/terminal/sessions?id=e68f7ad8-46bd-4f22-9e12-10105d263c91 1ms
+2026/03/19 06:39:06 61.244.170.194:62333 GET /api/terminal 4.7s
+2026/03/19 06:39:06 terminal session d08a8c88-4fae-4265-a7d9-df8caaec404d closed via API
+2026/03/19 06:39:06 61.244.170.194:58249 DELETE /api/terminal/sessions?id=d08a8c88-4fae-4265-a7d9-df8caaec404d 1ms
+2026/03/19 06:39:06 61.244.170.194:54399 GET /api/terminal 4.286s
+2026/03/19 06:39:06 terminal session 0931bc5d-c470-40fc-a636-bc7a532d7595 closed via API
+2026/03/19 06:39:06 61.244.170.194:58249 DELETE /api/terminal/sessions?id=0931bc5d-c470-40fc-a636-bc7a532d7595 1ms
+2026/03/19 06:39:06 61.244.170.194:60183 GET /api/terminal 3.846s
+2026/03/19 06:39:06 terminal session bdbaa2dc-089b-415e-ac6c-a3388956ae0b closed via API
+2026/03/19 06:39:06 61.244.170.194:58249 DELETE /api/terminal/sessions?id=bdbaa2dc-089b-415e-ac6c-a3388956ae0b 1ms
+2026/03/19 06:39:06 61.244.170.194:57661 GET /api/terminal 3.299s
+2026/03/19 06:39:06 terminal session 7f204d71-2b08-46e3-bb66-a6a7222a93ba closed via API
+2026/03/19 06:39:06 61.244.170.194:58249 DELETE /api/terminal/sessions?id=7f204d71-2b08-46e3-bb66-a6a7222a93ba 1ms
+2026/03/19 06:39:09 61.244.170.194:55205 GET /api/terminal 654ms
+2026/03/19 06:39:09 terminal session 65d274f8-39db-4f54-a282-25b6647902e5 closed via API
+2026/03/19 06:39:09 61.244.170.194:58249 DELETE /api/terminal/sessions?id=65d274f8-39db-4f54-a282-25b6647902e5 1ms
+2026/03/19 06:39:16 61.244.170.194:59295 GET /api/terminal 8.418s
+2026/03/19 06:39:16 terminal session de507bfb-fb78-489e-9952-11af9849cede closed via API
+2026/03/19 06:39:16 61.244.170.194:58249 DELETE /api/terminal/sessions?id=de507bfb-fb78-489e-9952-11af9849cede 1ms
+2026/03/19 06:39:16 61.244.170.194:59918 GET /api/terminal 6.727s
+2026/03/19 06:39:16 terminal session fc0e9420-c24b-4e2c-bbd0-cd3d450dbd0a closed via API
+2026/03/19 06:39:16 61.244.170.194:58249 DELETE /api/terminal/sessions?id=fc0e9420-c24b-4e2c-bbd0-cd3d450dbd0a 1ms
+2026/03/19 06:39:18 61.244.170.194:63622 GET /api/terminal 7.546s
+2026/03/19 06:39:18 terminal session f6c3463a-54e0-43ee-8fb4-6cd84b65fa5b closed via API
+2026/03/19 06:39:18 61.244.170.194:58249 DELETE /api/terminal/sessions?id=f6c3463a-54e0-43ee-8fb4-6cd84b65fa5b 0s
+2026/03/19 06:39:18 61.244.170.194:50701 GET /api/terminal 6.475s
+2026/03/19 06:39:18 terminal session 6f1182f9-6dbe-45c5-b0b0-a40c4e274270 closed via API
+2026/03/19 06:39:18 61.244.170.194:58249 DELETE /api/terminal/sessions?id=6f1182f9-6dbe-45c5-b0b0-a40c4e274270 1ms
+2026/03/19 06:39:19 61.244.170.194:65079 GET /api/terminal 6.507s
+2026/03/19 06:39:19 terminal session 6aef828b-e154-4df2-9550-996331bd3151 closed via API
+2026/03/19 06:39:19 61.244.170.194:58249 DELETE /api/terminal/sessions?id=6aef828b-e154-4df2-9550-996331bd3151 1ms
+2026/03/19 06:39:19 61.244.170.194:54582 GET /api/terminal 6.146s
+2026/03/19 06:39:19 terminal session b96656cd-8cc6-4016-9a65-5982bc1a53ce closed via API
+2026/03/19 06:39:19 61.244.170.194:58249 DELETE /api/terminal/sessions?id=b96656cd-8cc6-4016-9a65-5982bc1a53ce 1ms
+2026/03/19 06:41:05 61.244.170.194:58249 GET /api/read?path=.claude.json 1ms
+2026/03/19 06:52:49 restart requested, rebuilding and restarting...
+2026/03/19 06:52:49 61.244.170.194:62776 POST /api/restart 0s
+2026/03/19 06:52:49 server stopped
+Thu Mar 19 06:52:50 AM UTC 2026 [RESTART] Build succeeded, starting server...
+Thu Mar 19 06:52:50 AM UTC 2026 [RESTART] Server started, PID=1354546
+2026/03/19 06:52:50 serving /root on http://0.0.0.0:3000
+2026/03/19 06:52:51 61.244.170.194:56389 GET /api/auth-check 0s
+2026/03/19 06:52:51 61.244.170.194:56389 GET / 0s
+2026/03/19 06:52:52 61.244.170.194:56389 GET /favicon.ico 0s
+2026/03/19 06:52:55 61.244.170.194:56389 POST /api/login 0s
+2026/03/19 06:52:55 61.244.170.194:56389 GET / 0s
+2026/03/19 06:52:56 61.244.170.194:56389 GET /api/files?path= 1ms
+2026/03/19 06:52:56 61.244.170.194:63126 GET /api/terminal/sessions 0s
+2026/03/19 06:52:56 61.244.170.194:56389 GET /favicon.ico 0s
+2026/03/19 06:53:05 61.244.170.194:50501 GET /api/terminal 6.44s
+2026/03/19 06:53:05 terminal session 6c6f2c79-6c9f-48e2-997f-15040f331ec8 closed via API
+2026/03/19 06:53:05 61.244.170.194:56389 DELETE /api/terminal/sessions?id=6c6f2c79-6c9f-48e2-997f-15040f331ec8 1ms
+2026/03/19 06:53:05 61.244.170.194:63243 GET /api/terminal 6.008s
+2026/03/19 06:53:05 terminal session f4aaa28c-fdd3-484c-9f2f-e9482e0aa986 closed via API
+2026/03/19 06:53:05 61.244.170.194:56389 DELETE /api/terminal/sessions?id=f4aaa28c-fdd3-484c-9f2f-e9482e0aa986 1ms
+2026/03/19 06:53:06 61.244.170.194:60227 GET /api/terminal 4.102s
+2026/03/19 06:53:06 terminal session 0db34667-fcef-4118-9ed9-9a14afad3687 closed via API
+2026/03/19 06:53:06 61.244.170.194:56389 DELETE /api/terminal/sessions?id=0db34667-fcef-4118-9ed9-9a14afad3687 1ms
+2026/03/19 06:53:06 61.244.170.194:54011 GET /api/terminal 2.729s
+2026/03/19 06:53:06 terminal session fdba6ab7-de1a-4529-bd63-37e837b5301e closed via API
+2026/03/19 06:53:06 61.244.170.194:56389 DELETE /api/terminal/sessions?id=fdba6ab7-de1a-4529-bd63-37e837b5301e 1ms
+2026/03/19 06:53:11 61.244.170.194:60605 GET /api/terminal 4.447s
+2026/03/19 06:53:11 terminal session e6f3848e-88e6-4d94-a44d-3438abf5d408 closed via API
+2026/03/19 06:53:11 61.244.170.194:56389 DELETE /api/terminal/sessions?id=e6f3848e-88e6-4d94-a44d-3438abf5d408 1ms
+2026/03/19 06:53:12 61.244.170.194:56482 GET /api/terminal 2.86s
+2026/03/19 06:53:12 terminal session 95d58c00-bfd1-40a4-8c64-660aa05c8fc2 closed via API
+2026/03/19 06:53:12 61.244.170.194:56389 DELETE /api/terminal/sessions?id=95d58c00-bfd1-40a4-8c64-660aa05c8fc2 0s
+2026/03/19 06:53:17 61.244.170.194:64305 GET /api/terminal 3.066s
+2026/03/19 06:53:17 terminal session a5cdf59a-5d14-41e9-ade6-0ab4bc74b4ee closed via API
+2026/03/19 06:53:17 61.244.170.194:56389 DELETE /api/terminal/sessions?id=a5cdf59a-5d14-41e9-ade6-0ab4bc74b4ee 1ms
+2026/03/19 06:53:18 61.244.170.194:64490 GET /api/terminal 2.489s
+2026/03/19 06:53:18 terminal session eaeb6f5d-f415-4555-9824-ebaed3c12674 closed via API
+2026/03/19 06:53:18 61.244.170.194:56389 DELETE /api/terminal/sessions?id=eaeb6f5d-f415-4555-9824-ebaed3c12674 0s
+2026/03/19 06:53:19 61.244.170.194:62708 GET /api/terminal 4.721s
+2026/03/19 06:53:19 terminal session decb62b2-cf6b-496d-9960-6d72724435e7 closed via API
+2026/03/19 06:53:19 61.244.170.194:56389 DELETE /api/terminal/sessions?id=decb62b2-cf6b-496d-9960-6d72724435e7 1ms
+2026/03/19 06:53:25 61.244.170.194:58774 GET /api/terminal 2.781s
+2026/03/19 06:53:25 terminal session 34af8727-31d9-4683-ac1c-2b6305a878ac closed via API
+2026/03/19 06:53:25 61.244.170.194:56389 DELETE /api/terminal/sessions?id=34af8727-31d9-4683-ac1c-2b6305a878ac 1ms
+2026/03/19 06:53:28 61.244.170.194:49372 GET /api/terminal 4.958s
+2026/03/19 06:53:28 terminal session 32867806-a44f-4dfc-b95b-f3b6c41cd951 closed via API
+2026/03/19 06:53:28 61.244.170.194:56389 DELETE /api/terminal/sessions?id=32867806-a44f-4dfc-b95b-f3b6c41cd951 1ms
+2026/03/19 06:53:30 61.244.170.194:63622 GET /api/terminal 882ms
+2026/03/19 06:53:30 terminal session e4fd3283-13af-4be2-863d-ff0d5dda6a29 closed via API
+2026/03/19 06:53:30 61.244.170.194:56389 DELETE /api/terminal/sessions?id=e4fd3283-13af-4be2-863d-ff0d5dda6a29 1ms
+2026/03/19 06:53:35 61.244.170.194:49740 GET /api/terminal 3.433s
+2026/03/19 06:53:35 terminal session 1d1ca805-82f9-4618-9b06-4870d91f9bfb closed via API
+2026/03/19 06:53:35 61.244.170.194:56389 DELETE /api/terminal/sessions?id=1d1ca805-82f9-4618-9b06-4870d91f9bfb 1ms
+2026/03/19 06:53:36 61.244.170.194:57661 GET /api/terminal 3.04s
+2026/03/19 06:53:36 terminal session 78d394da-acdb-4e8d-ba28-647c1912b92b closed via API
+2026/03/19 06:53:36 61.244.170.194:56389 DELETE /api/terminal/sessions?id=78d394da-acdb-4e8d-ba28-647c1912b92b 1ms
+2026/03/19 06:53:38 61.244.170.194:64078 GET /api/terminal 41.496s
+2026/03/19 06:53:38 terminal session f12cbc62-df72-4d50-be2b-9837dd9503c0 closed via API
+2026/03/19 06:53:38 61.244.170.194:56389 DELETE /api/terminal/sessions?id=f12cbc62-df72-4d50-be2b-9837dd9503c0 1ms
+2026/03/19 06:53:38 61.244.170.194:64156 GET /api/terminal 30.718s
+2026/03/19 06:53:38 terminal session fd6b68d6-bd4a-4c91-8db4-7d12d4684b2e closed via API
+2026/03/19 06:53:38 61.244.170.194:56389 DELETE /api/terminal/sessions?id=fd6b68d6-bd4a-4c91-8db4-7d12d4684b2e 1ms
+2026/03/19 06:53:38 61.244.170.194:65118 GET /api/terminal 29.515s
+2026/03/19 06:53:38 terminal session 47ba3d0f-6cdd-487f-ab8c-a0d3d269f4b2 closed via API
+2026/03/19 06:53:38 61.244.170.194:56389 DELETE /api/terminal/sessions?id=47ba3d0f-6cdd-487f-ab8c-a0d3d269f4b2 1ms
+2026/03/19 06:53:38 61.244.170.194:65100 GET /api/terminal 16.919s
+2026/03/19 06:53:38 terminal session ffa41a72-b88c-429e-8e5d-f62294372352 closed via API
+2026/03/19 06:53:38 61.244.170.194:56389 DELETE /api/terminal/sessions?id=ffa41a72-b88c-429e-8e5d-f62294372352 1ms
+2026/03/19 06:53:39 61.244.170.194:65020 GET /api/terminal 12.594s
+2026/03/19 06:53:39 terminal session f79079de-f394-4afe-be83-25474ffd3faa closed via API
+2026/03/19 06:53:39 61.244.170.194:56389 DELETE /api/terminal/sessions?id=f79079de-f394-4afe-be83-25474ffd3faa 1ms
+2026/03/19 06:56:29 61.244.170.194:63126 GET /favicon.ico 0s
+2026/03/19 06:56:29 61.244.170.194:56389 GET /api/files?path=JES 0s
+2026/03/19 06:56:31 61.244.170.194:63126 GET /api/read?path=JES%2F%E5%B9%BF%E4%B8%9C%E5%81%A5%E5%B0%94%E5%9C%A3%E5%8C%BB%E8%8D%AF%E7%A7%91%E6%8A%80%E5%88%9D%E6%AD%A5%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A.md 2ms
+2026/03/19 06:59:17 restart requested, rebuilding and restarting...
+2026/03/19 06:59:17 61.244.170.194:63126 POST /api/restart 0s
+2026/03/19 06:59:18 server stopped
+Thu Mar 19 06:59:19 AM UTC 2026 [RESTART] Build succeeded, starting server...
+Thu Mar 19 06:59:19 AM UTC 2026 [RESTART] Server started, PID=1355357
+2026/03/19 06:59:19 serving /root on http://0.0.0.0:3000
+2026/03/19 06:59:20 61.244.170.194:60189 GET /api/auth-check 0s
+2026/03/19 06:59:20 61.244.170.194:60189 GET / 0s
+2026/03/19 06:59:20 61.244.170.194:60189 GET /favicon.ico 0s
+2026/03/19 06:59:23 61.244.170.194:60189 POST /api/login 0s
+2026/03/19 06:59:23 61.244.170.194:60189 GET / 0s
+2026/03/19 06:59:24 61.244.170.194:49966 GET /api/terminal/sessions 0s
+2026/03/19 06:59:24 61.244.170.194:60189 GET /api/files?path= 1ms
+2026/03/19 06:59:24 61.244.170.194:49966 GET /favicon.ico 0s
+2026/03/19 06:59:31 61.244.170.194:50744 GET /api/terminal 3.202s
+2026/03/19 06:59:31 terminal session a82d21a7-6ec2-4e49-96fd-2cf0ccbd0ccb closed via API
+2026/03/19 06:59:31 61.244.170.194:49966 DELETE /api/terminal/sessions?id=a82d21a7-6ec2-4e49-96fd-2cf0ccbd0ccb 0s
+2026/03/19 06:59:31 61.244.170.194:63469 GET /api/terminal 3.172s
+2026/03/19 06:59:31 terminal session aafd3953-d2d4-4d00-890e-8684dd12f4a0 closed via API
+2026/03/19 06:59:31 61.244.170.194:49966 DELETE /api/terminal/sessions?id=aafd3953-d2d4-4d00-890e-8684dd12f4a0 0s
+2026/03/19 06:59:33 61.244.170.194:60077 GET /api/terminal 6.45s
+2026/03/19 06:59:33 terminal session 6580fa9e-8557-4366-a388-519e3ce55eef closed via API
+2026/03/19 06:59:33 61.244.170.194:49966 DELETE /api/terminal/sessions?id=6580fa9e-8557-4366-a388-519e3ce55eef 1ms
+2026/03/19 06:59:33 61.244.170.194:51405 GET /api/terminal 6.191s
+2026/03/19 06:59:33 terminal session 3e891d39-9bfc-498a-b7a9-79c75b5ab24d closed via API
+2026/03/19 06:59:33 61.244.170.194:49966 DELETE /api/terminal/sessions?id=3e891d39-9bfc-498a-b7a9-79c75b5ab24d 0s
+2026/03/19 06:59:41 61.244.170.194:54743 GET /api/terminal 4.328s
+2026/03/19 06:59:41 terminal session f3325e60-29ce-4e8b-bece-dea236f999b9 closed via API
+2026/03/19 06:59:41 61.244.170.194:49966 DELETE /api/terminal/sessions?id=f3325e60-29ce-4e8b-bece-dea236f999b9 0s
+2026/03/19 06:59:42 61.244.170.194:60318 GET /api/terminal 6.209s
+2026/03/19 06:59:42 terminal session fc7d8ef5-e597-469e-9d1e-b320db6c2ca2 closed via API
+2026/03/19 06:59:42 61.244.170.194:49966 DELETE /api/terminal/sessions?id=fc7d8ef5-e597-469e-9d1e-b320db6c2ca2 1ms
+2026/03/19 06:59:47 61.244.170.194:61449 GET /api/terminal 2.715s
+2026/03/19 06:59:47 terminal session 3a201f58-d46f-4110-bffd-4e2493743510 closed via API
+2026/03/19 06:59:47 61.244.170.194:49966 DELETE /api/terminal/sessions?id=3a201f58-d46f-4110-bffd-4e2493743510 1ms
+2026/03/19 06:59:49 61.244.170.194:59558 GET /api/terminal 893ms
+2026/03/19 06:59:49 terminal session c1589557-b08e-4eec-8e36-a255bc0cd52c closed via API
+2026/03/19 06:59:49 61.244.170.194:49966 DELETE /api/terminal/sessions?id=c1589557-b08e-4eec-8e36-a255bc0cd52c 1ms
+2026/03/19 06:59:52 61.244.170.194:63660 GET /api/terminal 1.251s
+2026/03/19 06:59:52 terminal session ede677ff-a1f1-470c-85a4-b84db9b6a6a0 closed via API
+2026/03/19 06:59:52 61.244.170.194:49966 DELETE /api/terminal/sessions?id=ede677ff-a1f1-470c-85a4-b84db9b6a6a0 1ms
+2026/03/19 06:59:55 61.244.170.194:55004 GET /api/terminal 2.127s
+2026/03/19 06:59:55 terminal session 577e2201-1db6-4b47-8b69-b9d1e61f493a closed via API
+2026/03/19 06:59:55 61.244.170.194:49966 DELETE /api/terminal/sessions?id=577e2201-1db6-4b47-8b69-b9d1e61f493a 0s
+2026/03/19 06:59:56 61.244.170.194:60346 GET /api/terminal 6.06s
+2026/03/19 06:59:56 terminal session ba47fe3d-6721-40fc-af64-1ad6341c8251 closed via API
+2026/03/19 06:59:56 61.244.170.194:49966 DELETE /api/terminal/sessions?id=ba47fe3d-6721-40fc-af64-1ad6341c8251 1ms
+2026/03/19 06:59:59 61.244.170.194:62218 GET /api/terminal 25.259s
+2026/03/19 06:59:59 terminal session baa2a4c5-b9a0-473d-81ef-c979c6876605 closed via API
+2026/03/19 06:59:59 61.244.170.194:49966 DELETE /api/terminal/sessions?id=baa2a4c5-b9a0-473d-81ef-c979c6876605 1ms
+2026/03/19 06:59:59 61.244.170.194:62293 GET /api/terminal 24.599s
+2026/03/19 06:59:59 terminal session ce76f262-7a85-4a46-b5c7-cf2369b66454 closed via API
+2026/03/19 06:59:59 61.244.170.194:49966 DELETE /api/terminal/sessions?id=ce76f262-7a85-4a46-b5c7-cf2369b66454 1ms
+2026/03/19 06:59:59 61.244.170.194:58965 GET /api/terminal 24.025s
+2026/03/19 06:59:59 terminal session 60cf0516-cce2-4da5-a783-e9f59b1c1b5d closed via API
+2026/03/19 06:59:59 61.244.170.194:49966 DELETE /api/terminal/sessions?id=60cf0516-cce2-4da5-a783-e9f59b1c1b5d 1ms
+2026/03/19 07:00:00 61.244.170.194:61324 GET /api/terminal 15.862s
+2026/03/19 07:00:00 terminal session cacbf209-ec1e-4687-a720-ebb401fac4c4 closed via API
+2026/03/19 07:00:00 61.244.170.194:49966 DELETE /api/terminal/sessions?id=cacbf209-ec1e-4687-a720-ebb401fac4c4 1ms
+2026/03/19 07:00:00 61.244.170.194:59969 GET /api/terminal 2.818s
+2026/03/19 07:00:00 terminal session 418078bb-070a-4b13-a26f-6531fe629ce3 closed via API
+2026/03/19 07:00:00 61.244.170.194:49966 DELETE /api/terminal/sessions?id=418078bb-070a-4b13-a26f-6531fe629ce3 0s
+2026/03/19 07:07:22 restart requested, rebuilding and restarting...
+2026/03/19 07:07:22 61.244.170.194:50067 POST /api/restart 0s
+2026/03/19 07:07:22 server stopped
+Thu Mar 19 07:07:23 AM UTC 2026 [RESTART] Build succeeded, starting server...
+Thu Mar 19 07:07:23 AM UTC 2026 [RESTART] Server started, PID=1356664
+2026/03/19 07:07:23 serving /root on http://0.0.0.0:3000
+2026/03/19 07:07:24 61.244.170.194:53703 GET /api/auth-check 0s
+2026/03/19 07:07:24 61.244.170.194:53703 GET / 0s
+2026/03/19 07:07:24 61.244.170.194:53703 GET /favicon.ico 0s
+2026/03/19 07:07:27 61.244.170.194:53703 POST /api/login 0s
+2026/03/19 07:07:28 61.244.170.194:53703 GET / 0s
+2026/03/19 07:07:28 61.244.170.194:52883 GET /api/terminal/sessions 0s
+2026/03/19 07:07:28 61.244.170.194:53703 GET /api/files?path= 1ms
+2026/03/19 07:07:28 61.244.170.194:52883 GET /favicon.ico 0s
+2026/03/19 07:07:36 61.244.170.194:61649 GET /api/terminal 3.22s
+2026/03/19 07:07:36 terminal session 0b3fccad-0a30-47fd-b4f0-62ea0397c340 closed via API
+2026/03/19 07:07:36 61.244.170.194:52883 DELETE /api/terminal/sessions?id=0b3fccad-0a30-47fd-b4f0-62ea0397c340 0s
+2026/03/19 07:07:37 61.244.170.194:64035 GET /api/terminal 5.396s
+2026/03/19 07:07:37 terminal session a6b07bc6-ab66-40bc-b349-9921c6e02ac0 closed via API
+2026/03/19 07:07:37 61.244.170.194:52883 DELETE /api/terminal/sessions?id=a6b07bc6-ab66-40bc-b349-9921c6e02ac0 1ms
+2026/03/19 07:07:42 61.244.170.194:64540 GET /api/terminal 2.64s
+2026/03/19 07:07:42 terminal session 4fc6beb0-ba65-4825-ad9d-bab04aada040 closed via API
+2026/03/19 07:07:42 61.244.170.194:52883 DELETE /api/terminal/sessions?id=4fc6beb0-ba65-4825-ad9d-bab04aada040 1ms
+2026/03/19 07:07:43 61.244.170.194:56651 GET /api/terminal 11.73s
+2026/03/19 07:07:43 terminal session ff5bbc01-36ab-46c5-b51b-df89b87fc141 closed via API
+2026/03/19 07:07:43 61.244.170.194:52883 DELETE /api/terminal/sessions?id=ff5bbc01-36ab-46c5-b51b-df89b87fc141 1ms
+2026/03/19 07:07:44 61.244.170.194:55622 GET /api/terminal 13.379s
+2026/03/19 07:07:44 terminal session 9edfeaf9-8929-46b2-918d-541c7e4e841d closed via API
+2026/03/19 07:07:44 61.244.170.194:52883 DELETE /api/terminal/sessions?id=9edfeaf9-8929-46b2-918d-541c7e4e841d 1ms
+2026/03/19 07:07:45 61.244.170.194:50958 GET /api/terminal 15.002s
+2026/03/19 07:07:45 terminal session 5cca31d6-a3a9-432a-9f58-414fd78052a8 closed via API
+2026/03/19 07:07:45 61.244.170.194:52883 DELETE /api/terminal/sessions?id=5cca31d6-a3a9-432a-9f58-414fd78052a8 1ms
+2026/03/19 07:12:30 61.244.170.194:52883 GET / 0s
+2026/03/19 07:12:30 61.244.170.194:64865 GET /api/terminal 5m1.768s
+2026/03/19 07:12:30 61.244.170.194:52883 GET /api/files?path= 1ms
+2026/03/19 07:12:30 61.244.170.194:53051 GET /api/terminal/sessions 0s
+2026/03/19 07:12:31 61.244.170.194:52883 GET /favicon.ico 0s
+2026/03/19 07:12:33 restart requested, rebuilding and restarting...
+2026/03/19 07:12:33 61.244.170.194:52883 POST /api/restart 0s
+2026/03/19 07:12:34 server stopped
+Thu Mar 19 07:12:34 AM UTC 2026 [RESTART] Build succeeded, starting server...
+Thu Mar 19 07:12:34 AM UTC 2026 [RESTART] Server started, PID=1357684
+2026/03/19 07:12:34 serving /root on http://0.0.0.0:3000
+2026/03/19 07:12:36 61.244.170.194:62019 GET /api/auth-check 0s
+2026/03/19 07:12:36 61.244.170.194:62019 GET / 0s
+2026/03/19 07:12:36 61.244.170.194:62019 GET /favicon.ico 0s
+2026/03/19 07:12:39 61.244.170.194:62019 POST /api/login 0s
+2026/03/19 07:12:39 61.244.170.194:62019 GET / 0s
+2026/03/19 07:12:40 61.244.170.194:62019 GET /api/files?path= 1ms
+2026/03/19 07:12:40 61.244.170.194:59081 GET /api/terminal/sessions 0s
+2026/03/19 07:12:40 61.244.170.194:62019 GET /favicon.ico 1ms
+2026/03/19 07:12:47 61.244.170.194:62019 GET /api/files?path=JES 0s
+2026/03/19 07:12:47 61.244.170.194:59081 GET /favicon.ico 0s
+2026/03/19 07:12:51 61.244.170.194:59081 GET /api/read?path=JES%2F%E5%B9%BF%E4%B8%9C%E5%81%A5%E5%B0%94%E5%9C%A3%E5%8C%BB%E8%8D%AF%E7%A7%91%E6%8A%80%E5%88%9D%E6%AD%A5%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A.md 1ms
+2026/03/19 07:17:23 14.0.227.88:6939 GET /api/files?path= 0s
+2026/03/19 07:17:24 14.0.227.88:6940 GET /api/terminal/sessions 0s
+2026/03/19 07:17:24 14.0.227.88:6939 GET / 0s
+2026/03/19 07:17:24 14.0.227.88:6941 GET /api/terminal 0s
+2026/03/19 07:21:41 61.244.170.194:51948 GET /api/files?path= 1ms
+2026/03/19 07:21:41 61.244.170.194:57541 GET /favicon.ico 0s
+2026/03/19 07:21:45 61.244.170.194:57541 GET /api/files?path=file-server 0s
+2026/03/19 07:21:45 61.244.170.194:51948 GET /favicon.ico 0s
+2026/03/19 07:21:56 uploaded: /root/file-server/A_minimalist_logo_for_Phosphor_a_web_based_terminal_workstation_app_The_design_features_a_stylized_letter_P_formed_by_glowing_green_00ff41_terminal_cursor_lines_on_a_pure_black_background_The_P_is_constructed_fr.png (1182976 bytes)
+2026/03/19 07:21:56 61.244.170.194:51948 POST /api/upload?path=file-server 928ms
+2026/03/19 07:21:56 61.244.170.194:51948 GET /api/files?path=file-server 0s
+2026/03/19 07:22:14 renamed: /root/file-server/A_minimalist_logo_for_Phosphor_a_web_based_terminal_workstation_app_The_design_features_a_stylized_letter_P_formed_by_glowing_green_00ff41_terminal_cursor_lines_on_a_pure_black_background_The_P_is_constructed_fr.png -> /root/file-server/Phosphor_logo
+2026/03/19 07:22:14 61.244.170.194:51948 POST /api/rename 0s
+2026/03/19 07:22:14 61.244.170.194:51948 GET /api/files?path=file-server 0s
+2026/03/19 07:22:19 61.244.170.194:51948 GET /api/read?path=file-server%2FPhosphor_logo 971ms
+2026/03/19 07:28:41 restart requested, rebuilding and restarting...
+2026/03/19 07:28:41 61.244.170.194:50757 POST /api/restart 0s
+2026/03/19 07:28:42 server stopped
+Thu Mar 19 07:28:42 AM UTC 2026 [RESTART] Build succeeded, starting server...
+Thu Mar 19 07:28:42 AM UTC 2026 [RESTART] Server started, PID=1359553
+2026/03/19 07:28:42 serving /root on http://0.0.0.0:3000
+2026/03/19 07:28:44 61.244.170.194:49164 GET /api/auth-check 0s
+2026/03/19 07:28:44 61.244.170.194:49164 GET / 755ms
+2026/03/19 07:28:45 61.244.170.194:49164 GET /favicon.ico 0s
+2026/03/19 07:28:51 61.244.170.194:49164 POST /api/login 0s
+2026/03/19 07:28:52 61.244.170.194:49164 GET / 765ms
+2026/03/19 07:28:52 61.244.170.194:49164 GET /api/files?path= 1ms
+2026/03/19 07:28:52 61.244.170.194:55624 GET /api/terminal/sessions 0s
+2026/03/19 07:28:53 61.244.170.194:49164 GET /favicon.ico 2ms
+2026/03/19 07:31:36 restart requested, rebuilding and restarting...
+2026/03/19 07:31:36 61.244.170.194:64670 POST /api/restart 0s
+2026/03/19 07:31:37 server stopped
+Thu Mar 19 07:31:37 AM UTC 2026 [RESTART] Build succeeded, starting server...
+Thu Mar 19 07:31:37 AM UTC 2026 [RESTART] Server started, PID=1360203
+2026/03/19 07:31:37 serving /root on http://0.0.0.0:3000
+2026/03/19 07:31:39 61.244.170.194:58183 GET /api/auth-check 0s
+2026/03/19 07:31:39 61.244.170.194:58183 GET / 158ms
+2026/03/19 07:31:39 61.244.170.194:58183 GET /favicon.ico 0s
+2026/03/19 07:31:43 61.244.170.194:58183 POST /api/login 0s
+2026/03/19 07:31:44 61.244.170.194:58183 GET / 303ms
+2026/03/19 07:31:44 61.244.170.194:58183 GET /api/files?path= 1ms
+2026/03/19 07:31:44 61.244.170.194:59553 GET /api/terminal/sessions 0s
+2026/03/19 07:31:44 61.244.170.194:58183 GET /favicon.ico 0s
+2026/03/19 07:36:19 restart requested, rebuilding and restarting...
+2026/03/19 07:36:19 61.244.170.194:58183 POST /api/restart 1ms
+2026/03/19 07:36:20 server stopped
+Thu Mar 19 07:36:20 AM UTC 2026 [RESTART] Build succeeded, starting server...
+Thu Mar 19 07:36:20 AM UTC 2026 [RESTART] Server started, PID=1360846
+2026/03/19 07:36:20 serving /root on http://0.0.0.0:3000
+2026/03/19 07:36:21 61.244.170.194:56097 GET /api/auth-check 0s
+2026/03/19 07:36:22 61.244.170.194:56097 GET / 151ms
+2026/03/19 07:36:22 61.244.170.194:56097 GET /favicon.ico 0s
+2026/03/19 07:36:26 61.244.170.194:56097 POST /api/login 0s
+2026/03/19 07:36:26 61.244.170.194:56097 GET / 303ms
+2026/03/19 07:36:27 61.244.170.194:56097 GET /api/files?path= 1ms
+2026/03/19 07:36:27 61.244.170.194:52423 GET /api/terminal/sessions 0s
+2026/03/19 07:36:27 61.244.170.194:56097 GET /favicon.ico 0s
+2026/03/19 07:36:38 61.244.170.194:56097 GET /api/files?path=superapp 1ms
+2026/03/19 07:36:38 61.244.170.194:52423 GET /favicon.ico 305ms
+2026/03/19 07:36:43 61.244.170.194:52423 GET /api/files?path= 1ms
+2026/03/19 07:36:43 61.244.170.194:56097 GET /favicon.ico 1ms
+2026/03/19 07:36:49 61.244.170.194:52423 GET /favicon.ico 1ms
+2026/03/19 07:36:49 61.244.170.194:56097 GET /api/files?path=test 1ms
+2026/03/19 07:36:50 61.244.170.194:52423 GET /api/files?path=test%2F.claude 1ms
+2026/03/19 07:36:50 61.244.170.194:56097 GET /favicon.ico 0s
+2026/03/19 07:36:53 61.244.170.194:56097 GET /api/files?path=test 0s
+2026/03/19 07:36:53 61.244.170.194:52423 GET /favicon.ico 1ms
+2026/03/19 07:36:58 61.244.170.194:52423 GET /api/files?path= 1ms
+2026/03/19 07:36:58 61.244.170.194:56097 GET /favicon.ico 0s
+2026/03/19 07:37:04 deleted: /root/test
+2026/03/19 07:37:04 61.244.170.194:56097 POST /api/delete 4ms
+2026/03/19 07:37:04 61.244.170.194:56097 GET /api/files?path= 0s
+2026/03/19 07:37:06 61.244.170.194:56097 GET /api/files?path=tech-analysis 0s
+2026/03/19 07:37:06 61.244.170.194:52423 GET /favicon.ico 0s
+2026/03/19 07:37:08 61.244.170.194:52423 GET /api/files?path= 0s
+2026/03/19 07:37:08 61.244.170.194:56097 GET /favicon.ico 0s
+2026/03/19 07:37:15 deleted: /root/tech-analysis
+2026/03/19 07:37:15 61.244.170.194:56097 POST /api/delete 1ms
+2026/03/19 07:37:15 61.244.170.194:56097 GET /api/files?path= 0s
+2026/03/19 07:38:57 61.244.170.194:56097 GET /api/files?path=automation 1ms
+2026/03/19 07:38:57 61.244.170.194:52423 GET /favicon.ico 1ms
+2026/03/19 07:38:59 61.244.170.194:52423 GET /api/files?path=automation%2F.claude 0s
+2026/03/19 07:38:59 61.244.170.194:56097 GET /favicon.ico 0s
+2026/03/19 07:39:01 61.244.170.194:56097 GET /api/read?path=automation%2F.claude%2Fsettings.local.json 1ms
+2026/03/19 07:39:08 61.244.170.194:52423 GET /favicon.ico 0s
+2026/03/19 07:39:08 61.244.170.194:56097 GET /api/files?path= 1ms
+2026/03/19 07:39:12 deleted: /root/automation
+2026/03/19 07:39:12 61.244.170.194:52423 POST /api/delete 1ms
+2026/03/19 07:39:12 61.244.170.194:52423 GET /api/files?path= 1ms
+2026/03/19 07:39:13 61.244.170.194:52423 GET /api/files?path=client 0s
+2026/03/19 07:39:13 61.244.170.194:56097 GET /favicon.ico 0s
+2026/03/19 07:39:16 61.244.170.194:56097 GET /api/files?path= 0s
+2026/03/19 07:39:16 61.244.170.194:52423 GET /favicon.ico 0s
+2026/03/19 07:39:18 deleted: /root/client
+2026/03/19 07:39:18 61.244.170.194:52423 POST /api/delete 1ms
+2026/03/19 07:39:18 61.244.170.194:52423 GET /api/files?path= 0s
+2026/03/19 07:39:19 61.244.170.194:56097 GET /favicon.ico 0s
+2026/03/19 07:39:19 61.244.170.194:52423 GET /api/files?path=company_screen 1ms
+2026/03/19 07:39:28 61.244.170.194:56097 GET /api/files?path=company_screen%2F.claude 1ms
+2026/03/19 07:39:28 61.244.170.194:52423 GET /favicon.ico 0s
+2026/03/19 07:39:30 61.244.170.194:52423 GET /api/files?path= 1ms
+2026/03/19 07:39:30 61.244.170.194:56097 GET /favicon.ico 0s
+2026/03/19 07:39:40 61.244.170.194:56097 GET /api/files?path=demo 1ms
+2026/03/19 07:39:40 61.244.170.194:52423 GET /favicon.ico 0s
+2026/03/19 07:39:47 61.244.170.194:52423 GET /api/files?path=demo%2Fexamples 1ms
+2026/03/19 07:39:47 61.244.170.194:56097 GET /favicon.ico 4ms
+2026/03/19 07:39:51 61.244.170.194:56097 GET /api/files?path=demo 0s
+2026/03/19 07:39:51 61.244.170.194:52423 GET /favicon.ico 0s
+2026/03/19 07:39:53 61.244.170.194:52423 GET /api/files?path= 1ms
+2026/03/19 07:39:53 61.244.170.194:56097 GET /favicon.ico 1ms
+2026/03/19 07:39:57 deleted: /root/demo
+2026/03/19 07:39:57 61.244.170.194:56097 POST /api/delete 10ms
+2026/03/19 07:39:57 61.244.170.194:56097 GET /api/files?path= 0s
+2026/03/19 07:39:58 61.244.170.194:56097 GET /api/files?path=draft 0s
+2026/03/19 07:39:58 61.244.170.194:52423 GET /favicon.ico 1ms
+2026/03/19 07:40:00 61.244.170.194:52423 GET /api/files?path= 0s
+2026/03/19 07:40:00 61.244.170.194:56097 GET /favicon.ico 0s
+2026/03/19 07:40:03 deleted: /root/draft
+2026/03/19 07:40:03 61.244.170.194:56097 POST /api/delete 1ms
+2026/03/19 07:40:03 61.244.170.194:56097 GET /api/files?path= 0s
+2026/03/19 07:40:06 61.244.170.194:56097 GET /api/files?path=flight-check 1ms
+2026/03/19 07:40:06 61.244.170.194:52423 GET /favicon.ico 0s
+2026/03/19 07:40:08 61.244.170.194:52423 GET /api/files?path= 1ms
+2026/03/19 07:40:08 61.244.170.194:56097 GET /favicon.ico 1ms
+2026/03/19 07:40:12 61.244.170.194:56097 GET /api/files?path=go 0s
+2026/03/19 07:40:12 61.244.170.194:52423 GET /favicon.ico 0s
+2026/03/19 07:40:14 61.244.170.194:52423 GET /api/files?path= 0s
+2026/03/19 07:40:14 61.244.170.194:56097 GET /favicon.ico 0s
+2026/03/19 07:40:17 61.244.170.194:56097 GET /api/files?path=Investment-project-Organizor 1ms
+2026/03/19 07:40:17 61.244.170.194:52423 GET /favicon.ico 0s
+2026/03/19 07:40:20 61.244.170.194:52423 GET /api/files?path= 1ms
+2026/03/19 07:40:20 61.244.170.194:56097 GET /favicon.ico 0s
+2026/03/19 07:40:22 61.244.170.194:56097 GET /api/files?path=LPA 0s
+2026/03/19 07:40:22 61.244.170.194:52423 GET /favicon.ico 0s
+2026/03/19 07:40:24 61.244.170.194:52423 GET /api/files?path= 0s
+2026/03/19 07:40:24 61.244.170.194:56097 GET /favicon.ico 0s
+2026/03/19 07:40:27 deleted: /root/LPA
+2026/03/19 07:40:27 61.244.170.194:56097 POST /api/delete 0s
+2026/03/19 07:40:27 61.244.170.194:56097 GET /api/files?path= 0s
+2026/03/19 07:40:31 61.244.170.194:56097 GET /api/files?path=neural-nexus 1ms
+2026/03/19 07:40:31 61.244.170.194:52423 GET /favicon.ico 0s
+2026/03/19 07:40:34 61.244.170.194:52423 GET /api/files?path= 0s
+2026/03/19 07:40:34 61.244.170.194:56097 GET /favicon.ico 0s
+2026/03/19 07:40:44 deleted: /root/neural-nexus
+2026/03/19 07:40:44 61.244.170.194:56097 POST /api/delete 1.935s
+2026/03/19 07:40:44 61.244.170.194:56097 GET /api/files?path= 0s
+2026/03/19 07:40:47 61.244.170.194:56097 GET /api/files?path=snap 1ms
+2026/03/19 07:40:47 61.244.170.194:52423 GET /favicon.ico 0s
+2026/03/19 07:40:51 61.244.170.194:52423 GET /api/files?path= 0s
+2026/03/19 07:40:51 61.244.170.194:56097 GET /favicon.ico 0s
+2026/03/19 07:41:38 61.244.170.194:56097 GET /api/files?path=starshine 1ms
+2026/03/19 07:41:38 61.244.170.194:52423 GET /favicon.ico 1ms
+2026/03/19 07:41:40 61.244.170.194:52423 GET /api/files?path= 0s
+2026/03/19 07:41:40 61.244.170.194:56097 GET /favicon.ico 0s
+2026/03/19 07:41:53 61.244.170.194:56097 GET /api/files?path= 1ms
+2026/03/19 08:03:28 61.244.170.194:53401 GET /api/files?path= 1ms
+2026/03/19 08:03:44 61.244.170.194:53401 GET /api/files?path=duck 1ms
+2026/03/19 08:03:45 61.244.170.194:53401 GET /favicon.ico 307ms
+2026/03/19 08:03:49 61.244.170.194:53401 GET /api/files?path= 0s
+2026/03/19 08:03:49 61.244.170.194:64126 GET /favicon.ico 304ms
+2026/03/19 08:03:51 61.244.170.194:64126 GET /api/files?path=roast 1ms
+2026/03/19 08:03:51 61.244.170.194:53401 GET /favicon.ico 0s
+2026/03/19 08:03:53 61.244.170.194:53401 GET /api/files?path=roast%2Fdata 0s
+2026/03/19 08:03:53 61.244.170.194:64126 GET /favicon.ico 1ms
+2026/03/19 08:03:54 61.244.170.194:64126 GET /api/files?path=roast 0s
+2026/03/19 08:03:54 61.244.170.194:53401 GET /favicon.ico 0s
+2026/03/19 08:03:55 61.244.170.194:53401 GET /api/files?path=roast%2F.next 0s
+2026/03/19 08:03:55 61.244.170.194:64126 GET /favicon.ico 0s
+2026/03/19 08:03:57 61.244.170.194:64126 GET /api/files?path=roast%2F.next%2Fserver 0s
+2026/03/19 08:03:57 61.244.170.194:53401 GET /favicon.ico 0s
+2026/03/19 08:03:59 61.244.170.194:53401 GET /api/files?path=roast%2F.next%2Fserver%2Fapp 0s
+2026/03/19 08:03:59 61.244.170.194:64126 GET /favicon.ico 0s
+2026/03/19 08:04:00 61.244.170.194:64126 GET /api/files?path=roast%2F.next%2Fserver%2Fapp%2Fapi 1ms
+2026/03/19 08:04:00 61.244.170.194:53401 GET /favicon.ico 0s
+2026/03/19 08:04:02 61.244.170.194:53401 GET /api/files?path= 0s
+2026/03/19 08:04:02 61.244.170.194:64126 GET /favicon.ico 0s
+2026/03/19 08:04:14 61.244.170.194:64126 GET /api/files?path=trade-analysis 1ms
+2026/03/19 08:04:14 61.244.170.194:53401 GET /favicon.ico 1ms
+2026/03/19 08:04:15 61.244.170.194:53401 GET /api/files?path=trade-analysis%2F.claude 0s
+2026/03/19 08:04:15 61.244.170.194:64126 GET /favicon.ico 0s
+2026/03/19 08:04:17 61.244.170.194:64126 GET /api/files?path= 0s
+2026/03/19 08:04:17 61.244.170.194:53401 GET /favicon.ico 0s
+2026/03/19 08:05:09 61.244.170.194:53401 GET /api/files?path= 0s
+2026/03/19 08:11:28 restart requested, rebuilding and restarting...
+2026/03/19 08:11:28 61.244.170.194:53921 POST /api/restart 0s
+2026/03/19 08:11:28 server stopped
+Thu Mar 19 08:11:29 AM UTC 2026 [RESTART] Build succeeded, starting server...
+Thu Mar 19 08:11:29 AM UTC 2026 [RESTART] Server started, PID=1362349
+2026/03/19 08:11:29 serving /root on http://0.0.0.0:3000
+2026/03/19 08:11:30 61.244.170.194:57774 GET /api/auth-check 0s
+2026/03/19 08:11:31 61.244.170.194:57774 GET / 162ms
+2026/03/19 08:11:31 61.244.170.194:57774 GET /favicon.ico 0s
+2026/03/19 08:11:34 61.244.170.194:57774 POST /api/login 0s
+2026/03/19 08:11:34 61.244.170.194:57774 GET / 327ms
+2026/03/19 08:11:35 61.244.170.194:57774 GET /api/files?path= 1ms
+2026/03/19 08:11:35 61.244.170.194:62751 GET /api/terminal/sessions 0s
+2026/03/19 08:11:35 61.244.170.194:57774 GET /favicon.ico 1ms
+2026/03/19 08:11:36 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:11:37 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:11:38 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:11:39 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:11:40 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:11:41 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:11:42 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:11:43 61.244.170.194:57774 GET /api/files?path= 1ms
+2026/03/19 08:11:44 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:11:45 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:11:46 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:11:47 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:11:48 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:11:49 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:11:50 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:11:51 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:11:52 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:11:53 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:11:54 61.244.170.194:57774 GET /api/files?path= 1ms
+2026/03/19 08:11:55 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:11:56 deleted: /root/aabbcc
+2026/03/19 08:11:56 61.244.170.194:57774 POST /api/delete 0s
+2026/03/19 08:11:56 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:11:56 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:11:57 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:11:59 deleted: /root/aabbccasd
+2026/03/19 08:11:59 61.244.170.194:57774 POST /api/delete 0s
+2026/03/19 08:11:59 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:11:59 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:00 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:01 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:02 61.244.170.194:57774 GET /api/files?path= 1ms
+2026/03/19 08:12:03 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:04 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:05 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:06 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:07 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:08 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:09 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:10 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:11 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:12 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:13 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:14 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:15 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:16 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:17 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:18 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:19 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:20 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:21 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:22 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:23 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:24 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:25 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:26 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:27 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:28 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:29 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:30 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:31 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:32 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:33 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:39 renamed: /root/file-server -> /root/Phosphor
+2026/03/19 08:12:39 61.244.170.194:57774 POST /api/rename 0s
+2026/03/19 08:12:39 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:12:39 61.244.170.194:57774 GET /api/files?path= 0s
+2026/03/19 08:12:39 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:12:40 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:12:41 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:12:42 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:12:43 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:12:44 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:12:45 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:12:46 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:12:47 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:12:48 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:12:49 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:12:50 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:12:51 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:14:34 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:14:35 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:14:36 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:14:37 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:14:45 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:15:02 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:15:03 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:01 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:17:02 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:03 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:17:04 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:17:04 61.244.170.194:57774 GET /favicon.ico 1ms
+2026/03/19 08:17:04 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:05 61.244.170.194:57774 GET /api/files?path=Phosphor 0s
+2026/03/19 08:17:05 61.244.170.194:57774 GET /api/files?path=Phosphor 0s
+2026/03/19 08:17:05 61.244.170.194:62751 GET /favicon.ico 327ms
+2026/03/19 08:17:06 61.244.170.194:62751 GET /api/files?path=Phosphor 0s
+2026/03/19 08:17:07 61.244.170.194:62751 GET /api/files?path=Phosphor 0s
+2026/03/19 08:17:08 61.244.170.194:62751 GET /api/files?path=Phosphor 0s
+2026/03/19 08:17:09 61.244.170.194:62751 GET /api/files?path=Phosphor 0s
+2026/03/19 08:17:10 61.244.170.194:57774 GET /favicon.ico 0s
+2026/03/19 08:17:10 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:10 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:11 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:12 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:13 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:14 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:15 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:16 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:17 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:17:18 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:19 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:20 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:21 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:22 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:23 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:24 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:25 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:26 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:27 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:28 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:29 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:30 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:31 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:32 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:33 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:34 61.244.170.194:62751 GET /api/files?path= 4ms
+2026/03/19 08:17:35 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:36 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:37 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:38 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:39 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:40 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:41 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:17:42 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:43 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:44 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:45 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:46 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:47 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:48 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:49 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:50 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:51 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:52 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:53 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:54 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:55 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:56 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:57 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:58 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:17:59 61.244.170.194:62751 GET /api/files?path= 5ms
+2026/03/19 08:18:00 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:01 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:02 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:03 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:04 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:05 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:06 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:07 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:08 61.244.170.194:62751 GET /api/files?path= 4ms
+2026/03/19 08:18:09 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:10 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:11 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:18:12 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:13 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:18:14 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:15 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:16 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:18:17 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:18 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:19 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:20 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:21 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:22 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:18:23 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:24 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:25 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:26 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:18:27 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:18:28 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:29 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:18:30 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:31 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:32 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:33 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:34 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:35 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:36 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:37 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:18:38 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:18:39 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:40 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:18:41 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:42 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:43 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:44 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:45 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:46 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:47 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:48 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:49 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:18:50 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:51 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:52 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:53 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:54 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:55 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:56 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:57 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:58 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:18:59 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:19:00 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:01 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:02 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:03 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:19:04 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:19:05 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:06 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:07 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:08 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:09 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:19:10 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:11 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:19:12 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:13 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:14 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:19:15 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:16 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:19:17 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:18 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:19 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:20 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:21 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:19:22 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:19:23 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:24 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:25 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:19:26 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:27 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:28 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:29 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:30 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:19:31 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:32 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:33 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:34 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:35 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:36 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:37 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:38 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:39 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:40 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:41 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:42 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:43 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:44 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:45 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:46 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:47 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:48 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:49 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:19:50 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:51 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:52 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:53 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:54 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:55 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:19:56 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:57 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:58 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:19:59 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:00 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:20:01 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:20:02 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:03 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:04 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:05 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:06 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:20:07 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:08 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:20:09 61.244.170.194:62751 GET /api/files?path= 2ms
+2026/03/19 08:20:10 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:11 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:12 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:13 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:14 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:15 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:16 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:17 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:18 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:19 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:20 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:21 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:22 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:23 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:24 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:25 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:26 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:27 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:28 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:29 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:30 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:31 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:32 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:33 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:34 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:35 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:20:36 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:50 61.244.170.194:62751 GET /api/files?path= 1ms
+2026/03/19 08:20:51 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:52 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:53 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:54 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:55 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:56 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:57 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:58 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:20:59 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:21:00 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:21:01 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:21:02 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:21:03 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:21:04 61.244.170.194:62751 GET /api/files?path= 0s
+2026/03/19 08:21:05 61.244.170.194:62751 GET /api/files?path= 0s
