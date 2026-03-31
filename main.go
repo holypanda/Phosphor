@@ -1195,6 +1195,9 @@ func main() {
 			if *devMode {
 				restartArgs = append(restartArgs, "-dev", "True")
 			}
+			if openrouterAPIKey != "" {
+				restartArgs = append(restartArgs, "-openrouter-key", openrouterAPIKey)
+			}
 			cmd := restartCommand(exePath, pid, *devMode, restartArgs...)
 			cmd.Dir = exeDir
 			detachProcess(cmd)

@@ -848,6 +848,37 @@ func TestHandleVoice(t *testing.T) {
 		}
 	})
 
+	t.Run("valid request with key", func(t *testing.T) {
+		ts := setupTestServer(t)
+		openrouterAPIKey = "test-key-not-real"
+
+		var buf bytes.Buffer
+		w := multipart.NewWriter(&buf)
+		fw, _ := w.CreateFormFile("audio", "recording.webm")
+		fw.Write([]byte("fake audio content"))
+		w.WriteField("prompt", "test prompt")
+		w.Close()
+
+		req, _ := http.NewRequest("POST", ts.URL+"/api/voice", &buf)
+		req.Header.Set("Content-Type", w.FormDataContentType())
+		resp, err := http.DefaultClient.Do(req)
+		if err != nil {
+			t.Fatal(err)
+		}
+		defer resp.Body.Close()
+
+		// With a fake key, OpenRouter will return an auth error (not 501 or 400)
+		if resp.StatusCode == http.StatusNotImplemented || resp.StatusCode == http.StatusBadRequest {
+			t.Fatalf("should not be 501 or 400 with valid audio and key, got %d", resp.StatusCode)
+		}
+
+		var result map[string]string
+		json.NewDecoder(resp.Body).Decode(&result)
+		if result["text"] == "" && result["error"] == "" {
+			t.Fatal("expected either text or error in response")
+		}
+	})
+
 	t.Run("audio too large returns 413", func(t *testing.T) {
 		ts := setupTestServer(t)
 		openrouterAPIKey = "test-key"
