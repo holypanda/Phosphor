@@ -1,11 +1,13 @@
 package main
 
 import (
+	"bytes"
 	"context"
 	"crypto/rand"
 	"crypto/subtle"
 	"embed"
 	"encoding/hex"
+	"encoding/base64"
 	"encoding/json"
 	"flag"
 	"fmt"
@@ -997,6 +999,129 @@ window.addEventListener('resize', function() {
 </html>`
 
 
+const voiceMaxBytes = 10 * 1024 * 1024
+
+func handleVoice(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+
+	if openrouterAPIKey == "" {
+		w.WriteHeader(http.StatusNotImplemented)
+		json.NewEncoder(w).Encode(map[string]string{"error": "voice recognition not configured: missing OpenRouter API key"})
+		return
+	}
+
+	r.Body = http.MaxBytesReader(w, r.Body, voiceMaxBytes+1024*1024)
+	if err := r.ParseMultipartForm(voiceMaxBytes); err != nil {
+		w.WriteHeader(http.StatusRequestEntityTooLarge)
+		json.NewEncoder(w).Encode(map[string]string{"error": "audio file too large (max 10MB)"})
+		return
+	}
+
+	file, _, err := r.FormFile("audio")
+	if err != nil {
+		w.WriteHeader(http.StatusBadRequest)
+		json.NewEncoder(w).Encode(map[string]string{"error": "missing audio file"})
+		return
+	}
+	defer file.Close()
+
+	audioData, err := io.ReadAll(io.LimitReader(file, voiceMaxBytes+1))
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		json.NewEncoder(w).Encode(map[string]string{"error": "failed to read audio data"})
+		return
+	}
+	if len(audioData) > voiceMaxBytes {
+		w.WriteHeader(http.StatusRequestEntityTooLarge)
+		json.NewEncoder(w).Encode(map[string]string{"error": "audio file too large (max 10MB)"})
+		return
+	}
+
+	audioBase64 := base64.StdEncoding.EncodeToString(audioData)
+
+	prompt := r.FormValue("prompt")
+	if prompt == "" {
+		prompt = "请将这段语音准确转录为文字。只输出转录内容，不要添加任何额外说明。"
+	}
+
+	reqBody := map[string]interface{}{
+		"model": "google/gemini-2.5-flash",
+		"messages": []map[string]interface{}{
+			{
+				"role": "user",
+				"content": []map[string]interface{}{
+					{
+						"type": "input_audio",
+						"input_audio": map[string]string{
+							"data":   audioBase64,
+							"format": "webm",
+						},
+					},
+					{
+						"type": "text",
+						"text": prompt,
+					},
+				},
+			},
+		},
+	}
+
+	jsonBody, err := json.Marshal(reqBody)
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		json.NewEncoder(w).Encode(map[string]string{"error": "failed to build request"})
+		return
+	}
+
+	client := &http.Client{Timeout: 30 * time.Second}
+	apiReq, err := http.NewRequest("POST", "https://openrouter.ai/api/v1/chat/completions", bytes.NewReader(jsonBody))
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		json.NewEncoder(w).Encode(map[string]string{"error": "failed to create request"})
+		return
+	}
+	apiReq.Header.Set("Content-Type", "application/json")
+	apiReq.Header.Set("Authorization", "Bearer "+openrouterAPIKey)
+
+	apiResp, err := client.Do(apiReq)
+	if err != nil {
+		w.WriteHeader(http.StatusBadGateway)
+		json.NewEncoder(w).Encode(map[string]string{"error": "OpenRouter API request failed: " + err.Error()})
+		return
+	}
+	defer apiResp.Body.Close()
+
+	var result struct {
+		Choices []struct {
+			Message struct {
+				Content string `json:"content"`
+			} `json:"message"`
+		} `json:"choices"`
+		Error *struct {
+			Message string `json:"message"`
+		} `json:"error"`
+	}
+	if err := json.NewDecoder(apiResp.Body).Decode(&result); err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		json.NewEncoder(w).Encode(map[string]string{"error": "failed to parse API response"})
+		return
+	}
+
+	if result.Error != nil {
+		w.WriteHeader(http.StatusBadGateway)
+		json.NewEncoder(w).Encode(map[string]string{"error": "OpenRouter API error: " + result.Error.Message})
+		return
+	}
+
+	if len(result.Choices) == 0 {
+		w.WriteHeader(http.StatusInternalServerError)
+		json.NewEncoder(w).Encode(map[string]string{"error": "no response from API"})
+		return
+	}
+
+	json.NewEncoder(w).Encode(map[string]string{"text": result.Choices[0].Message.Content})
+}
+
 func main() {
 	dir := flag.String("dir", ".", "root directory to serve")
 	port := flag.Int("port", 8080, "port to listen on")
@@ -1052,6 +1177,7 @@ func main() {
 	mux.HandleFunc("POST /api/login", handleLogin)
 	mux.HandleFunc("POST /api/logout", handleLogout)
 	mux.HandleFunc("GET /api/auth-check", handleAuthCheck)
+	mux.HandleFunc("POST /api/voice", handleVoice)
 
 	addr := fmt.Sprintf(":%d", *port)
 	srv := &http.Server{Addr: addr, Handler: logMiddleware(authMiddleware(mux))}

@@ -45,6 +45,7 @@ func setupTestServer(t *testing.T) *httptest.Server {
 	mux.HandleFunc("POST /api/login", handleLogin)
 	mux.HandleFunc("POST /api/logout", handleLogout)
 	mux.HandleFunc("GET /api/auth-check", handleAuthCheck)
+	mux.HandleFunc("POST /api/voice", handleVoice)
 
 	handler := logMiddleware(authMiddleware(mux))
 	ts := httptest.NewServer(handler)
@@ -798,6 +799,74 @@ func TestSafePath(t *testing.T) {
 		_, err := safePath(root, "/etc/passwd")
 		if err == nil {
 			t.Fatal("expected error for absolute path")
+		}
+	})
+}
+
+// --- Voice ---
+
+func TestHandleVoice(t *testing.T) {
+	t.Run("no api key returns 501", func(t *testing.T) {
+		ts := setupTestServer(t)
+		openrouterAPIKey = ""
+
+		var buf bytes.Buffer
+		w := multipart.NewWriter(&buf)
+		fw, _ := w.CreateFormFile("audio", "recording.webm")
+		fw.Write([]byte("fake audio data"))
+		w.Close()
+
+		req, _ := http.NewRequest("POST", ts.URL+"/api/voice", &buf)
+		req.Header.Set("Content-Type", w.FormDataContentType())
+		resp, err := http.DefaultClient.Do(req)
+		if err != nil {
+			t.Fatal(err)
+		}
+		defer resp.Body.Close()
+		if resp.StatusCode != http.StatusNotImplemented {
+			t.Fatalf("expected 501, got %d", resp.StatusCode)
+		}
+	})
+
+	t.Run("no audio file returns 400", func(t *testing.T) {
+		ts := setupTestServer(t)
+		openrouterAPIKey = "test-key"
+
+		var buf bytes.Buffer
+		w := multipart.NewWriter(&buf)
+		w.Close()
+
+		req, _ := http.NewRequest("POST", ts.URL+"/api/voice", &buf)
+		req.Header.Set("Content-Type", w.FormDataContentType())
+		resp, err := http.DefaultClient.Do(req)
+		if err != nil {
+			t.Fatal(err)
+		}
+		defer resp.Body.Close()
+		if resp.StatusCode != http.StatusBadRequest {
+			t.Fatalf("expected 400, got %d", resp.StatusCode)
+		}
+	})
+
+	t.Run("audio too large returns 413", func(t *testing.T) {
+		ts := setupTestServer(t)
+		openrouterAPIKey = "test-key"
+
+		var buf bytes.Buffer
+		w := multipart.NewWriter(&buf)
+		fw, _ := w.CreateFormFile("audio", "big.webm")
+		fw.Write(make([]byte, 11*1024*1024))
+		w.Close()
+
+		req, _ := http.NewRequest("POST", ts.URL+"/api/voice", &buf)
+		req.Header.Set("Content-Type", w.FormDataContentType())
+		resp, err := http.DefaultClient.Do(req)
+		if err != nil {
+			t.Fatal(err)
+		}
+		defer resp.Body.Close()
+		if resp.StatusCode != http.StatusRequestEntityTooLarge {
+			t.Fatalf("expected 413, got %d", resp.StatusCode)
 		}
 	})
 }
