@@ -9,7 +9,9 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
+	"archive/zip"
 	"io"
+	"io/fs"
 	"log"
 	"net/http"
 	"os"
@@ -18,16 +20,20 @@ import (
 	"strings"
 	"sync"
 	"sync/atomic"
-	"syscall"
 	"time"
 
-	"github.com/creack/pty"
 	"github.com/google/uuid"
 	"github.com/gorilla/websocket"
 )
 
 //go:embed index.html
 var indexHTML embed.FS
+
+//go:embed mobile.html
+var mobileHTML embed.FS
+
+//go:embed static
+var staticFiles embed.FS
 
 type FileInfo struct {
 	Name     string    `json:"name"`
@@ -38,6 +44,7 @@ type FileInfo struct {
 }
 
 var rootDir string
+var openrouterAPIKey string
 
 // Auth
 var (
@@ -236,12 +243,13 @@ type ptySession struct {
 	name         string
 	createdAt    time.Time
 	lastActivity time.Time
-	ptmx         *os.File
+	terminal     io.ReadWriteCloser
 	cmd          *exec.Cmd
 	mu           sync.Mutex
 	conn         *websocket.Conn
 	buffer       []byte
 	bufLimit     int
+	platformData interface{}
 }
 
 var (
@@ -305,6 +313,12 @@ func logMiddleware(next http.Handler) http.Handler {
 
 func handleIndex(w http.ResponseWriter, r *http.Request) {
 	data, _ := indexHTML.ReadFile("index.html")
+	w.Header().Set("Content-Type", "text/html; charset=utf-8")
+	w.Write(data)
+}
+
+func handleMobile(w http.ResponseWriter, r *http.Request) {
+	data, _ := mobileHTML.ReadFile("mobile.html")
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
 	w.Write(data)
 }
@@ -500,7 +514,34 @@ func handleDownload(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	if info.IsDir() {
-		http.Error(w, "cannot download directory", http.StatusBadRequest)
+		dirName := filepath.Base(absPath)
+		w.Header().Set("Content-Type", "application/zip")
+		w.Header().Set("Content-Disposition", fmt.Sprintf(`attachment; filename="%s.zip"`, dirName))
+
+		zw := zip.NewWriter(w)
+		defer zw.Close()
+
+		filepath.WalkDir(absPath, func(filePath string, d fs.DirEntry, err error) error {
+			if err != nil {
+				return err
+			}
+			relPath, _ := filepath.Rel(absPath, filePath)
+			if d.IsDir() {
+				if relPath != "." {
+					zw.Create(relPath + "/")
+				}
+				return nil
+			}
+			fInfo, _ := d.Info()
+			header, _ := zip.FileInfoHeader(fInfo)
+			header.Name = relPath
+			header.Method = zip.Deflate
+			writer, _ := zw.CreateHeader(header)
+			f, _ := os.Open(filePath)
+			defer f.Close()
+			io.Copy(writer, f)
+			return nil
+		})
 		return
 	}
 	w.Header().Set("Content-Disposition", fmt.Sprintf(`attachment; filename="%s"`, filepath.Base(absPath)))
@@ -709,13 +750,9 @@ func handleTerminal(w http.ResponseWriter, r *http.Request) {
 		conn.WriteMessage(websocket.TextMessage, []byte("session:"+sess.id))
 	} else {
 		// Create new session
-		cmd := exec.Command("/bin/bash")
-		cmd.Dir = rootDir
-		cmd.Env = append(os.Environ(), "TERM=xterm-256color")
-
-		ptmx, err := pty.Start(cmd)
+		rw, cmd, platData, err := startTerminal(rootDir)
 		if err != nil {
-			log.Printf("pty start error: %v", err)
+			log.Printf("terminal start error: %v", err)
 			conn.Close()
 			return
 		}
@@ -726,8 +763,9 @@ func handleTerminal(w http.ResponseWriter, r *http.Request) {
 			name:         fmt.Sprintf("终端 %d", num),
 			createdAt:    time.Now(),
 			lastActivity: time.Now(),
-			ptmx:         ptmx,
+			terminal:     rw,
 			cmd:          cmd,
+			platformData: platData,
 			conn:         conn,
 			buffer:       make([]byte, 0, 102400),
 			bufLimit:     102400, // 100KB
@@ -744,7 +782,7 @@ func handleTerminal(w http.ResponseWriter, r *http.Request) {
 		go func() {
 			buf := make([]byte, 4096)
 			for {
-				n, err := ptmx.Read(buf)
+				n, err := sess.terminal.Read(buf)
 				if err != nil {
 					sess.mu.Lock()
 					if sess.conn != nil {
@@ -755,7 +793,7 @@ func handleTerminal(w http.ResponseWriter, r *http.Request) {
 					ptySessionsMu.Lock()
 					delete(ptySessions, sess.id)
 					ptySessionsMu.Unlock()
-					ptmx.Close()
+					sess.terminal.Close()
 					if cmd.Process != nil {
 						cmd.Process.Kill()
 						cmd.Process.Wait()
@@ -796,14 +834,14 @@ func handleTerminal(w http.ResponseWriter, r *http.Request) {
 				Rows uint16 `json:"rows"`
 			}
 			if err := json.Unmarshal(msg[7:], &size); err == nil {
-				pty.Setsize(sess.ptmx, &pty.Winsize{Cols: size.Cols, Rows: size.Rows})
+				resizeTerminal(sess.platformData, size.Cols, size.Rows)
 			}
 			continue
 		}
 		sess.mu.Lock()
 		sess.lastActivity = time.Now()
 		sess.mu.Unlock()
-		if _, err := sess.ptmx.Write(msg); err != nil {
+		if _, err := sess.terminal.Write(msg); err != nil {
 			return
 		}
 	}
@@ -852,7 +890,7 @@ func handleTerminalSessionDelete(w http.ResponseWriter, r *http.Request) {
 		sess.conn = nil
 	}
 	sess.mu.Unlock()
-	sess.ptmx.Close()
+	sess.terminal.Close()
 	if sess.cmd.Process != nil {
 		sess.cmd.Process.Kill()
 		sess.cmd.Process.Wait()
@@ -900,9 +938,9 @@ const terminalPageHTML = `<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Terminal</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm@5.3.0/css/xterm.css">
-<script src="https://cdn.jsdelivr.net/npm/xterm@5.3.0/lib/xterm.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/xterm-addon-fit@0.8.0/lib/xterm-addon-fit.js"></script>
+<link rel="stylesheet" href="/static/xterm/xterm.css">
+<script src="/static/xterm/xterm.js"></script>
+<script src="/static/xterm/xterm-addon-fit.js"></script>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { background: #1e1e1e; overflow: hidden; }
@@ -963,7 +1001,14 @@ func main() {
 	dir := flag.String("dir", ".", "root directory to serve")
 	port := flag.Int("port", 8080, "port to listen on")
 	password := flag.String("password", "", "access password (empty = no auth)")
+	devMode := flag.Bool("dev", false, "development mode: rebuild from source on restart")
+	openrouterKey := flag.String("openrouter-key", "", "OpenRouter API key for voice recognition (or set OPENROUTER_API_KEY env)")
 	flag.Parse()
+
+	openrouterAPIKey = *openrouterKey
+	if openrouterAPIKey == "" {
+		openrouterAPIKey = os.Getenv("OPENROUTER_API_KEY")
+	}
 
 	authPassword = *password
 
@@ -984,7 +1029,12 @@ func main() {
 	}
 
 	mux := http.NewServeMux()
+
+	staticFS, _ := fs.Sub(staticFiles, "static")
+	mux.Handle("GET /static/", http.StripPrefix("/static/", http.FileServer(http.FS(staticFS))))
+
 	mux.HandleFunc("GET /", handleIndex)
+	mux.HandleFunc("GET /mobile", handleMobile)
 	mux.HandleFunc("GET /terminal", handleTerminalPage)
 	mux.HandleFunc("GET /api/files", handleFiles)
 	mux.HandleFunc("POST /api/upload", handleUpload)
@@ -1009,16 +1059,19 @@ func main() {
 	mux.HandleFunc("POST /api/restart", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		json.NewEncoder(w).Encode(map[string]bool{"ok": true})
-		log.Println("restart requested, rebuilding and restarting...")
+		log.Println("restart requested, restarting...")
 		go func() {
 			time.Sleep(500 * time.Millisecond)
 			pid := fmt.Sprintf("%d", os.Getpid())
 			exePath, _ := os.Executable()
 			exeDir := filepath.Dir(exePath)
-			cmd := exec.Command("bash", filepath.Join(exeDir, "restart_fileserver.sh"), pid,
-				"-dir", *dir, "-port", fmt.Sprintf("%d", *port), "-password", *password)
+			restartArgs := []string{"-dir", *dir, "-port", fmt.Sprintf("%d", *port), "-password", *password}
+			if *devMode {
+				restartArgs = append(restartArgs, "-dev", "True")
+			}
+			cmd := restartCommand(exePath, pid, *devMode, restartArgs...)
 			cmd.Dir = exeDir
-			cmd.SysProcAttr = &syscall.SysProcAttr{Setsid: true}
+			detachProcess(cmd)
 			if err := cmd.Start(); err != nil {
 				log.Printf("restart script start error: %v", err)
 				return
