@@ -174,14 +174,11 @@ html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(-
         <button class="key-btn reply-btn" data-reply="n">n</button>
         <button class="key-btn reply-btn" data-reply="yes!">yes!</button>
       </div>
-      <!-- Collapse button -->
-      <div class="key-row">
-        <button class="key-btn expand-btn" id="btn-collapse">▼</button>
-      </div>
     </div>
 
     <!-- Input row -->
     <div class="input-row">
+      <button class="key-btn expand-btn" id="btn-collapse" style="display:none;">▼</button>
       <input type="text" id="cmd-input" placeholder="输入命令..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
       <button id="mic-btn">🎤</button>
     </div>
@@ -378,6 +375,7 @@ document.getElementById('cmd-input').addEventListener('keydown', function(e) {
 function updateToolbarState() {
   document.getElementById('keys-collapsed').style.display = toolbarExpanded ? 'none' : 'flex';
   document.getElementById('keys-expanded').classList.toggle('show', toolbarExpanded);
+  document.getElementById('btn-collapse').style.display = toolbarExpanded ? '' : 'none';
   localStorage.setItem('toolbarExpanded', toolbarExpanded);
   setTimeout(function() { if (fit) fit.fit(); sendResize(); }, 50);
 }
@@ -631,6 +629,39 @@ function escapeHtml(text) {
   d.textContent = text;
   return d.innerHTML;
 }
+
+// === Session Rename (double-click) ===
+document.getElementById('session-name').addEventListener('dblclick', function() {
+  const el = this;
+  const oldName = el.textContent;
+  const input = document.createElement('input');
+  input.type = 'text';
+  input.value = oldName;
+  input.style.cssText = 'background:var(--bg);color:var(--text);border:1px solid var(--blue);border-radius:4px;' +
+    'font-size:13px;font-family:"JetBrains Mono",monospace;padding:2px 6px;width:120px;outline:none;';
+  el.replaceWith(input);
+  input.focus();
+  input.select();
+
+  function finishRename() {
+    const newName = input.value.trim() || oldName;
+    el.textContent = newName;
+    input.replaceWith(el);
+    if (newName !== oldName && currentSessionId) {
+      fetch('/api/terminal/sessions/rename', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: currentSessionId, name: newName })
+      });
+    }
+  }
+
+  input.addEventListener('blur', finishRename);
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') { e.preventDefault(); input.blur(); }
+    if (e.key === 'Escape') { input.value = oldName; input.blur(); }
+  });
+});
 
 // === Init ===
 (async function() {
