@@ -1,0 +1,6 @@
+dist/
+*.log
+fileserver
+fileserver.exe
+phosphor
+phosphor.exe

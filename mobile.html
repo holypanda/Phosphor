@@ -446,8 +446,12 @@ async function startRecording() {
     micBtn.classList.add('recording');
     showMicStatus('正在录音...');
   } catch(err) {
-    showMicStatus('麦克风权限被拒绝');
-    setTimeout(hideMicStatus, 2000);
+    if (!window.isSecureContext) {
+      showMicStatus('需要 HTTPS 才能使用麦克风，请用 -tls 启动服务');
+    } else {
+      showMicStatus('麦克风权限被拒绝');
+    }
+    setTimeout(hideMicStatus, 3000);
   }
 }
 

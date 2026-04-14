@@ -1,0 +1,127 @@
+<h2>移动端页面完整设计</h2>
+<p class="subtitle">从上到下的布局结构和交互流程</p>
+
+<div class="mockup">
+  <div class="mockup-header">mobile.html 页面结构</div>
+  <div class="mockup-body" style="max-width: 360px; margin: 0 auto;">
+    <div style="background: #0a0e14; border-radius: 12px; overflow: hidden; font-family: 'JetBrains Mono', monospace; font-size: 11px; border: 2px solid #30363d;">
+
+      <!-- Top bar -->
+      <div style="background: #161b22; padding: 8px 12px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #30363d;">
+        <div style="display: flex; gap: 8px; align-items: center;">
+          <span style="color: #00ff41; font-size: 13px; font-weight: bold;">⚡</span>
+          <span style="color: #c9d1d9; font-size: 11px;">Session 1</span>
+          <span style="color: #00ff41; font-size: 8px;">●</span>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <span style="color: #8b949e; font-size: 12px; cursor: pointer;">＋</span>
+          <span style="color: #8b949e; font-size: 12px; cursor: pointer;">☰</span>
+        </div>
+      </div>
+
+      <!-- Terminal area -->
+      <div style="padding: 10px; color: #c9d1d9; min-height: 300px; line-height: 1.7; font-size: 11px;">
+        <div><span style="color:#00ff41;">root@dev</span>:<span style="color:#58a6ff;">~/project</span>$ claude</div>
+        <div style="color:#8b949e; margin: 4px 0;">╭───────────────────────────╮</div>
+        <div style="color:#8b949e;">│ <span style="color:#f0883e;">Claude Code</span>              │</div>
+        <div style="color:#8b949e;">╰───────────────────────────╯</div>
+        <div style="margin-top: 8px; color:#58a6ff;">> 帮我重构 auth middleware</div>
+        <div style="color:#c9d1d9; margin-top: 4px; font-size: 10px; line-height: 1.5;">
+          I'll refactor the auth middleware.<br>
+          Let me read the current code first...<br><br>
+          <span style="color:#00ff41;">✓</span> Read main.go (lines 45-120)<br>
+          <span style="color:#00ff41;">✓</span> Read auth.go<br><br>
+          I'll split authMiddleware into:<br>
+          1. tokenValidator<br>
+          2. sessionManager<br>
+          3. routeGuard<br><br>
+          <span style="color:#f0883e;">Do you want me to proceed?</span>
+        </div>
+        <div style="margin-top: 8px;"><span style="color:#00ff41;">▊</span></div>
+      </div>
+
+      <!-- Toolbar: collapsed -->
+      <div style="background: #161b22; padding: 8px 8px 10px; border-top: 1px solid #30363d;">
+        <div style="display: flex; gap: 6px; justify-content: center; margin-bottom: 8px; align-items: center;">
+          <span style="background:#21262d; color:#c9d1d9; padding: 8px 12px; border-radius: 6px; font-size: 12px; border: 1px solid #30363d;">ESC</span>
+          <span style="background:#21262d; color:#c9d1d9; padding: 8px 12px; border-radius: 6px; font-size: 12px; border: 1px solid #30363d;">↑</span>
+          <span style="background:#21262d; color:#c9d1d9; padding: 8px 12px; border-radius: 6px; font-size: 12px; border: 1px solid #30363d;">↓</span>
+          <span style="background:#21262d; color:#c9d1d9; padding: 8px 12px; border-radius: 6px; font-size: 12px; border: 1px solid #30363d;">←</span>
+          <span style="background:#21262d; color:#c9d1d9; padding: 8px 12px; border-radius: 6px; font-size: 12px; border: 1px solid #30363d;">→</span>
+          <span style="background:#21262d; color:#c9d1d9; padding: 8px 12px; border-radius: 6px; font-size: 12px; border: 1px solid #30363d;">⏎</span>
+          <span style="background:#0d419d; color:#58a6ff; padding: 8px 10px; border-radius: 6px; font-size: 12px; border: 1px solid #1f6feb;">▲</span>
+        </div>
+        <div style="display: flex; gap: 8px; align-items: center;">
+          <div style="flex: 1; background: #0d1117; border: 1px solid #30363d; border-radius: 20px; padding: 10px 16px; color: #8b949e; font-size: 12px;">输入或语音...</div>
+          <div style="background: #da3633; min-width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px;">🎤</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top: 2rem;">
+  <h3>顶部栏</h3>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 13px;">
+    <div style="background: #161b22; padding: 10px; border-radius: 6px;">
+      <div style="color: #00ff41; margin-bottom: 4px;">⚡ + Session 名</div>
+      <div style="color: #8b949e; font-size: 12px;">当前终端 session，双击可重命名</div>
+    </div>
+    <div style="background: #161b22; padding: 10px; border-radius: 6px;">
+      <div style="color: #00ff41; margin-bottom: 4px;">● 连接状态</div>
+      <div style="color: #8b949e; font-size: 12px;">绿色=已连接，黄色=断线重连中</div>
+    </div>
+    <div style="background: #161b22; padding: 10px; border-radius: 6px;">
+      <div style="color: #58a6ff; margin-bottom: 4px;">＋ 新建 Session</div>
+      <div style="color: #8b949e; font-size: 12px;">创建新终端 tab</div>
+    </div>
+    <div style="background: #161b22; padding: 10px; border-radius: 6px;">
+      <div style="color: #58a6ff; margin-bottom: 4px;">☰ 菜单</div>
+      <div style="color: #8b949e; font-size: 12px;">切换 session、文件浏览、设置</div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top: 1.5rem;">
+  <h3>语音输入流程</h3>
+  <div style="background: #161b22; padding: 16px; border-radius: 8px; font-size: 13px; color: #c9d1d9;">
+    <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+      <span style="background: #da3633; color: white; min-width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px;">1</span>
+      <div>按住 🎤 → 按钮变大+脉冲动画+显示"正在录音..."</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+      <span style="background: #da3633; color: white; min-width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px;">2</span>
+      <div>松开 → 音频发到 <code style="color:#00ff41;">/api/voice</code> → 显示"识别中..."</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+      <span style="background: #da3633; color: white; min-width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px;">3</span>
+      <div>返回文字 → 填入输入框（可编辑）</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 12px;">
+      <span style="background: #da3633; color: white; min-width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px;">4</span>
+      <div>确认无误 → 点回车或⏎键发送到终端</div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top: 1.5rem;">
+  <h3>斜杠命令 + 语音组合流程</h3>
+  <div style="background: #161b22; padding: 16px; border-radius: 8px; font-size: 13px; color: #c9d1d9;">
+    <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+      <span style="background: #238636; color: white; min-width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px;">1</span>
+      <div>展开工具栏 → 点 <code style="color:#00ff41;">/using-superpowers</code></div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+      <span style="background: #238636; color: white; min-width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px;">2</span>
+      <div>输入框显示 <code style="color:#00ff41;">/using-superpowers </code>（光标在后）</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+      <span style="background: #238636; color: white; min-width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px;">3</span>
+      <div>按住 🎤 说"帮我写一个登录页面"</div>
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 12px;">
+      <span style="background: #238636; color: white; min-width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px;">4</span>
+      <div>拼接成 <code style="color:#00ff41;">/using-superpowers 帮我写一个登录页面</code> → 确认发送</div>
+    </div>
+  </div>
+</div>

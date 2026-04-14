@@ -3,18 +3,26 @@ package main
 import (
 	"bytes"
 	"context"
+	"crypto/ecdsa"
+	"crypto/elliptic"
 	"crypto/rand"
 	"crypto/subtle"
+	"crypto/tls"
+	"crypto/x509"
+	"crypto/x509/pkix"
 	"embed"
 	"encoding/hex"
 	"encoding/base64"
 	"encoding/json"
+	"encoding/pem"
 	"flag"
 	"fmt"
 	"archive/zip"
 	"io"
 	"io/fs"
 	"log"
+	"math/big"
+	"net"
 	"net/http"
 	"os"
 	"os/exec"
@@ -99,7 +107,7 @@ func authMiddleware(next http.Handler) http.Handler {
 			next.ServeHTTP(w, r)
 			return
 		}
-		if r.URL.Path == "/api/login" || r.URL.Path == "/api/auth-check" {
+		if r.URL.Path == "/api/login" || r.URL.Path == "/api/auth-check" || r.URL.Path == "/api/download-cert" {
 			next.ServeHTTP(w, r)
 			return
 		}
@@ -1122,12 +1130,87 @@ func handleVoice(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(map[string]string{"text": result.Choices[0].Message.Content})
 }
 
+// tlsCertFile stores the path to the TLS certificate for download.
+var tlsCertFile string
+
+func handleDownloadCert(w http.ResponseWriter, r *http.Request) {
+	if tlsCertFile == "" {
+		http.Error(w, "TLS not enabled", http.StatusNotFound)
+		return
+	}
+	data, err := os.ReadFile(tlsCertFile)
+	if err != nil {
+		http.Error(w, "certificate not found", http.StatusNotFound)
+		return
+	}
+	w.Header().Set("Content-Type", "application/x-x509-ca-cert")
+	w.Header().Set("Content-Disposition", "attachment; filename=\"phosphor.crt\"")
+	w.Write(data)
+}
+
+// generateSelfSignedCert creates a self-signed TLS certificate and key,
+// writes them to certPath and keyPath, and returns the tls.Certificate.
+func generateSelfSignedCert(certPath, keyPath string) (tls.Certificate, error) {
+	key, err := ecdsa.GenerateKey(elliptic.P256(), rand.Reader)
+	if err != nil {
+		return tls.Certificate{}, fmt.Errorf("generate key: %w", err)
+	}
+
+	serial, _ := rand.Int(rand.Reader, new(big.Int).Lsh(big.NewInt(1), 128))
+	tmpl := &x509.Certificate{
+		SerialNumber: serial,
+		Subject:      pkix.Name{CommonName: "Phosphor Dev"},
+		NotBefore:    time.Now(),
+		NotAfter:     time.Now().Add(365 * 24 * time.Hour),
+		KeyUsage:     x509.KeyUsageDigitalSignature,
+		ExtKeyUsage:  []x509.ExtKeyUsage{x509.ExtKeyUsageServerAuth},
+		IPAddresses:  localIPs(),
+		DNSNames:     []string{"localhost"},
+	}
+
+	certDER, err := x509.CreateCertificate(rand.Reader, tmpl, tmpl, &key.PublicKey, key)
+	if err != nil {
+		return tls.Certificate{}, fmt.Errorf("create certificate: %w", err)
+	}
+
+	certPEM := pem.EncodeToMemory(&pem.Block{Type: "CERTIFICATE", Bytes: certDER})
+	keyDER, _ := x509.MarshalECPrivateKey(key)
+	keyPEM := pem.EncodeToMemory(&pem.Block{Type: "EC PRIVATE KEY", Bytes: keyDER})
+
+	if err := os.WriteFile(certPath, certPEM, 0644); err != nil {
+		return tls.Certificate{}, fmt.Errorf("write cert: %w", err)
+	}
+	if err := os.WriteFile(keyPath, keyPEM, 0600); err != nil {
+		return tls.Certificate{}, fmt.Errorf("write key: %w", err)
+	}
+
+	return tls.X509KeyPair(certPEM, keyPEM)
+}
+
+// localIPs returns all non-loopback IPv4 addresses for SAN inclusion.
+func localIPs() []net.IP {
+	ips := []net.IP{net.ParseIP("127.0.0.1")}
+	addrs, err := net.InterfaceAddrs()
+	if err != nil {
+		return ips
+	}
+	for _, a := range addrs {
+		if ipnet, ok := a.(*net.IPNet); ok && ipnet.IP.To4() != nil && !ipnet.IP.IsLoopback() {
+			ips = append(ips, ipnet.IP)
+		}
+	}
+	return ips
+}
+
 func main() {
 	dir := flag.String("dir", ".", "root directory to serve")
 	port := flag.Int("port", 8080, "port to listen on")
 	password := flag.String("password", "", "access password (empty = no auth)")
 	devMode := flag.Bool("dev", false, "development mode: rebuild from source on restart")
 	openrouterKey := flag.String("openrouter-key", "", "OpenRouter API key for voice recognition (or set OPENROUTER_API_KEY env)")
+	tlsEnabled := flag.Bool("tls", false, "enable HTTPS with auto-generated self-signed certificate")
+	tlsCert := flag.String("tls-cert", "", "path to TLS certificate file (optional, auto-generated if empty)")
+	tlsKey := flag.String("tls-key", "", "path to TLS key file (optional, auto-generated if empty)")
 	flag.Parse()
 
 	openrouterAPIKey = *openrouterKey
@@ -1178,6 +1261,7 @@ func main() {
 	mux.HandleFunc("POST /api/logout", handleLogout)
 	mux.HandleFunc("GET /api/auth-check", handleAuthCheck)
 	mux.HandleFunc("POST /api/voice", handleVoice)
+	mux.HandleFunc("GET /api/download-cert", handleDownloadCert)
 
 	addr := fmt.Sprintf(":%d", *port)
 	srv := &http.Server{Addr: addr, Handler: logMiddleware(authMiddleware(mux))}
@@ -1197,6 +1281,15 @@ func main() {
 			}
 			if openrouterAPIKey != "" {
 				restartArgs = append(restartArgs, "-openrouter-key", openrouterAPIKey)
+			}
+			if *tlsEnabled {
+				restartArgs = append(restartArgs, "-tls")
+			}
+			if *tlsCert != "" {
+				restartArgs = append(restartArgs, "-tls-cert", *tlsCert)
+			}
+			if *tlsKey != "" {
+				restartArgs = append(restartArgs, "-tls-key", *tlsKey)
 			}
 			cmd := restartCommand(exePath, pid, *devMode, restartArgs...)
 			cmd.Dir = exeDir
@@ -1221,9 +1314,35 @@ func main() {
 		}()
 	})
 
-	log.Printf("serving %s on http://0.0.0.0%s", rootDir, addr)
-	if err := srv.ListenAndServe(); err != http.ErrServerClosed {
-		log.Fatal(err)
+	if *tlsEnabled {
+		certFile := *tlsCert
+		keyFile := *tlsKey
+		if certFile == "" || keyFile == "" {
+			// Auto-generate self-signed cert
+			exePath, _ := os.Executable()
+			exeDir := filepath.Dir(exePath)
+			certFile = filepath.Join(exeDir, "phosphor.crt")
+			keyFile = filepath.Join(exeDir, "phosphor.key")
+
+			if _, err := os.Stat(certFile); os.IsNotExist(err) {
+				log.Println("generating self-signed TLS certificate...")
+				if _, err := generateSelfSignedCert(certFile, keyFile); err != nil {
+					log.Fatalf("failed to generate TLS certificate: %v", err)
+				}
+				log.Printf("certificate saved to %s", certFile)
+				log.Println("NOTE: on mobile, open the HTTPS URL and accept the self-signed certificate warning")
+			}
+		}
+		tlsCertFile = certFile
+		log.Printf("serving %s on https://0.0.0.0%s", rootDir, addr)
+		if err := srv.ListenAndServeTLS(certFile, keyFile); err != http.ErrServerClosed {
+			log.Fatal(err)
+		}
+	} else {
+		log.Printf("serving %s on http://0.0.0.0%s", rootDir, addr)
+		if err := srv.ListenAndServe(); err != http.ErrServerClosed {
+			log.Fatal(err)
+		}
 	}
 	log.Println("server stopped")
 }

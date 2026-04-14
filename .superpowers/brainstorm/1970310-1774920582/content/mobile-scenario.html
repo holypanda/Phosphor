@@ -1,0 +1,44 @@
+<h2>手机端使用场景</h2>
+<p class="subtitle">你主要在什么场景下用手机访问 Phosphor？这会影响我们的布局优先级</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>随时随地 Vibe Coding</h3>
+      <p>手机就是主力终端 —— 通过语音输入 + 快捷指令，在手机上完成大部分 coding 工作。终端是核心，文件浏览和编辑器是辅助。</p>
+    </div>
+  </div>
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>应急远程操控</h3>
+      <p>主要在电脑上工作，手机用于紧急情况 —— 比如服务器出问题时快速 SSH 进去看看日志、重启服务。需要快速、可靠。</p>
+    </div>
+  </div>
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>两者兼顾</h3>
+      <p>既要能日常 vibe coding，也要能应急操控。手机端需要在两种模式间流畅切换。</p>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top: 2rem;">
+  <h3>当前移动端现状</h3>
+  <div class="mockup">
+    <div class="mockup-header">Phosphor 现有移动端布局 (≤767px)</div>
+    <div class="mockup-body" style="max-width: 375px; margin: 0 auto;">
+      <div style="background: #0d1117; padding: 12px; border-radius: 8px; font-family: monospace; font-size: 11px; color: #c9d1d9;">
+        <div style="background: #161b22; padding: 8px; border-radius: 4px; margin-bottom: 8px; color: #00ff41;">📁 文件浏览器</div>
+        <div style="background: #161b22; padding: 8px; border-radius: 4px; margin-bottom: 8px; color: #58a6ff;">📝 代码编辑器（可折叠）</div>
+        <div style="background: #161b22; padding: 8px; border-radius: 4px; color: #f0883e;">💻 终端（可折叠）</div>
+        <div style="margin-top: 12px; color: #8b949e; font-size: 10px;">
+          ⚠️ 问题：没有虚拟按键、没有语音输入、终端不是主角<br>
+          ⚠️ 触摸操作不友好，无法发送 Ctrl/Esc/箭头等特殊键
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

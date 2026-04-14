@@ -1,0 +1,92 @@
+<h2>手机端屏幕布局</h2>
+<p class="subtitle">终端为主的情况下，屏幕空间怎么分配？</p>
+
+<div class="split">
+  <div class="mockup" data-choice="a" onclick="toggleSelect(this)" style="cursor:pointer;">
+    <div class="mockup-header">A: 全屏终端 + 底部工具栏</div>
+    <div class="mockup-body" style="max-width: 320px; margin: 0 auto;">
+      <div style="background: #0a0e14; border-radius: 8px; overflow: hidden; font-family: 'JetBrains Mono', monospace; font-size: 11px;">
+        <!-- Status bar -->
+        <div style="background: #161b22; padding: 6px 10px; display: flex; justify-content: space-between; color: #8b949e; font-size: 10px;">
+          <span>Session 1</span>
+          <span style="color: #00ff41;">● Connected</span>
+        </div>
+        <!-- Terminal area -->
+        <div style="padding: 10px; color: #c9d1d9; min-height: 280px; line-height: 1.6;">
+          <div><span style="color:#00ff41;">root@server</span>:<span style="color:#58a6ff;">~/project</span>$ claude</div>
+          <div style="color:#8b949e;">╭─────────────────────────╮</div>
+          <div style="color:#8b949e;">│ Claude Code             │</div>
+          <div style="color:#8b949e;">╰─────────────────────────╯</div>
+          <div style="color:#f0883e;">> 帮我修改 login 组件...</div>
+          <div style="color:#c9d1d9; margin-top: 8px;">I'll update the login...</div>
+          <div style="margin-top: 8px;"><span style="color:#00ff41;">root@server</span>:<span style="color:#58a6ff;">~</span>$ <span style="animation: blink 1s infinite; color: #00ff41;">▊</span></div>
+        </div>
+        <!-- Voice + Quick keys -->
+        <div style="background: #161b22; padding: 8px; border-top: 1px solid #30363d;">
+          <div style="display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; margin-bottom: 6px;">
+            <span style="background:#21262d; color:#c9d1d9; padding: 6px 10px; border-radius: 4px; font-size: 10px;">ESC</span>
+            <span style="background:#21262d; color:#c9d1d9; padding: 6px 10px; border-radius: 4px; font-size: 10px;">TAB</span>
+            <span style="background:#21262d; color:#c9d1d9; padding: 6px 10px; border-radius: 4px; font-size: 10px;">Ctrl</span>
+            <span style="background:#21262d; color:#c9d1d9; padding: 6px 10px; border-radius: 4px; font-size: 10px;">↑</span>
+            <span style="background:#21262d; color:#c9d1d9; padding: 6px 10px; border-radius: 4px; font-size: 10px;">↓</span>
+            <span style="background:#21262d; color:#c9d1d9; padding: 6px 10px; border-radius: 4px; font-size: 10px;">←</span>
+            <span style="background:#21262d; color:#c9d1d9; padding: 6px 10px; border-radius: 4px; font-size: 10px;">→</span>
+          </div>
+          <div style="display: flex; gap: 6px; align-items: center;">
+            <div style="flex: 1; background: #0d1117; border: 1px solid #30363d; border-radius: 20px; padding: 8px 12px; color: #8b949e; font-size: 11px;">输入命令...</div>
+            <div style="background: #da3633; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px;">🎤</div>
+          </div>
+        </div>
+      </div>
+      <div style="color: #8b949e; font-size: 10px; margin-top: 8px; text-align: center;">
+        终端占满全屏，底部固定工具栏<br>文件浏览通过手势或按钮切换
+      </div>
+    </div>
+  </div>
+
+  <div class="mockup" data-choice="b" onclick="toggleSelect(this)" style="cursor:pointer;">
+    <div class="mockup-header">B: 终端 + 可滑出侧栏</div>
+    <div class="mockup-body" style="max-width: 320px; margin: 0 auto;">
+      <div style="background: #0a0e14; border-radius: 8px; overflow: hidden; font-family: 'JetBrains Mono', monospace; font-size: 11px; position: relative;">
+        <!-- Side panel hint -->
+        <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: linear-gradient(to right, #00ff41, transparent); z-index: 2;"></div>
+        <!-- Status bar -->
+        <div style="background: #161b22; padding: 6px 10px; display: flex; justify-content: space-between; color: #8b949e; font-size: 10px;">
+          <span>☰ 文件</span>
+          <span>Session 1</span>
+          <span style="color: #00ff41;">●</span>
+        </div>
+        <!-- Terminal -->
+        <div style="padding: 10px; color: #c9d1d9; min-height: 280px; line-height: 1.6;">
+          <div><span style="color:#00ff41;">root@server</span>:<span style="color:#58a6ff;">~/project</span>$ claude</div>
+          <div style="color:#8b949e;">╭─────────────────────────╮</div>
+          <div style="color:#8b949e;">│ Claude Code             │</div>
+          <div style="color:#8b949e;">╰─────────────────────────╯</div>
+          <div style="color:#f0883e;">> 帮我修改 login 组件...</div>
+          <div style="color:#c9d1d9; margin-top: 8px;">I'll update the login...</div>
+          <div style="margin-top: 8px;"><span style="color:#00ff41;">root@server</span>:<span style="color:#58a6ff;">~</span>$ <span style="color: #00ff41;">▊</span></div>
+        </div>
+        <!-- Bottom bar -->
+        <div style="background: #161b22; padding: 8px; border-top: 1px solid #30363d;">
+          <div style="display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; margin-bottom: 6px;">
+            <span style="background:#21262d; color:#c9d1d9; padding: 6px 10px; border-radius: 4px; font-size: 10px;">ESC</span>
+            <span style="background:#21262d; color:#c9d1d9; padding: 6px 10px; border-radius: 4px; font-size: 10px;">TAB</span>
+            <span style="background:#21262d; color:#c9d1d9; padding: 6px 10px; border-radius: 4px; font-size: 10px;">Ctrl</span>
+            <span style="background:#21262d; color:#c9d1d9; padding: 6px 10px; border-radius: 4px; font-size: 10px;">↑ ↓ ← →</span>
+          </div>
+          <div style="display: flex; gap: 6px; align-items: center;">
+            <div style="flex: 1; background: #0d1117; border: 1px solid #30363d; border-radius: 20px; padding: 8px 12px; color: #8b949e; font-size: 11px;">输入命令...</div>
+            <div style="background: #da3633; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px;">🎤</div>
+          </div>
+        </div>
+      </div>
+      <div style="color: #8b949e; font-size: 10px; margin-top: 8px; text-align: center;">
+        左侧边缘右滑呼出文件侧栏<br>顶部汉堡菜单也可切换
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top: 1.5rem;">
+  <p class="subtitle">💡 两者都以终端全屏为主。区别在于文件浏览器的呼出方式：A 通过顶部按钮切换视图，B 通过侧滑手势呼出覆盖层。</p>
+</div>
